@@ -1,0 +1,46 @@
+.button {
+  position: relative;
+  display: inline-block;
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  padding: 0.3em 1.5em 0.3em 0.1em;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  margin: 0 var(--offset) 0 0;
+
+  border-radius: var(--border-radius);
+
+  overflow: hidden;
+  transition: all var(--animation-duration);
+
+  z-index: 1;
+}
+
+.text {
+  position: relative;
+}
+.button:hover,
+.button:focus {
+  color: var(--hover-text-color);
+  border: 2px solid var(--hover-border-color);
+  padding: 0.3em 2em 0.3em 0.6em;
+  margin: 0 0 0 var(--offset);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 130%;
+  background-color: var(--hover-color);
+  transform: translate(-110%, 0) skew(-30deg);
+  transition: all var(--animation-duration);
+}
+.button:hover::before,
+.button:focus::before {
+  transform: translate(-10%, 0) skew(-30deg);
+}

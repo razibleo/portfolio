@@ -1,0 +1,37 @@
+.projects-wrapper {
+  background-color: var(--secondary-background-color);
+  padding: 3% 0 6% 0;
+}
+body {
+  color: white;
+}
+.project-content {
+  width: 85%;
+  max-width: 1300px;
+}
+.project-title {
+  font-weight: bold;
+  font-size: 27px;
+  margin: 23px 0;
+  color: var(--primary-color);
+}
+
+.project-image {
+  display: inline-block;
+  width: 35%;
+}
+
+.project-resource-btn {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.project-description {
+  margin-bottom: 3em;
+}
+
+.techstackusedtext {
+  color: var(--primary-color);
+  font-weight: 600;
+  padding-bottom: 0.5em;
+}
