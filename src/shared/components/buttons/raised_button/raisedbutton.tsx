@@ -7,6 +7,7 @@ import styles from "./raisedbutton.module.css";
 import LaunchIcon from "@mui/icons-material/Launch";
 interface Props {
   title: string;
+  urlToOpen: string;
   borderColor?: string;
   textColor?: string;
   color?: string;
@@ -34,7 +35,12 @@ const RaisedButton = (props: Props) => {
         } as React.CSSProperties
       }
     >
-      <button className={styles.button}>
+      <button
+        className={styles.button}
+        onClick={(e) => {
+          window.open(props.urlToOpen, "_blank");
+        }}
+      >
         <LaunchIcon /> <span className={styles.text}>{props.title}</span>
       </button>
     </div>

@@ -2,6 +2,7 @@ import styles from "./hoverbutton.module.css";
 import { primaryColor } from "../../../../theme/colors";
 interface Props {
   title: string;
+  urlToOpen: string;
   borderColor?: string;
   borderRadius?: number;
   textColor?: string;
@@ -29,7 +30,12 @@ const HoverButton = (props: Props) => {
         } as React.CSSProperties
       }
     >
-      <button className={styles.button}>
+      <button
+        className={styles.button}
+        onClick={(e) => {
+          window.open(props.urlToOpen, "_blank");
+        }}
+      >
         <span className={styles.text}>{props.title}</span>
       </button>
     </div>
