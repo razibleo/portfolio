@@ -21,7 +21,10 @@ const TheaterBookingProjectItem = () => {
             style={{ display: "flex", justifyContent: "end" }}
             className="me-3"
           >
-            <img src={Assets.THEATER_GIF} style={{ width: "100%" }} />
+            <img
+              src={Assets.THEATER_GIF}
+              style={{ width: "100%", border: `3px solid green` }}
+            />
           </div>
         </Col>
 
@@ -35,8 +38,8 @@ const TheaterBookingProjectItem = () => {
             <h5 className={styles["techstackusedtext"]}>
               What's under the hood?
             </h5>
-            <HoverListItem title={"Java"} iconPath={Assets.JAVA_ICON} />
-            <HoverListItem title={"JavaFX"} iconPath={Assets.JAVAFX_ICON} />
+            <HoverListItem title={"Java"} iconPath={Assets.JAVA_LOGO} />
+            <HoverListItem title={"JavaFX"} iconPath={Assets.JAVAFX_LOGO} />
           </div>
 
           <div className={styles["project-resource-btn"]}>

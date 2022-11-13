@@ -113,10 +113,10 @@ const Intro: React.ElementType = () => {
             options={{
               strings: [
                 "It's nice to meet you.",
-                "I like to design things.",
+                "I'm a Full-Stack engineer.",
+                "I like to design web & mobile apps.",
                 "I love learning new tech.",
                 "I love meeting new people.",
-                "I create unique digital experiences.",
               ],
               autoStart: true,
               loop: true,

@@ -22,10 +22,10 @@ const AndroidTicTacToeProjectItem = () => {
             <h5 className={styles["techstackusedtext"]}>
               What's under the hood?
             </h5>
-            <HoverListItem title={"Java"} iconPath={Assets.JAVA_ICON} />
+            <HoverListItem title={"Java"} iconPath={Assets.JAVA_LOGO} />
             <HoverListItem
               title={"Android SDK"}
-              iconPath={Assets.ANDROID_ICON}
+              iconPath={Assets.ANDROID_LOGO}
             />
           </div>
 

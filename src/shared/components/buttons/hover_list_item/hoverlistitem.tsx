@@ -36,7 +36,12 @@ const HoverListItem = (props: Props) => {
       }
     >
       <span>
-        <button className={styles.button}>
+        <button
+          className={styles.button}
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        >
           <span className={styles.text}>
             {" "}
             <KeyboardArrowRightIcon

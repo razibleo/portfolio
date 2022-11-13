@@ -22,8 +22,8 @@ const JavaFXGamesProjectItem = () => {
             <h5 className={styles["techstackusedtext"]}>
               What's under the hood?
             </h5>
-            <HoverListItem title={"Java"} iconPath={Assets.JAVA_ICON} />
-            <HoverListItem title={"Java FX"} iconPath={Assets.JAVAFX_ICON} />
+            <HoverListItem title={"Java"} iconPath={Assets.JAVA_LOGO} />
+            <HoverListItem title={"Java FX"} iconPath={Assets.JAVAFX_LOGO} />
           </div>
 
           <div className={styles["project-resource-btn"]}>

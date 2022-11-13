@@ -15,14 +15,29 @@ const CommuniserveProjectItem = () => {
         <Col
           md={7}
           className={styles["project-image-section"]}
-          style={{ paddingTop: "4em" }}
+          style={{ paddingTop: "2em" }}
         >
           <div
-            style={{ display: "flex", justifyContent: "end" }}
+            style={{
+              display: "flex",
+              justifyContent: "end",
+              position: "relative",
+            }}
             className="me-3"
           >
-            <img src={Assets.COUMMUNISERVE_MAPS} style={{ width: "33%" }} />
-            <img src={Assets.COUMMUNISERVE_HOME} style={{ width: "33%" }} />
+            <img
+              src={Assets.COUMMUNISERVE_HOME}
+              style={{ width: "33%", position: "relative", zIndex: 10 }}
+            />
+            <img
+              src={Assets.COUMMUNISERVE_MAPS}
+              style={{
+                width: "33%",
+                position: "absolute",
+                top: "15%",
+                right: "20%",
+              }}
+            />
           </div>
         </Col>
 
@@ -36,25 +51,25 @@ const CommuniserveProjectItem = () => {
             <h5 className={styles["techstackusedtext"]}>
               What's under the hood?
             </h5>
-            <HoverListItem title={"Ionic"} iconPath={Assets.IONIC_ICON} />
-            <HoverListItem title={"Angular"} iconPath={Assets.ANGULAR_ICON} />
+            <HoverListItem title={"Ionic"} iconPath={Assets.IONIC_LOGO} />
+            <HoverListItem title={"Angular"} iconPath={Assets.ANGULAR_LOGO} />
             <HoverListItem
               title={"Typescript"}
-              iconPath={Assets.TYPSCRIPT_ICON}
+              iconPath={Assets.TYPSCRIPT_LOGO}
             />
             <HoverListItem
               title={"Firebase"}
-              iconPath={Assets.FIREBASE_ICON}
+              iconPath={Assets.FIREBASE_LOGO}
               saturation={90}
             />
             <HoverListItem
               title={"Google Maps"}
               saturation={96}
-              iconPath={Assets.Google_MAPS_ICON}
+              iconPath={Assets.Google_MAPS_LOGO}
             />
             <HoverListItem
               title={"Push Notifications"}
-              iconPath={Assets.PUSH_NOTIFICATIONS_ICON}
+              iconPath={Assets.PUSH_NOTIFICATIONS_LOGO}
             />
           </div>
 

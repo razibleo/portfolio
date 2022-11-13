@@ -21,8 +21,9 @@
   position: relative;
 }
 
-.button:hover,
-.button:focus {
+.button:hover
+/* ,
+.button:focus  */ {
   color: var(--hover-text-color);
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover-shadow-color);
   border: 2px solid var(--hover-border-color);
