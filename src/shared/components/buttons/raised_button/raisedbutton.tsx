@@ -14,6 +14,7 @@ interface Props {
   hoverColor?: string;
   hoverBorderColor?: string;
   hoverTextColor?: string;
+  fontSize?: number;
   hoverShadowColor?: string;
   animationDuration?: number;
 }
@@ -41,7 +42,10 @@ const RaisedButton = (props: Props) => {
           window.open(props.urlToOpen, "_blank");
         }}
       >
-        <LaunchIcon /> <span className={styles.text}>{props.title}</span>
+        <LaunchIcon />{" "}
+        <span className={styles.text} style={{ fontSize: props.fontSize }}>
+          {props.title}
+        </span>
       </button>
     </div>
   );

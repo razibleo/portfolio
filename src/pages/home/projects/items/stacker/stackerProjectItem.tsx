@@ -56,7 +56,7 @@ const StackerProjectItem = () => {
             <img
               src={Assets.COLLISION_AVOIDANCE_GIF}
               style={{
-                width: "50",
+                width: "50%",
                 border: `3px solid green`,
                 position: "absolute",
                 right: "33%",

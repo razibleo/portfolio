@@ -4,6 +4,10 @@ import DCMotorIcon from "../assets/icons/dcmotor.png";
 import LineCurveIcon from "../assets/icons/linecurve.png";
 import ServoIcon from "../assets/icons/servo.png";
 import UltrasoundIcon from "../assets/icons/ultrasound.png";
+import DepthSensorIcon from "../assets/icons/3dsensor.png";
+import BrainAiIcon from "../assets/icons/brain_ai.png";
+import LidarIcon from "../assets/icons/lidar.png";
+import TTSIcon from "../assets/icons/tts.png";
 
 //// Logos
 import AndroidLogo from "../assets/logos/android.png";
@@ -42,6 +46,14 @@ import ReduxLogo from "../assets/logos/redux.png";
 import RosLogo from "../assets/logos/ros.png";
 import TypescriptLogo from "../assets/logos/typescript.png";
 
+import DialogflowCXLogo from "../assets/logos/dialogflowcx.png";
+import JsonLogo from "../assets/logos/json.png";
+import P5Logo from "../assets/logos/p5.png";
+import PicovoiceLogo from "../assets/logos/picovoice.png";
+import TuricreateLogo from "../assets/logos/turicreate.png";
+import TurtlebotLogo from "../assets/logos/turtlebot.png";
+import WebSocketsLogo from "../assets/logos/websockets.png";
+
 ///images
 import AndroidTicTacToeHome from "../assets/projectimages/tictactoe_home-min.png";
 import AndroidTicTacToeGameplay from "../assets/projectimages/tictactoe_gameplay-min.png";
@@ -70,7 +82,22 @@ class Assets {
   static readonly LINECURVE_ICON: string = LineCurveIcon;
   static readonly SERVO_ICON: string = ServoIcon;
   static readonly ULTRASOUND_ICON: string = UltrasoundIcon;
+  static readonly DEPTH_SENSOR_ICON: string = DepthSensorIcon;
+  static readonly BRAIN_AI_ICON: string = BrainAiIcon;
+  static readonly LIDAR_ICON: string = LidarIcon;
+  static readonly TTS_ICON: string = TTSIcon;
 
+  public static getAllIconsUrls = (): string[] => [
+    this.CAMERA_ICON,
+    this.DCMOTOR_ICON,
+    this.LINECURVE_ICON,
+    this.SERVO_ICON,
+    this.ULTRASOUND_ICON,
+    this.DEPTH_SENSOR_ICON,
+    this.BRAIN_AI_ICON,
+    this.LIDAR_ICON,
+    this.TTS_ICON,
+  ];
   ////Logos
   static readonly ANDROID_LOGO: string = AndroidLogo;
   static readonly ANGULAR_LOGO: string = AngularLogo;
@@ -109,6 +136,14 @@ class Assets {
   static readonly ROS_LOGO: string = RosLogo;
   static readonly TYPSCRIPT_LOGO: string = TypescriptLogo;
 
+  static readonly DIALOGFLOWCX_LOGO: string = DialogflowCXLogo;
+  static readonly JSON_LOGO: string = JsonLogo;
+  static readonly P5JS_LOGO: string = P5Logo;
+  static readonly PICOVOICE_LOGO: string = PicovoiceLogo;
+  static readonly TURICREATE_LOGO: string = TuricreateLogo;
+  static readonly TURTLEBOTLOGO: string = TurtlebotLogo;
+  static readonly WEBSOCKETS_LOGO: string = WebSocketsLogo;
+
   ////project images
   static readonly TIC_TAC_TOE_HOME: string = AndroidTicTacToeHome;
   static readonly TIC_TAC_TOE_GAMEPLAY: string = AndroidTicTacToeGameplay;
@@ -123,7 +158,6 @@ class Assets {
   static readonly COLOR_DETECTION_GIF: string = ColorDetection;
   static readonly GRIPPER_GIF: string = Gripper;
   static readonly LINE_FOLLOWER_GIF: string = LineFollower;
-
   static readonly REACHER_CHATBOT_GIF: string = ReacherChatbot;
   static readonly REACHER_COLLISION_AVOIDANCE_GIF: string =
     ReacherCollisionAvoidance;

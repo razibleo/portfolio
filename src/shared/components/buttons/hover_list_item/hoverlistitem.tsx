@@ -11,6 +11,7 @@ interface Props {
   hoverTextColor?: string;
   animationDuration?: number;
   iconPath?: string;
+  iconPadding?: string;
   saturation?: number;
 }
 
@@ -50,7 +51,15 @@ const HoverListItem = (props: Props) => {
             {props.title}
           </span>
         </button>
-        {props.iconPath && <img src={props.iconPath} className={styles.logo} />}
+        {props.iconPath && (
+          <img
+            src={props.iconPath}
+            className={styles.logo}
+            style={{
+              padding: props.iconPadding,
+            }}
+          />
+        )}
       </span>
     </div>
   );
