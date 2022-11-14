@@ -75,6 +75,10 @@ import ReacherNavigationInternal from "../assets/projectimages/reacher_navigatio
 import ReacherMappingInternal from "../assets/projectimages/reacher_mapping_internal.gif";
 import ReacherLocalizationInternal from "../assets/projectimages/reacher_localization_internal.gif";
 
+///// miscellaneous
+import UCResearch from "../assets/miscellaneous/uc_undergraduate-min.png";
+import Ega from "../assets/miscellaneous/ega-min.jpeg";
+
 class Assets {
   /////Icons
   static readonly CAMERA_ICON: string = CameraIcon;
@@ -167,6 +171,10 @@ class Assets {
   static readonly REACHER_MAPPING_INTERNAL_GIF: string = ReacherMappingInternal;
   static readonly REACHER_NAVIGATION_INTERNAL_GIF: string =
     ReacherNavigationInternal;
+
+  /// miscellaneous
+  static readonly UC_RESEARCH: string = UCResearch;
+  static readonly EGA_COMPETITION: string = Ega;
 }
 
 export default Assets;

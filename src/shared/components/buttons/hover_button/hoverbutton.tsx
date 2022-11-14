@@ -27,7 +27,7 @@ const HoverButton = (props: Props) => {
         {
           "--color": props.color ?? "transparent",
           "--text-color": props.textColor ?? "white",
-          "--border-color": props.textColor ?? "white",
+          "--border-color": props.borderColor ?? "white",
           "--hover-color": props.color ?? "white",
           "--border-radius": props.borderRadius ?? "1000em",
           "--hover-text-color": props.hoverTextColor ?? "black",

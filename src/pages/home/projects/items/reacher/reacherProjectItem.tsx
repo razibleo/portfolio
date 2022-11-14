@@ -121,7 +121,6 @@ const ReacherProjectItem = () => {
 
             <RaisedButton
               title={"Demo"}
-              fontSize={13}
               hoverBorderColor={"transparent"}
               borderColor={"transparent"}
               hoverShadowColor={"transparent"}
