@@ -7,12 +7,20 @@ import HoverButton from "../../../../shared/components/buttons/hover_button/hove
 import { primaryColor } from "../../../../theme/colors";
 
 const EgaAwardItem = () => {
+  const urlToOpen =
+    "https://www.ega.ae/en/media-releases/2020/march/al-robot-competition";
   return (
     <Container fluid style={styles}>
       <Row>
         <Col md={5}>
           <div className={"me-3"}>
-            <img src={Assets.EGA_COMPETITION} className={styles["image"]} />
+            <img
+              src={Assets.EGA_COMPETITION}
+              className={styles["image"]}
+              onClick={(e) => {
+                window.open(urlToOpen, "_blank");
+              }}
+            />
           </div>
         </Col>
         <Col md={7}>
@@ -31,9 +39,7 @@ const EgaAwardItem = () => {
 
           <HoverButton
             title={"View Details"}
-            urlToOpen={
-              "https://www.ega.ae/en/media-releases/2020/march/al-robot-competition"
-            }
+            urlToOpen={urlToOpen}
             color={primaryColor}
             hoverBorderColor={primaryColor}
             showLaunchIcon={true}

@@ -1,11 +1,11 @@
 .awards-wrapper {
   background-color: var(--primary-background-color);
-  padding: 3% 0 1% 0;
+  padding: 5% 0 8% 0;
 }
 .awards-content {
   width: 85%;
   max-width: 1300px;
-  margin: 4% auto;
+  margin: 0% auto;
 }
 
 .separator {

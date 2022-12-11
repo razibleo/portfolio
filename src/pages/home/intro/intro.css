@@ -61,6 +61,16 @@
   margin: 20px auto 0 auto;
   z-index: 2;
 }
+.links a img {
+  width: 50px;
+  height: 50px;
+  transition: all 0.25s ease-in-out 0s;
+}
+
+.links a img:hover {
+  width: 60px;
+  height: 60px;
+}
 
 .links a:first-child {
   margin-right: 20px;

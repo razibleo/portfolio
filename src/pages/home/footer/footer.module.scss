@@ -1,0 +1,33 @@
+.website-created-with {
+  text-align: center;
+  font-weight: 700;
+  font-family: "Courier";
+  margin: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1300;
+}
+.website-created-with img {
+  width: 20px;
+  display: inline-block;
+}
+.typewriter {
+  display: inline-block;
+  width: 2px;
+}
+
+.footer {
+  // background: var(--secondary-background-color);
+  background: black;
+  padding: 2% 0;
+}
+
+.highlight1 {
+  color: var(--primary-color);
+}
+.highlight2 {
+  color: lightskyblue;
+}
+.highlight3 {
+  color: cyan;
+}

@@ -7,6 +7,7 @@ import HoverButton from "../../../../shared/components/buttons/hover_button/hove
 import { primaryColor } from "../../../../theme/colors";
 
 const UCResearchAwardItem = () => {
+  const urlToOpen = "https://youtu.be/pQSFTKTndXY?t=5757";
   return (
     <Container fluid style={styles}>
       <Row>
@@ -27,7 +28,7 @@ const UCResearchAwardItem = () => {
 
           <HoverButton
             title={"View Details"}
-            urlToOpen={"https://youtu.be/pQSFTKTndXY?t=5757"}
+            urlToOpen={urlToOpen}
             color={primaryColor}
             hoverBorderColor={primaryColor}
             showLaunchIcon={true}
@@ -35,7 +36,13 @@ const UCResearchAwardItem = () => {
         </Col>
         <Col md={5}>
           <div className={"ms-3"}>
-            <img src={Assets.UC_RESEARCH} className={styles["image"]} />
+            <img
+              src={Assets.UC_RESEARCH}
+              className={styles["image"]}
+              onClick={(e) => {
+                window.open(urlToOpen, "_blank");
+              }}
+            />
           </div>
         </Col>
       </Row>

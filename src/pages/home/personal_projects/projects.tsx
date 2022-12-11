@@ -9,10 +9,10 @@ import StackerProjectItem from "./items/stacker/stackerProjectItem";
 import TheaterBookingProjectItem from "./items/theater-booking/theaterBookingProjectItem";
 import styles from "./projects.module.css";
 
-const Projects: FC = () => {
+const PersonalProjects: FC = () => {
   return (
     <div className={styles["projects-wrapper"]}>
-      <SectionHeader title={"Projects"} />
+      <SectionHeader title={"Personal Projects"} />
       <div className={styles["project-content"]}>
         <AndroidTicTacToeProjectItem />
         <TheaterBookingProjectItem />
@@ -25,4 +25,4 @@ const Projects: FC = () => {
     </div>
   );
 };
-export default Projects;
+export default PersonalProjects;

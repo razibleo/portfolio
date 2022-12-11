@@ -1,0 +1,70 @@
+.project-title {
+  font-weight: bold;
+  font-size: 27px;
+  margin: 23px 0;
+  color: var(--primary-color);
+}
+
+.projectitem-wrapper {
+  padding: 0 0 7em 0;
+}
+
+.project-image {
+  display: inline-block;
+  width: 35%;
+}
+
+.project-resource-btn {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.project-description {
+  margin-bottom: 2.5em;
+}
+
+.techstackusedtext {
+  color: var(--primary-color);
+  font-weight: 600;
+  padding-bottom: 0.5em;
+}
+
+.techstackssectiom {
+  margin-bottom: 2em;
+}
+
+.statistics {
+  display: flex;
+  // justify-content: center;
+  // margin-left: 5%;
+  text-align: center;
+  margin-bottom: 3%;
+
+  .value {
+    font-size: 2.2em;
+    font-weight: 100;
+    color: rgba($color: #ffffff, $alpha: 0.96);
+  }
+
+  .title {
+    font-size: 1.5em;
+    font-weight: 100;
+    color: rgba($color: #ffffff, $alpha: 0.96);
+  }
+}
+
+.divider {
+  width: 2px;
+  height: 70px;
+  margin: 0% 5%;
+  background-color: rgba($color: #ffffff, $alpha: 0.8);
+}
+.appicon {
+  width: 65px;
+  height: 65px;
+  margin: 0 5% 0 2%;
+  border-radius: 20%;
+  filter: invert(5%) sepia(0%) saturate(0%) hue-rotate(317deg) brightness(200%)
+    contrast(100%);
+}

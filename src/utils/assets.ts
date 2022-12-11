@@ -37,6 +37,7 @@ import MongoDBLogo from "../assets/logos/mongodb.png";
 import MySqlLogo from "../assets/logos/mysql.png";
 import NodejsLogo from "../assets/logos/nodejs.png";
 import OpenCVLogo from "../assets/logos/opencv.png";
+import OpenCVAltLogo from "../assets/logos/opencv_alt_logo.png";
 import PhpLogo from "../assets/logos/php.png";
 import PushNotificationsLogo from "../assets/logos/pushnotifications.png";
 import RaspberryPiLogo from "../assets/logos/raspberrypi.png";
@@ -44,6 +45,8 @@ import PythonLogo from "../assets/logos/python.png";
 import ReactLogo from "../assets/logos/react.png";
 import ReduxLogo from "../assets/logos/redux.png";
 import RosLogo from "../assets/logos/ros.png";
+import RosAltLogo from "../assets/logos/ros_alt_logo.png";
+
 import TypescriptLogo from "../assets/logos/typescript.png";
 
 import DialogflowCXLogo from "../assets/logos/dialogflowcx.png";
@@ -53,8 +56,23 @@ import PicovoiceLogo from "../assets/logos/picovoice.png";
 import TuricreateLogo from "../assets/logos/turicreate.png";
 import TurtlebotLogo from "../assets/logos/turtlebot.png";
 import WebSocketsLogo from "../assets/logos/websockets.png";
+import ThreejsLogo from "../assets/logos/threejs.png";
+import BootstrapLogo from "../assets/logos/bootstrap.png";
+import SassLogo from "../assets/logos/sass.png";
+import FastlaneLogo from "../assets/logos/fastlane_logo.png";
+import AdobeXDLogo from "../assets/logos/adobe_xd_logo.png";
+import ArduinoLogo from "../assets/logos/arduino_logo.png";
+import JiraLogo from "../assets/logos/jira_logo.png";
+import SlackLogo from "../assets/logos/slack_logo.png";
+import AppleLogo from "../assets/logos/apple-logo.png";
+import GooglePlayLogo from "../assets/logos/google-play.png";
 
 ///images
+import EievMockUp1 from "../assets/projectimages/eiev_mockup_1-min.png";
+import EievMockUp2 from "../assets/projectimages/eiev_mockup_2-min.png";
+import ErcMockUp1 from "../assets/projectimages/erc_mockup_1-min.png";
+import ErcMockUp2 from "../assets/projectimages/erc_mockup_2-min.png";
+
 import AndroidTicTacToeHome from "../assets/projectimages/tictactoe_home-min.png";
 import AndroidTicTacToeGameplay from "../assets/projectimages/tictactoe_gameplay-min.png";
 import TheaterBooking from "../assets/projectimages/theater-min.gif";
@@ -78,6 +96,11 @@ import ReacherLocalizationInternal from "../assets/projectimages/reacher_localiz
 ///// miscellaneous
 import UCResearch from "../assets/miscellaneous/uc_undergraduate-min.png";
 import Ega from "../assets/miscellaneous/ega-min.jpeg";
+import MVPLogo from "../assets/miscellaneous/mvp_logo.jpeg";
+import MVPLogoBlack from "../assets/miscellaneous/mvp_logo_black.jpeg";
+import AduLogo from "../assets/miscellaneous/adu_logo.png";
+import EievLogo from "../assets/miscellaneous/eiev-logo.png";
+import ERCLogo from "../assets/miscellaneous/erc-logo.png";
 
 class Assets {
   /////Icons
@@ -131,6 +154,7 @@ class Assets {
   static readonly MYSQL_LOGO: string = MySqlLogo;
   static readonly NODEJS_LOGO: string = NodejsLogo;
   static readonly OPENCV_LOGO: string = OpenCVLogo;
+  static readonly OPENCV_ALT_LOGO: string = OpenCVAltLogo;
   static readonly PHP_LOGO: string = PhpLogo;
   static readonly PUSH_NOTIFICATIONS_LOGO: string = PushNotificationsLogo;
   static readonly PYTHON_LOGO: string = PythonLogo;
@@ -138,7 +162,16 @@ class Assets {
   static readonly REACT_LOGO: string = ReactLogo;
   static readonly REDUX_LOGO: string = ReduxLogo;
   static readonly ROS_LOGO: string = RosLogo;
+  static readonly ROS_ALT_LOGO: string = RosAltLogo;
   static readonly TYPSCRIPT_LOGO: string = TypescriptLogo;
+  static readonly THREEJS_LOGO: string = ThreejsLogo;
+  static readonly BOOTSTRAP_LOGO: string = BootstrapLogo;
+  static readonly SASS_LOGO: string = SassLogo;
+  static readonly FASTLANE_LOGO: string = FastlaneLogo;
+  static readonly ADOBE_XD_LOGO: string = AdobeXDLogo;
+  static readonly ARDUINO_LOGO: string = ArduinoLogo;
+  static readonly JIRA_LOGO: string = JiraLogo;
+  static readonly SLACK_LOGO: string = SlackLogo;
 
   static readonly DIALOGFLOWCX_LOGO: string = DialogflowCXLogo;
   static readonly JSON_LOGO: string = JsonLogo;
@@ -148,7 +181,15 @@ class Assets {
   static readonly TURTLEBOTLOGO: string = TurtlebotLogo;
   static readonly WEBSOCKETS_LOGO: string = WebSocketsLogo;
 
+  static readonly GOOGLEPLAYLOGO: string = GooglePlayLogo;
+  static readonly APPLELOGO: string = AppleLogo;
+
   ////project images
+  static readonly EIEV_HOME: string = EievMockUp1;
+  static readonly EIEV_SOCIAL: string = EievMockUp2;
+  static readonly ERC_HOME: string = ErcMockUp1;
+  static readonly ERC_PROJECT_SHARE: string = ErcMockUp1;
+
   static readonly TIC_TAC_TOE_HOME: string = AndroidTicTacToeHome;
   static readonly TIC_TAC_TOE_GAMEPLAY: string = AndroidTicTacToeGameplay;
   static readonly THEATER_GIF: string = TheaterBooking;
@@ -175,6 +216,11 @@ class Assets {
   /// miscellaneous
   static readonly UC_RESEARCH: string = UCResearch;
   static readonly EGA_COMPETITION: string = Ega;
+  static readonly MVP_LOGO: string = MVPLogo;
+  static readonly MVP_LOGO_BLACK: string = MVPLogoBlack;
+  static readonly ADU_LOGO: string = AduLogo;
+  static readonly EIEV_LOGO: string = EievLogo;
+  static readonly ERC_LOGO: string = ERCLogo;
 }
 
 export default Assets;

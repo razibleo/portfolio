@@ -7,6 +7,19 @@
   -moz-osx-font-smoothing: grayscale;
 } */
 
+@font-face {
+  font-family: "Courier";
+  src: url("./assets/fonts/courier/CourierStd.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Courier";
+  src: url("./assets/fonts/courier/CourierStd-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 
 /* code {
@@ -39,4 +52,10 @@ p {
   font-size: 18px;
   line-height: 24px;
   font-weight: 300;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

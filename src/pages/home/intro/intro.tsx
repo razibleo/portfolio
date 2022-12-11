@@ -113,7 +113,7 @@ const Intro: React.ElementType = () => {
             options={{
               strings: [
                 "It's nice to meet you.",
-                "I'm a Full-Stack engineer.",
+                "I'm a Full-Stack Engineer.",
                 "I like to design web & mobile apps.",
                 "I love learning new tech.",
                 "I love meeting new people.",
@@ -134,7 +134,7 @@ const Intro: React.ElementType = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={linkedin} alt="Linkedin Logo" width="50px" />
+          <img src={linkedin} alt="Linkedin Logo" />
         </a>
 
         <a
@@ -142,7 +142,7 @@ const Intro: React.ElementType = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={github} alt="Github Logo" width="50px" />
+          <img src={github} alt="Github Logo" />
         </a>
       </div>
 
