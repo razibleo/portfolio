@@ -72,6 +72,7 @@ import EievMockUp1 from "../assets/projectimages/eiev_mockup_1-min.png";
 import EievMockUp2 from "../assets/projectimages/eiev_mockup_2-min.png";
 import ErcMockUp1 from "../assets/projectimages/erc_mockup_1-min.png";
 import ErcMockUp2 from "../assets/projectimages/erc_mockup_2-min.png";
+import KMZ from "../assets/projectimages/kmz.png";
 
 import AndroidTicTacToeHome from "../assets/projectimages/tictactoe_home-min.png";
 import AndroidTicTacToeGameplay from "../assets/projectimages/tictactoe_gameplay-min.png";
@@ -101,6 +102,7 @@ import MVPLogoBlack from "../assets/miscellaneous/mvp_logo_black.jpeg";
 import AduLogo from "../assets/miscellaneous/adu_logo.png";
 import EievLogo from "../assets/miscellaneous/eiev-logo.png";
 import ERCLogo from "../assets/miscellaneous/erc-logo.png";
+import KMZLogo from "../assets/miscellaneous/kmz_app_logo.png";
 
 class Assets {
   /////Icons
@@ -188,7 +190,8 @@ class Assets {
   static readonly EIEV_HOME: string = EievMockUp1;
   static readonly EIEV_SOCIAL: string = EievMockUp2;
   static readonly ERC_HOME: string = ErcMockUp1;
-  static readonly ERC_PROJECT_SHARE: string = ErcMockUp1;
+  static readonly ERC_PROJECT_SHARE: string = ErcMockUp2;
+  static readonly KHAYMATZAMAN_SCREENSHOT: string = KMZ;
 
   static readonly TIC_TAC_TOE_HOME: string = AndroidTicTacToeHome;
   static readonly TIC_TAC_TOE_GAMEPLAY: string = AndroidTicTacToeGameplay;
@@ -221,6 +224,7 @@ class Assets {
   static readonly ADU_LOGO: string = AduLogo;
   static readonly EIEV_LOGO: string = EievLogo;
   static readonly ERC_LOGO: string = ERCLogo;
+  static readonly KMZ_LOGO: string = KMZLogo;
 }
 
 export default Assets;

@@ -3,6 +3,8 @@ import SectionHeader from "../../../shared/components/sectionheader/sectionheade
 
 import styles from "./workproject.module.scss";
 import EievProjectItem from "./items/eiev/eiev";
+import ERCProjectItem from "./items/erc/erc";
+import OtherWorkProjects from "./other/other_work_projects";
 
 const WorkProjects: FC = () => {
   return (
@@ -10,6 +12,8 @@ const WorkProjects: FC = () => {
       <SectionHeader title={"Work Projects"} />
       <div className={styles["project-content"]}>
         <EievProjectItem />
+        <ERCProjectItem />
+        <OtherWorkProjects />
       </div>
     </div>
   );

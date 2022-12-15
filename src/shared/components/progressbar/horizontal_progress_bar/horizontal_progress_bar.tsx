@@ -2,7 +2,11 @@ import { FC, useEffect, useRef, useState } from "react";
 import styles from "./horizontal_progress_bar.module.scss";
 import useContainerDimensions from "../../../hooks/useContainerDimensions";
 
-const HorizontalProgressBar: FC = () => {
+interface Props {
+  percentageFill: number;
+}
+
+const HorizontalProgressBar: FC<Props> = (props: Props) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const ref = useRef(null);
@@ -21,7 +25,7 @@ const HorizontalProgressBar: FC = () => {
           isVisible
             ? {
                 transition: `${1}s width ease-in-out`,
-                width: dimensions.width * (90 / 100),
+                width: dimensions.width * props.percentageFill,
               }
             : {
                 width: 1,

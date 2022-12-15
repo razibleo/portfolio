@@ -10,22 +10,41 @@ import AppStoreButton, {
 import CountUp from "react-countup";
 import { StarRate } from "@mui/icons-material";
 
-const EievProjectItem = () => (
+const ERCProjectItem = () => (
   <Container fluid className={styles["projectitem-wrapper"]}>
     <Row>
+      <Col md={7}>
+        <div
+          style={{ display: "flex", justifyContent: "end" }}
+          className="me-3"
+        >
+          <img
+            src={Assets.ERC_PROJECT_SHARE}
+            className={styles["project-image"]}
+            style={{ width: "40%" }}
+          />
+          <img
+            src={Assets.ERC_HOME}
+            className={styles["project-image"]}
+            style={{
+              marginLeft: "-15%",
+              width: "40%",
+            }}
+          />
+        </div>
+      </Col>
       <Col md={5}>
-        <h2 className={styles["project-title"]}>
-          Emirates Endurance International Village
-        </h2>
+        <h2 className={styles["project-title"]}>Emirates Red Crescent</h2>
         <p className={styles["project-description"]}>
-          <strong>EIEV</strong> is the official equastrian sports application
-          for{" "}
-          <a href="https://www.eiev.ae/en/">
-            Emirates Endurance International Village
+          <strong>Emirates RC</strong> is the official application for{" "}
+          <a href="https://www.emiratesrc.ae/">Emirates Red Crescent</a> which
+          is the United Arab Emirates affiliate of the{" "}
+          <a href="https://www.ifrc.org/">
+            International Federation of Red Cross and Red Crescent Societies{" "}
           </a>
-          . Search for race results, horse records & so much more in an instant
-          and stay updated with the latest results, horse stats and rider info
-          of international events. Take videos and share your precious moments.
+          , a worldwide humanitarian organization providing assistance without
+          discrimination as to nationality, race, religious beliefs, class or
+          political opinions.
         </p>
         {/* <div className={styles["techstackssectiom"]}>
           <h5 className={styles["techstackusedtext"]}>
@@ -38,15 +57,15 @@ const EievProjectItem = () => (
         <div className={styles.statistics}>
           <img
             className={styles.appicon}
-            src={Assets.EIEV_LOGO}
+            src={Assets.ERC_LOGO}
             style={{
               filter:
-                "invert(5%) sepia(0%) saturate(0%) hue-rotate(317deg) brightness(200%) contrast(100%)",
+                "invert(0%) sepia(0%) saturate(0%) hue-rotate(317deg) brightness(100%) contrast(90%)",
             }}
           />
           <span>
             <h5 className={styles.value}>
-              <CountUp end={5000} duration={1.22} separator="," />+
+              <CountUp end={500000} duration={1.22} separator="," />+
             </h5>
             <h5 className={styles.title}>Downloads</h5>
           </span>
@@ -55,41 +74,24 @@ const EievProjectItem = () => (
           <span className="center">
             <h5 className={styles.value}>
               <StarRate />
-              <CountUp end={4.5} duration={1.22} decimals={1} />
+              <CountUp end={4.7} duration={1.22} decimals={1} />
               /5.0
             </h5>
           </span>
         </div>
-        <HorizontalProgressBar percentageFill={4.5 / 5.0} />
+        <HorizontalProgressBar percentageFill={4.7 / 5.0} />
 
         <div className={styles["project-resource-btn"]}>
           <AppStoreButton
             buttonType={AppStoreButtonType.googleplay}
             urlToOpen={
-              "https://play.google.com/store/apps/details?id=com.adec.eiev&hl=en&gl=US"
+              "https://play.google.com/store/apps/details?id=ae.rcuae.rcuae_app&hl=en&gl=US"
             }
           />
           <span style={{ width: "20px" }} />
           <AppStoreButton
             buttonType={AppStoreButtonType.apple}
-            urlToOpen={"https://apps.apple.com/ae/app/eiev/id1529308218"}
-          />
-        </div>
-      </Col>
-      <Col md={7}>
-        <div>
-          <img
-            src={Assets.EIEV_HOME}
-            className={styles["project-image"]}
-            style={{ width: "45%" }}
-          />
-          <img
-            src={Assets.EIEV_SOCIAL}
-            className={styles["project-image"]}
-            style={{
-              marginLeft: "-18%",
-              width: "45%",
-            }}
+            urlToOpen={"https://apps.apple.com/ae/app/emirates-rc/id979176387"}
           />
         </div>
       </Col>
@@ -97,4 +99,4 @@ const EievProjectItem = () => (
   </Container>
 );
 
-export default EievProjectItem;
+export default ERCProjectItem;
