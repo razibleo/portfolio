@@ -1,50 +1,8 @@
+import MobileWorkProject from "../models/project/mobileworkproject";
+import Project from "../models/project/project";
 import Assets from "../utils/assets";
 
-abstract class WorkProject {
-  title: string;
-  description: string;
-  projectscreenshot: string;
-  projectlogo: string;
-  websiteurl: string;
-
-  constructor(
-    title: string,
-    description: string,
-    projectscreenshot: string,
-    projectlogo: string,
-    websiteurl: string
-  ) {
-    this.title = title;
-    this.description = description;
-    this.projectscreenshot = projectscreenshot;
-    this.projectlogo = projectlogo;
-    this.websiteurl = websiteurl;
-  }
-}
-
-interface MobileWorkProjectInterface extends WorkProject {
-  appstoreUrl: string;
-  googleplayUrl: string;
-}
-
-export class MobileWorkProject extends WorkProject {
-  appstoreUrl: string;
-  googleplayUrl: string;
-
-  constructor(params: MobileWorkProjectInterface) {
-    super(
-      params.title,
-      params.description,
-      params.projectscreenshot,
-      params.projectlogo,
-      params.websiteurl
-    );
-    this.appstoreUrl = params.appstoreUrl;
-    this.googleplayUrl = params.googleplayUrl;
-  }
-}
-
-const workprojects: WorkProject[] = [
+export const workprojects: Project[] = [
   new MobileWorkProject({
     title: "Khaymat Zaman",
     description:
@@ -74,7 +32,7 @@ const workprojects: WorkProject[] = [
   new MobileWorkProject({
     title: "MAWJ",
     description:
-      "A real estate application where developers, consultants, contractors, & suppliers can showcase their projects.",
+      "A real estate application where developers, consultants, contractors, & suppliers can showcase their work.",
     projectscreenshot: Assets.MAWJ_SCREENSHOT,
 
     projectlogo: Assets.MAWJ_LOGO,
@@ -125,4 +83,4 @@ const workprojects: WorkProject[] = [
   }),
 ];
 
-export default workprojects;
+export const personalprojects: Project[] = [];
