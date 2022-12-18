@@ -1,7 +1,5 @@
 import styles from "./appstore_button.module.scss";
-import Assets from "../../../../utils/assets";
 import GooglePlayIcon from "./google_play_Icon";
-import Col from "react-bootstrap/Col";
 import AppleIcon from "./apple_icon";
 
 export enum AppStoreButtonType {

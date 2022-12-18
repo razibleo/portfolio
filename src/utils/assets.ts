@@ -73,6 +73,11 @@ import EievMockUp2 from "../assets/projectimages/eiev_mockup_2-min.png";
 import ErcMockUp1 from "../assets/projectimages/erc_mockup_1-min.png";
 import ErcMockUp2 from "../assets/projectimages/erc_mockup_2-min.png";
 import KMZ from "../assets/projectimages/kmz.png";
+import Sitt from "../assets/projectimages/sitt.png";
+import Smartfix from "../assets/projectimages/smartfix.png";
+import NomadicTribe from "../assets/projectimages/nomadic_tribe.png";
+import MAWJ from "../assets/projectimages/mawj.png";
+import BSeen from "../assets/projectimages/bseen.png";
 
 import AndroidTicTacToeHome from "../assets/projectimages/tictactoe_home-min.png";
 import AndroidTicTacToeGameplay from "../assets/projectimages/tictactoe_gameplay-min.png";
@@ -103,6 +108,11 @@ import AduLogo from "../assets/miscellaneous/adu_logo.png";
 import EievLogo from "../assets/miscellaneous/eiev-logo.png";
 import ERCLogo from "../assets/miscellaneous/erc-logo.png";
 import KMZLogo from "../assets/miscellaneous/kmz_app_logo.png";
+import NomadicLogo from "../assets/miscellaneous/nomadic_app_logo.png";
+import SittLogo from "../assets/miscellaneous/sitt_app_logo.png";
+import SmartfixLogo from "../assets/miscellaneous/smartfix_app_logo.png";
+import BseenLogo from "../assets/miscellaneous/bseen_app_logo.png";
+import MAWJLogo from "../assets/miscellaneous/mawj_app_logo.png";
 
 class Assets {
   /////Icons
@@ -192,6 +202,11 @@ class Assets {
   static readonly ERC_HOME: string = ErcMockUp1;
   static readonly ERC_PROJECT_SHARE: string = ErcMockUp2;
   static readonly KHAYMATZAMAN_SCREENSHOT: string = KMZ;
+  static readonly SITT_SCREENSHOT: string = Sitt;
+  static readonly MAWJ_SCREENSHOT: string = MAWJ;
+  static readonly SMARTFIX_SCREENSHOT: string = Smartfix;
+  static readonly BSEEN_SCREENSHOT: string = BSeen;
+  static readonly NOMADIC_TRIBE_SCREENSHOT: string = NomadicTribe;
 
   static readonly TIC_TAC_TOE_HOME: string = AndroidTicTacToeHome;
   static readonly TIC_TAC_TOE_GAMEPLAY: string = AndroidTicTacToeGameplay;
@@ -225,6 +240,11 @@ class Assets {
   static readonly EIEV_LOGO: string = EievLogo;
   static readonly ERC_LOGO: string = ERCLogo;
   static readonly KMZ_LOGO: string = KMZLogo;
+  static readonly SITT_LOGO: string = SittLogo;
+  static readonly SMARTFIX_LOGO: string = SmartfixLogo;
+  static readonly BSEEN_LOGO: string = BseenLogo;
+  static readonly MAWJ_LOGO: string = MAWJLogo;
+  static readonly NOMADIC_LOGO: string = NomadicLogo;
 }
 
 export default Assets;
