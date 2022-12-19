@@ -86,33 +86,6 @@ export const workprojects: Project[] = [
 
 export const personalprojects: Project[] = [
   new PersonalProject({
-    title: "Tic Tac Toe",
-    description:
-      "A native andoid Tic Tac Toe game with multiplayer functionaly via bluetooth created using Java.",
-    projectscreenshot: Assets.TIC_TAC_TOE_SCREENSHOT,
-    demoUrl:
-      "https://drive.google.com/file/d/1kAseXEnMQSw_9HxdolVS0j1U4JasOrKb/view?usp=sharing",
-    githubUrl: "https://github.com/razibleo/AndoridTicTacToe",
-    stacks: [
-      {
-        name: "Java",
-        logoPath: Assets.JAVA_LOGO,
-        logoInversionColorLevel: 1,
-      },
-      {
-        name: "Android SDK",
-        logoPath: Assets.ANDROID_LOGO,
-        logoInversionColorLevel: 1,
-      },
-      {
-        name: "Bluetooth",
-        logoPath: Assets.BLUETOOTHLOGO,
-        logoInversionColorLevel: 1,
-      },
-    ],
-  }),
-
-  new PersonalProject({
     title: "Space Invaders",
     description: "A fun classical Space Invaders created using JavaFX.",
 
@@ -153,6 +126,33 @@ export const personalprojects: Project[] = [
       },
     ],
   }),
+  new PersonalProject({
+    title: "Tic Tac Toe",
+    description:
+      "A native andoid Tic Tac Toe game with multiplayer functionaly via bluetooth created using Java.",
+    projectscreenshot: Assets.TIC_TAC_TOE_SCREENSHOT,
+    demoUrl:
+      "https://drive.google.com/file/d/1kAseXEnMQSw_9HxdolVS0j1U4JasOrKb/view?usp=sharing",
+    githubUrl: "https://github.com/razibleo/AndoridTicTacToe",
+    stacks: [
+      {
+        name: "Java",
+        logoPath: Assets.JAVA_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "Android SDK",
+        logoPath: Assets.ANDROID_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "Bluetooth",
+        logoPath: Assets.BLUETOOTHLOGO,
+        logoInversionColorLevel: 1,
+      },
+    ],
+  }),
+
   new PersonalProject({
     title: "Communiserve",
     description:
