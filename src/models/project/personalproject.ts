@@ -1,23 +1,21 @@
+import { TechStack } from "../../data/experience";
 import Project from "./project";
 
 interface PeronsonalProjectInterface extends Project {
   githubUrl: string;
-  demoUrl: string;
+  demoUrl: string | null;
+  stacks: TechStack[];
 }
 
 export default class PersonalProject extends Project {
   githubUrl: string;
-  demoUrl: string;
+  demoUrl: string | null;
+  stacks: TechStack[];
 
   constructor(params: PeronsonalProjectInterface) {
-    super(
-      params.title,
-      params.description,
-      params.projectscreenshot,
-      params.projectlogo,
-      params.websiteurl
-    );
+    super(params.title, params.description, params.projectscreenshot);
     this.githubUrl = params.githubUrl;
     this.demoUrl = params.demoUrl;
+    this.stacks = params.stacks;
   }
 }

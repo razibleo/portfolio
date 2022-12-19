@@ -1,22 +1,22 @@
-import Project from "./project";
+import WorkProject from "./workproject";
 
-interface MobileWorkProjectInterface extends Project {
+interface MobileWorkProjectInterface extends WorkProject {
   appstoreUrl: string;
   googleplayUrl: string;
 }
 
-export default class MobileWorkProject extends Project {
+export default class MobileWorkProject extends WorkProject {
   appstoreUrl: string;
   googleplayUrl: string;
 
   constructor(params: MobileWorkProjectInterface) {
-    super(
-      params.title,
-      params.description,
-      params.projectscreenshot,
-      params.projectlogo,
-      params.websiteurl
-    );
+    super({
+      title: params.title,
+      description: params.description,
+      projectscreenshot: params.projectscreenshot,
+      projectlogo: params.projectlogo,
+      websiteurl: params.websiteurl,
+    });
     this.appstoreUrl = params.appstoreUrl;
     this.googleplayUrl = params.googleplayUrl;
   }

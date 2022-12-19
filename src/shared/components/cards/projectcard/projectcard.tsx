@@ -1,58 +1,116 @@
 import { FC } from "react";
-import styles from "./workprojectcard.module.scss";
+import styles from "./projectcard.module.scss";
 import GooglePlayIcon from "../../buttons/appstore_button/google_play_Icon";
 import AppleIcon from "../../buttons/appstore_button/apple_icon";
 import MobileWorkProject from "../../../../models/project/mobileworkproject";
 import Project from "../../../../models/project/project";
+import PersonalProject from "../../../../models/project/personalproject";
+import HoverButton from "../../buttons/hover_button/hoverbutton";
+import RaisedButton from "../../buttons/raised_button/raisedbutton";
 
 interface Props {
-  workproject: Project;
+  projectitem: Project;
+  imageBackgroundColor?: string;
+  imageBorderColor?: string | null;
 }
 
 const WorkProjectCard: FC<Props> = (props: Props) => {
-  const workprojectitem = props.workproject;
-  const isMobileProject = workprojectitem instanceof MobileWorkProject;
+  const projectitem = props.projectitem;
+
+  const isMobileWorkProject = projectitem instanceof MobileWorkProject;
+  const isPersonalProject = projectitem instanceof PersonalProject;
+
   return (
     <div
       className={styles["grid-item"]}
-      onClick={(e) => {
-        window.open(workprojectitem.websiteurl, "_blank");
-      }}
+      onClick={
+        isMobileWorkProject
+          ? (e) => {
+              if (projectitem.websiteurl == null) {
+                return;
+              }
+              window.open(projectitem.websiteurl, "_blank");
+            }
+          : undefined
+      }
     >
       <div className={styles.summary}>
-        <div className={styles["image-wrapper"]}>
+        <div
+          className={styles["image-wrapper"]}
+          style={
+            {
+              "--image-background-color":
+                props.imageBackgroundColor ?? "transparent",
+              "--image-border":
+                props.imageBackgroundColor != null
+                  ? `2px solid ${props.imageBorderColor}`
+                  : null,
+            } as React.CSSProperties
+          }
+        >
           <img
             className={styles["project-image"]}
-            alt={`${workprojectitem.title} screenshots`}
-            src={workprojectitem.projectscreenshot}
+            alt={`${projectitem.title} screenshots`}
+            src={projectitem.projectscreenshot}
           />
         </div>
 
-        <h5 className={styles.title}>{workprojectitem.title}</h5>
+        <h5 className={styles.title}>{projectitem.title}</h5>
       </div>
       <div className={styles.details}>
         <div className={styles.content}>
-          <h5 className={styles.title}>{workprojectitem.title}</h5>
-          <p className={styles.description}>{workprojectitem.description}</p>
-          {isMobileProject && (
+          <h5 className={styles.title}>{projectitem.title}</h5>
+          <p className={styles.description}>{projectitem.description}</p>
+          {isMobileWorkProject && (
             <div className={styles["availableon-section"]}>
               <img
-                alt={`${workprojectitem.title} app logo`}
+                alt={`${projectitem.title} app logo`}
                 className={styles.logo}
-                src={workprojectitem.projectlogo}
+                src={projectitem.projectlogo}
               />
               <div>
                 <h6>Available on:</h6>
                 <div className={styles["store-wrapper"]}>
                   <GooglePlayIcon
                     className={styles["store-icon"]}
-                    urlToOpen={workprojectitem.googleplayUrl}
+                    urlToOpen={projectitem.googleplayUrl}
                   />
                   <AppleIcon
                     className={styles["store-icon"]}
-                    urlToOpen={workprojectitem.appstoreUrl}
+                    urlToOpen={projectitem.appstoreUrl}
                   />
                 </div>
+              </div>
+            </div>
+          )}
+
+          {isPersonalProject && (
+            <div className={styles["tech-stack-section"]}>
+              <h6 className={styles["title"]}>Tech Stacks:</h6>
+              <div className={styles["wrapper"]}>
+                {projectitem.stacks.map((e, index) => {
+                  return (
+                    <div className={styles["tech-stack-item"]}>
+                      <img src={e.logoPath} alt={`${e.name} logo`} />
+                      <p className={styles["name"]}>{e.name}</p>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className={styles["project-resource-btn"]}>
+                <RaisedButton
+                  title={"Demo"}
+                  hoverBorderColor={"transparent"}
+                  borderColor={"transparent"}
+                  hoverShadowColor={"transparent"}
+                  urlToOpen={
+                    "https://drive.google.com/u/0/uc?id=1EO4a3ETphU6TsXC3ApqUj0ZubHNS4ZSL&export=download"
+                  }
+                />
+                <HoverButton
+                  title={"</> Source Code"}
+                  urlToOpen={"https://github.com/razibleo/communiserve_app"}
+                />
               </div>
             </div>
           )}

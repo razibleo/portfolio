@@ -10,7 +10,7 @@ const OtherWorkProjects: FC = () => {
 
       <div className={styles["grid-view"]}>
         {workprojects.map((workprojectitem) => {
-          return <WorkProjectCard workproject={workprojectitem} />;
+          return <WorkProjectCard projectitem={workprojectitem} />;
         })}
       </div>
     </>

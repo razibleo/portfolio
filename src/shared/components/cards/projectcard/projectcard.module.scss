@@ -5,23 +5,31 @@
 
 .grid-item {
   width: 100%;
-  // height: 100%;
+  height: 100%;
   transition: all var(--transition-duration);
   position: relative;
   overflow: hidden;
   min-height: 150px;
 
   .summary {
+    // border: 2px solid var(--primary-color);
     position: relative;
+    width: 100%;
+    height: 100%;
     .image-wrapper {
-      width: 100%;
-      height: 56.25%;
+      height: 80%;
+      aspect-ratio: 16/9;
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: var(--image-background-color);
 
       overflow: hidden;
 
       .project-image {
         width: 100%;
         height: 100%;
+        border: var(--image-border);
+        object-fit: contain;
         // scale: 1;
         // transition: all var(--transition-duration);
       }
@@ -32,6 +40,7 @@
       font-weight: 400;
       font-size: 20px;
       margin: 2% 5%;
+      text-align: center;
     }
   }
   .details {
@@ -88,6 +97,36 @@
           width: 20px;
           height: 20px;
           fill: white;
+        }
+      }
+    }
+    .tech-stack-section {
+      .title {
+        font-size: 12px;
+      }
+      .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        // justify-content: space-evenly;
+        .tech-stack-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 25px;
+          margin: 0 5px;
+          .name {
+            font-size: 6px;
+            text-align: center;
+            line-height: 1.4;
+            margin: 15% 0;
+          }
+          img {
+            height: 20px;
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(317deg)
+              brightness(200%) contrast(2200%);
+          }
         }
       }
     }

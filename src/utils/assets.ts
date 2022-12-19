@@ -66,6 +66,7 @@ import JiraLogo from "../assets/logos/jira_logo.png";
 import SlackLogo from "../assets/logos/slack_logo.png";
 import AppleLogo from "../assets/logos/apple-logo.png";
 import GooglePlayLogo from "../assets/logos/google-play.png";
+import BluetoothLogo from "../assets/logos/bluetooth.png";
 
 ///images
 import EievMockUp1 from "../assets/projectimages/eiev_mockup_1-min.png";
@@ -81,11 +82,17 @@ import BSeen from "../assets/projectimages/bseen.png";
 
 import AndroidTicTacToeHome from "../assets/projectimages/tictactoe_home-min.png";
 import AndroidTicTacToeGameplay from "../assets/projectimages/tictactoe_gameplay-min.png";
+import AndroidTicTacToeSceenshot from "../assets/projectimages/android_tic_tac_toe_screenshot.png";
 import TheaterBooking from "../assets/projectimages/theater-min.gif";
 import Frogger from "../assets/projectimages/frogger-min.gif";
+import FroggerScreenshot from "../assets/projectimages/frogger_screenshot.gif";
+
 import SpaceInvaders from "../assets/projectimages/space_invaders-min.gif";
+import SpaceInvadersScreenshot from "../assets/projectimages/space_invaders_screenshot.gif";
+
 import CommuniserveHome from "../assets/projectimages/communiserve_home-min.png";
 import CommuniserveMaps from "../assets/projectimages/communiserve_maps-min.png";
+import CommuniserveScreenshots from "../assets/projectimages/coummuniserve_screenshot.png";
 import CoinCounter from "../assets/projectimages/coin-counter-min.gif";
 import FaceDetection from "../assets/projectimages/face-detection-min.gif";
 import CollisionAvoidance from "../assets/projectimages/collison-avoidance-min.gif";
@@ -195,6 +202,7 @@ class Assets {
 
   static readonly GOOGLEPLAYLOGO: string = GooglePlayLogo;
   static readonly APPLELOGO: string = AppleLogo;
+  static readonly BLUETOOTHLOGO: string = BluetoothLogo;
 
   ////project images
   static readonly EIEV_HOME: string = EievMockUp1;
@@ -210,11 +218,19 @@ class Assets {
 
   static readonly TIC_TAC_TOE_HOME: string = AndroidTicTacToeHome;
   static readonly TIC_TAC_TOE_GAMEPLAY: string = AndroidTicTacToeGameplay;
+  static readonly TIC_TAC_TOE_SCREENSHOT: string = AndroidTicTacToeSceenshot;
+
   static readonly THEATER_GIF: string = TheaterBooking;
   static readonly FROGGER_GIF: string = Frogger;
+  static readonly FROGGER_SCREENSHOT: string = FroggerScreenshot;
+
   static readonly SPACEINVADERS_GIF: string = SpaceInvaders;
+  static readonly SPACEINVADERS_SCREENSHOT: string = SpaceInvadersScreenshot;
+
   static readonly COUMMUNISERVE_HOME: string = CommuniserveHome;
   static readonly COUMMUNISERVE_MAPS: string = CommuniserveMaps;
+  static readonly COUMMUNISERVE_SCREENSHOT: string = CommuniserveScreenshots;
+
   static readonly COINCOUNTER_GIF: string = CoinCounter;
   static readonly FACEDETECTION_GIF: string = FaceDetection;
   static readonly COLLISION_AVOIDANCE_GIF: string = CollisionAvoidance;

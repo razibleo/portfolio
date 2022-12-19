@@ -1,4 +1,5 @@
 import MobileWorkProject from "../models/project/mobileworkproject";
+import PersonalProject from "../models/project/personalproject";
 import Project from "../models/project/project";
 import Assets from "../utils/assets";
 
@@ -83,4 +84,114 @@ export const workprojects: Project[] = [
   }),
 ];
 
-export const personalprojects: Project[] = [];
+export const personalprojects: Project[] = [
+  new PersonalProject({
+    title: "Tic Tac Toe",
+    description:
+      "A native andoid Tic Tac Toe game with multiplayer functionaly via bluetooth created using Java.",
+    projectscreenshot: Assets.TIC_TAC_TOE_SCREENSHOT,
+    demoUrl:
+      "https://drive.google.com/file/d/1kAseXEnMQSw_9HxdolVS0j1U4JasOrKb/view?usp=sharing",
+    githubUrl: "https://github.com/razibleo/AndoridTicTacToe",
+    stacks: [
+      {
+        name: "Java",
+        logoPath: Assets.JAVA_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "Android SDK",
+        logoPath: Assets.ANDROID_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "Bluetooth",
+        logoPath: Assets.BLUETOOTHLOGO,
+        logoInversionColorLevel: 1,
+      },
+    ],
+  }),
+
+  new PersonalProject({
+    title: "Space Invaders",
+    description: "A fun classical Space Invaders created using JavaFX.",
+
+    projectscreenshot: Assets.SPACEINVADERS_SCREENSHOT,
+    demoUrl: null,
+    githubUrl: "https://github.com/razibleo/AndoridTicTacToe",
+    stacks: [
+      {
+        name: "Java",
+        logoPath: Assets.JAVA_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "JavaFX",
+        logoPath: Assets.JAVAFX_LOGO,
+        logoInversionColorLevel: 1,
+      },
+    ],
+  }),
+
+  new PersonalProject({
+    title: "Frogger",
+    description:
+      "Simplified version of the classical game Frogger created using JavaFX.",
+    projectscreenshot: Assets.FROGGER_SCREENSHOT,
+    demoUrl: null,
+    githubUrl: "https://github.com/razibleo/javafxspaceinvaders",
+    stacks: [
+      {
+        name: "Java",
+        logoPath: Assets.JAVA_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "JavaFX",
+        logoPath: Assets.JAVAFX_LOGO,
+        logoInversionColorLevel: 1,
+      },
+    ],
+  }),
+  new PersonalProject({
+    title: "Communiserve",
+    description:
+      "A hybrid mobile-app for nearby community members to help each other get groceries during COVID-19 created using Ionic.",
+    projectscreenshot: Assets.COUMMUNISERVE_SCREENSHOT,
+    demoUrl:
+      "https://drive.google.com/u/0/uc?id=1EO4a3ETphU6TsXC3ApqUj0ZubHNS4ZSL&export=download",
+    githubUrl: "https://github.com/razibleo/communiserve_app",
+    stacks: [
+      {
+        name: "Ionic",
+        logoPath: Assets.IONIC_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "Angular",
+        logoPath: Assets.ANGULAR_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "Typescript",
+        logoPath: Assets.TYPSCRIPT_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "Firebase",
+        logoPath: Assets.FIREBASE_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "Google Maps",
+        logoPath: Assets.Google_MAPS_LOGO,
+        logoInversionColorLevel: 1,
+      },
+      {
+        name: "Push Notifications",
+        logoPath: Assets.PUSH_NOTIFICATIONS_LOGO,
+        logoInversionColorLevel: 1,
+      },
+    ],
+  }),
+];
