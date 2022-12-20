@@ -1,5 +1,5 @@
+import TechStack from "../../../../../models/techstack";
 import styles from "./experience_card.module.scss";
-import { TechStack } from "../../../../../data/experience";
 
 interface ExperienceCardProps {
   link: string;

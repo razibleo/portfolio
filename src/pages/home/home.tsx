@@ -7,15 +7,20 @@ import CustomFooter from "./footer/footer";
 import Intro from "./intro/intro";
 import PersonalProjects from "./personal_projects/projects";
 import WorkProjects from "./work_projects/workproject";
+import Navbar from "../navbar/navbar";
 
 function Home(): React.ReactElement {
   return (
     <>
       <Intro />
+      <Navbar />
       <About />
       <Experience />
-      <WorkProjects />
-      <PersonalProjects />
+      <div id="projects">
+        <WorkProjects />
+        <PersonalProjects />
+      </div>
+
       <Awards />
       <Contact />
       <CustomFooter />

@@ -13,7 +13,7 @@ import {
   TrackballControls,
 } from "@react-three/drei";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
-import skills from "../../../../data/skills";
+import skills from "../../../../data/skills_data";
 
 function Word({ children, ...props }: any) {
   const color = new THREE.Color();

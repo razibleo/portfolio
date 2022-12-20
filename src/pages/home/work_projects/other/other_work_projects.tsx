@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styles from "./other_work_projects.module.scss";
 import WorkProjectCard from "../../../../shared/components/cards/projectcard/projectcard";
-import { workprojects } from "../../../../data/projects";
+import { workprojects } from "../../../../data/projects_data";
 
 const OtherWorkProjects: FC = () => {
   return (

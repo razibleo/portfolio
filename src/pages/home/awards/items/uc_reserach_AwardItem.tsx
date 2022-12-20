@@ -3,7 +3,9 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Assets from "../../../../utils/assets";
 import styles from "../awarditems.module.css";
-import HoverButton from "../../../../shared/components/buttons/hover_button/hoverbutton";
+import HoverButton, {
+  HoverButtonIconType,
+} from "../../../../shared/components/buttons/hover_button/hoverbutton";
 import { primaryColor } from "../../../../theme/colors";
 
 const UCResearchAwardItem = () => {
@@ -31,7 +33,8 @@ const UCResearchAwardItem = () => {
             urlToOpen={urlToOpen}
             color={primaryColor}
             hoverBorderColor={primaryColor}
-            showLaunchIcon={true}
+            hoverColor={primaryColor}
+            icon={HoverButtonIconType.launch}
           />
         </Col>
         <Col md={5}>

@@ -16,6 +16,13 @@
 
 .project-resource-btn {
   display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.project-resource-btn-top {
+  display: flex;
+  align-items: flex-start;
   /* justify-content: center; */
 }
 

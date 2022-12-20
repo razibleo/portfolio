@@ -8,7 +8,7 @@ import OtherWorkProjects from "./other/other_work_projects";
 
 const WorkProjects: FC = () => {
   return (
-    <div className={styles["projects-wrapper"]}>
+    <div id="work_projects" className={styles["projects-wrapper"]}>
       <SectionHeader title={"Work Projects"} />
       <div className={styles["project-content"]}>
         <EievProjectItem />

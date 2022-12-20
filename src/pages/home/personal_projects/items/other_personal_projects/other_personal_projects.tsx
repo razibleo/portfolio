@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./other_personal_projects.module.scss";
-import { personalprojects } from "../../../../../data/projects";
+import { personalprojects } from "../../../../../data/projects_data";
 import ProjectCard from "../../../../../shared/components/cards/projectcard/projectcard";
 // import { primaryBackgroundColor } from "../../../../../theme/colors";
 

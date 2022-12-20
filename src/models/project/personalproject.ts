@@ -1,4 +1,4 @@
-import { TechStack } from "../../data/experience";
+import TechStack from "../techstack";
 import Project from "./project";
 
 interface PeronsonalProjectInterface extends Project {

@@ -36,7 +36,7 @@ const Contact: FC = () => {
     },
   };
   return (
-    <div className={styles["contact-form-wrapper"]}>
+    <div id="contact" className={styles["contact-form-wrapper"]}>
       <SectionHeader title={"Let's Chat"} />
 
       <form

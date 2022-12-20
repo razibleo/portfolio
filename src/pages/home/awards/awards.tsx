@@ -6,7 +6,10 @@ import UCResearchAwardItem from "./items/uc_reserach_AwardItem";
 
 const Awards: FC = () => {
   return (
-    <div className={`${styles["awards-wrapper"]} ${styles["awards-content"]}`}>
+    <div
+      id="awards"
+      className={`${styles["awards-wrapper"]} ${styles["awards-content"]}`}
+    >
       <SectionHeader title={"Awards"} />
       <div style={{ height: "4em" }} />
       <UCResearchAwardItem />

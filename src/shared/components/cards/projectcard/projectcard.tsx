@@ -5,8 +5,11 @@ import AppleIcon from "../../buttons/appstore_button/apple_icon";
 import MobileWorkProject from "../../../../models/project/mobileworkproject";
 import Project from "../../../../models/project/project";
 import PersonalProject from "../../../../models/project/personalproject";
-import HoverButton from "../../buttons/hover_button/hoverbutton";
+import HoverButton, {
+  HoverButtonIconType,
+} from "../../buttons/hover_button/hoverbutton";
 import RaisedButton from "../../buttons/raised_button/raisedbutton";
+import { primaryColor } from "../../../../theme/colors";
 
 interface Props {
   projectitem: Project;
@@ -97,19 +100,33 @@ const WorkProjectCard: FC<Props> = (props: Props) => {
                   );
                 })}
               </div>
+              <div style={{ height: "8px" }} />
+
               <div className={styles["project-resource-btn"]}>
-                <RaisedButton
-                  title={"Demo"}
-                  hoverBorderColor={"transparent"}
-                  borderColor={"transparent"}
-                  hoverShadowColor={"transparent"}
-                  urlToOpen={
-                    "https://drive.google.com/u/0/uc?id=1EO4a3ETphU6TsXC3ApqUj0ZubHNS4ZSL&export=download"
-                  }
-                />
                 <HoverButton
                   title={"</> Source Code"}
                   urlToOpen={"https://github.com/razibleo/communiserve_app"}
+                  fontSize={12}
+                  padding={"0.5em 1.1em"}
+                  width={"100%"}
+                />
+                <div style={{ height: "12px" }} />
+                <HoverButton
+                  title={"Demo"}
+                  urlToOpen={
+                    "https://drive.google.com/u/0/uc?id=1EO4a3ETphU6TsXC3ApqUj0ZubHNS4ZSL&export=download"
+                  }
+                  fontSize={12}
+                  padding={"0.25em 1.1em"}
+                  icon={HoverButtonIconType.launch}
+                  width={"100%"}
+                  borderColor={primaryColor}
+                  textColor={primaryColor}
+                  hoverColor={primaryColor}
+                  hoverTextColor={"black"}
+                  hoverBorderColor={primaryColor}
+                  iconWidth={15}
+                  iconMargin={"0 4px"}
                 />
               </div>
             </div>

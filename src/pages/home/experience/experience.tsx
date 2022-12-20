@@ -3,11 +3,11 @@ import SectionHeader from "../../../shared/components/sectionheader/sectionheade
 import ExperienceCard from "./components/experience-card/experience_card";
 import styles from "./experience.module.scss";
 import Assets from "../../../utils/assets";
-import experiences from "../../../data/experience";
+import experiences from "../../../data/experience_data";
 import dateHelper from "../../../utils/datehelper";
 const Experience: FC = () => {
   return (
-    <div className={styles["experience-wrapper"]}>
+    <div id="experience" className={styles["experience-wrapper"]}>
       <SectionHeader title={"Experience"} />
 
       <div className={styles["exp-card-section"]}>

@@ -7,6 +7,7 @@ import HoverButton from "../../../../../shared/components/buttons/hover_button/h
 import RaisedButton from "../../../../../shared/components/buttons/raised_button/raisedbutton";
 import Assets from "../../../../../utils/assets";
 import styles from "../../projectitem.module.css";
+import { HoverButtonIconType } from "../../../../../shared/components/buttons/hover_button/hoverbutton";
 
 const ReacherProjectItem = () => {
   return (
@@ -92,17 +93,19 @@ const ReacherProjectItem = () => {
             <HoverListItem title={"RESTful APIs"} iconPath={Assets.JSON_LOGO} />
           </div>
 
-          <div className={styles["project-resource-btn"]}>
+          <div className={styles["project-resource-btn-top"]}>
             <div>
               <HoverButton
-                showLaunchIcon={true}
+                icon={HoverButtonIconType.launch}
                 title={"Presentation"}
                 urlToOpen={
                   "https://docs.google.com/presentation/d/1SfcnnYBrp54WCK-vey3FcF5-NrohfWx8/edit?usp=sharing&ouid=114847083521454778339&rtpof=true&sd=true "
                 }
               />
+              <div style={{ height: "14px" }} />
+
               <HoverButton
-                showArticleIcon={true}
+                icon={HoverButtonIconType.article}
                 title={"View Publication"}
                 urlToOpen={"https://www.mdpi.com/2076-3417/11/21/10449"}
               />
@@ -118,7 +121,6 @@ const ReacherProjectItem = () => {
                 "https://docs.google.com/presentation/d/1SfcnnYBrp54WCK-vey3FcF5-NrohfWx8/edit?usp=sharing&ouid=114847083521454778339&rtpof=true&sd=true "
               }
             /> */}
-
             <RaisedButton
               title={"Demo"}
               hoverBorderColor={"transparent"}

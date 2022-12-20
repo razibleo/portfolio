@@ -55,6 +55,7 @@ const ComputerVisionProjectItem = () => {
                 urlToOpen={"https://github.com/razibleo/coin_counter"}
               />
             </div>
+            <div style={{ width: "24px" }} />
             <div>
               <div>
                 <p style={{ fontSize: "13px", padding: "0 5%", margin: 0 }}>

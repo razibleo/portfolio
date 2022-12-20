@@ -6,14 +6,13 @@
   border: 2px solid var(--border-color);
   font: inherit;
   line-height: 1;
-  margin: 0.5em;
-  padding: 0.6em 2em;
+  margin: 0;
+  padding: 0;
   border-radius: 0.25em;
   box-shadow: none;
   overflow: hidden;
   transition: all var(--animation-duration);
-  padding: 0.6em 1em;
-
+  padding: var(--padding);
   z-index: 1;
 }
 

@@ -135,6 +135,8 @@ const StackerProjectItem = () => {
               title={"</> Source Code"}
               urlToOpen={"https://github.com/razibleo/stacking_robot"}
             />
+            <div style={{ width: "8px" }} />
+
             <RaisedButton
               title={"Demo"}
               hoverBorderColor={"transparent"}
