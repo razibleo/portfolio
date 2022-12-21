@@ -105,29 +105,29 @@ const WorkProjectCard: FC<Props> = (props: Props) => {
               <div className={styles["project-resource-btn"]}>
                 <HoverButton
                   title={"</> Source Code"}
-                  urlToOpen={"https://github.com/razibleo/communiserve_app"}
+                  urlToOpen={projectitem.githubUrl}
                   fontSize={12}
                   padding={"0.5em 1.1em"}
                   width={"100%"}
                 />
                 <div style={{ height: "12px" }} />
-                <HoverButton
-                  title={"Demo"}
-                  urlToOpen={
-                    "https://drive.google.com/u/0/uc?id=1EO4a3ETphU6TsXC3ApqUj0ZubHNS4ZSL&export=download"
-                  }
-                  fontSize={12}
-                  padding={"0.25em 1.1em"}
-                  icon={HoverButtonIconType.launch}
-                  width={"100%"}
-                  borderColor={primaryColor}
-                  textColor={primaryColor}
-                  hoverColor={primaryColor}
-                  hoverTextColor={"black"}
-                  hoverBorderColor={primaryColor}
-                  iconWidth={15}
-                  iconMargin={"0 4px"}
-                />
+                {projectitem.demoUrl != null && (
+                  <HoverButton
+                    title={"Demo"}
+                    urlToOpen={projectitem.demoUrl}
+                    fontSize={12}
+                    padding={"0.25em 1.1em"}
+                    icon={HoverButtonIconType.launch}
+                    width={"100%"}
+                    borderColor={primaryColor}
+                    textColor={primaryColor}
+                    hoverColor={primaryColor}
+                    hoverTextColor={"black"}
+                    hoverBorderColor={primaryColor}
+                    iconWidth={15}
+                    iconMargin={"0 4px"}
+                  />
+                )}
               </div>
             </div>
           )}

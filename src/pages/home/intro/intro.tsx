@@ -13,6 +13,8 @@ import { loadFull } from "tsparticles";
 import linkedin from "../../../assets/social/linkedin.png";
 import github from "../../../assets/social/github.png";
 import ArrowDropDown from "@mui/icons-material/ArrowDropDownCircleRounded";
+import { Link } from "react-scroll";
+import { adujustedOffset, navBarHeight } from "../../navbar/navbar";
 
 const Intro: React.ElementType = () => {
   const x: RecursivePartial<IOptions> = {
@@ -146,9 +148,11 @@ const Intro: React.ElementType = () => {
         </a>
       </div>
 
-      <div className="scroll-down">
-        <ArrowDropDown style={{ fontSize: "30px", cursor: "pointer" }} />
-      </div>
+      <Link to="about" smooth={true} duration={500} offset={adujustedOffset}>
+        <div className="scroll-down">
+          <ArrowDropDown style={{ fontSize: "30px", cursor: "pointer" }} />
+        </div>
+      </Link>
     </div>
   );
 };

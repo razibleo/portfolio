@@ -5,9 +5,11 @@ import styles from "./experience.module.scss";
 import Assets from "../../../utils/assets";
 import experiences from "../../../data/experience_data";
 import dateHelper from "../../../utils/datehelper";
+import { Element } from "react-scroll";
+
 const Experience: FC = () => {
   return (
-    <div id="experience" className={styles["experience-wrapper"]}>
+    <Element name="experience" className={styles["experience-wrapper"]}>
       <SectionHeader title={"Experience"} />
 
       <div className={styles["exp-card-section"]}>
@@ -37,7 +39,7 @@ const Experience: FC = () => {
           );
         })}
       </div>
-    </div>
+    </Element>
   );
 };
 export default Experience;

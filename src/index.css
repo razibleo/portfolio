@@ -46,6 +46,7 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   font-weight: bold;
+  overflow: scroll;
 }
 
 p {

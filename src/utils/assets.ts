@@ -120,6 +120,9 @@ import SittLogo from "../assets/miscellaneous/sitt_app_logo.png";
 import SmartfixLogo from "../assets/miscellaneous/smartfix_app_logo.png";
 import BseenLogo from "../assets/miscellaneous/bseen_app_logo.png";
 import MAWJLogo from "../assets/miscellaneous/mawj_app_logo.png";
+import IOTBanner from "../assets/miscellaneous/iot_banner.jpg";
+import WebDesignBanner from "../assets/miscellaneous/web_design_banner.png";
+import CodeBanner from "../assets/miscellaneous/code_banner.png";
 
 class Assets {
   /////Icons
@@ -261,6 +264,9 @@ class Assets {
   static readonly BSEEN_LOGO: string = BseenLogo;
   static readonly MAWJ_LOGO: string = MAWJLogo;
   static readonly NOMADIC_LOGO: string = NomadicLogo;
+  static readonly IOT_BANNER: string = IOTBanner;
+  static readonly WEBDESIGN_BANNER: string = WebDesignBanner;
+  static readonly CODE_BANNER: string = CodeBanner;
 }
 
 export default Assets;

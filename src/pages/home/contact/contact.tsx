@@ -5,6 +5,7 @@ import SectionHeader from "../../../shared/components/sectionheader/sectionheade
 import styles from "./contact.module.scss";
 import { primaryColor, secondaryColor } from "../../../theme/colors";
 import Assets from "../../../utils/assets";
+import { Element } from "react-scroll";
 
 const Contact: FC = () => {
   const emailStyle = {
@@ -36,7 +37,7 @@ const Contact: FC = () => {
     },
   };
   return (
-    <div id="contact" className={styles["contact-form-wrapper"]}>
+    <Element name="contact" className={styles["contact-form-wrapper"]}>
       <SectionHeader title={"Let's Chat"} />
 
       <form
@@ -87,7 +88,7 @@ const Contact: FC = () => {
         )}
         {false && <p>Ooops! There was an error.</p>}
       </form>
-    </div>
+    </Element>
   );
 };
 export default Contact;

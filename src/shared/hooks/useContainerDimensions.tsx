@@ -11,6 +11,7 @@ const useContainerDimensions = (myRef: MutableRefObject<any>) => {
     const getDimensions = () => ({
       width: myRef.current.offsetWidth,
     });
+
     const handleResize = () => {
       setDimensions(getDimensions());
     };

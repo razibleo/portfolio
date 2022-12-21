@@ -7,10 +7,11 @@ import LocationIcon from "@mui/icons-material/LocationOnOutlined";
 
 import Typewriter from "typewriter-effect";
 import TagCloud from "./components/tagcloud";
+import { Element } from "react-scroll";
 
 const About = () => {
   return (
-    <div id="about">
+    <Element name="about">
       <div className="about-wrapper">
         <SectionHeader title={"About"} />
         <Container fluid className="about-content">
@@ -99,7 +100,7 @@ const About = () => {
           </Row>
         </Container>
       </div>
-    </div>
+    </Element>
   );
 };
 

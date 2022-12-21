@@ -3,11 +3,12 @@ import SectionHeader from "../../../shared/components/sectionheader/sectionheade
 import styles from "./awards.module.css";
 import EgaAwardItem from "./items/ega_awardItem";
 import UCResearchAwardItem from "./items/uc_reserach_AwardItem";
+import { Element } from "react-scroll";
 
 const Awards: FC = () => {
   return (
-    <div
-      id="awards"
+    <Element
+      name="awards"
       className={`${styles["awards-wrapper"]} ${styles["awards-content"]}`}
     >
       <SectionHeader title={"Awards"} />
@@ -15,7 +16,7 @@ const Awards: FC = () => {
       <UCResearchAwardItem />
       <div className={styles["separator"]} />
       <EgaAwardItem />
-    </div>
+    </Element>
   );
 };
 export default Awards;

@@ -7,8 +7,7 @@ const experiences: ExperienceModel[] = [
     companyName: "MVP Applications and Game Design",
     companyUrl: "https://mvp-apps.com",
     companyLogo: Assets.MVP_LOGO,
-    companyBackgroundUrl:
-      "https://static01.nyt.com/images/2022/04/04/multimedia/15ai-nocode/15ai-nocode-mobileMasterAt3x.jpg",
+    companyBackgroundUrl: Assets.CODE_BANNER,
     responsibilites: [
       "Restructuing of equestrian sports application",
       "Utilize clean and maintainable architecture",
@@ -75,8 +74,8 @@ const experiences: ExperienceModel[] = [
     companyName: "MVP Applications and Game Design",
     companyUrl: "https://mvp-apps.com",
     companyLogo: Assets.MVP_LOGO_BLACK,
-    companyBackgroundUrl:
-      "https://thumbs.dreamstime.com/b/computer-troubleshooting-concept-banner-header-technical-support-guys-working-repairing-computer-hardware-software-129701356.jpg",
+    companyBackgroundUrl: Assets.WEBDESIGN_BANNER,
+
     responsibilites: [
       "Develop cross platfrom mobile applications & design admin control panels using Flutter and React respectively",
       "Implement complex designs & animations",
@@ -125,8 +124,8 @@ const experiences: ExperienceModel[] = [
     companyName: "Abu Dhabi University",
     companyUrl: "https://www.adu.ac.ae",
     companyLogo: Assets.ADU_LOGO,
-    companyBackgroundUrl:
-      "https://static.vecteezy.com/ti/vetor-gratis/p1/2280186-banner-da-internet-das-coisas-vetor.jpg",
+    companyBackgroundUrl: Assets.IOT_BANNER,
+
     responsibilites: [
       "Tutor students understand and learn Java/Python",
       "Create websites/mobile apps for students/clients wanting to start a small business",

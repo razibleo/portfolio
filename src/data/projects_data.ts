@@ -91,7 +91,7 @@ export const personalprojects: Project[] = [
 
     projectscreenshot: Assets.SPACEINVADERS_SCREENSHOT,
     demoUrl: null,
-    githubUrl: "https://github.com/razibleo/AndoridTicTacToe",
+    githubUrl: "https://github.com/razibleo/javafxspaceinvaders",
     stacks: [
       {
         name: "Java",
@@ -112,7 +112,7 @@ export const personalprojects: Project[] = [
       "Simplified version of the classical game Frogger created using JavaFX.",
     projectscreenshot: Assets.FROGGER_SCREENSHOT,
     demoUrl: null,
-    githubUrl: "https://github.com/razibleo/javafxspaceinvaders",
+    githubUrl: "https://github.com/razibleo/javafxfrogger",
     stacks: [
       {
         name: "Java",
