@@ -22,45 +22,46 @@ const NavlinkFromString = (value: String): Navlink =>
 const Navbar: FC = () => {
   const [mobilenavVisible, setMobilenavVisible] = useState<boolean>(false);
   const [hamburgerClass, setHamburgerClass] = useState<string>("");
-  const [selectedNavLink, setSelectedNavLink] = useState<Navlink>(
-    Navlink.unknown
-  );
-  const isAtBottom = useAtBottom({ offset: 0 });
+  const isAtBottom = useAtBottom({ offset: 10 });
+
+  // const [selectedNavLink, setSelectedNavLink] = useState<Navlink>(
+  //   Navlink.unknown
+  // );
   // console.log("isAtBottom", isAtBottom);
 
   const baseNavStyle = styles.navitem;
   const selectedBaseStyle = styles["navitem-selected"];
 
-  const getStyleFromNavLink = useCallback(
-    (navlink: Navlink) => {
-      if (selectedNavLink === navlink) {
-        return selectedBaseStyle;
-      }
+  // const getSelectedStyleFromNavLink = useCallback(
+  //   (navlink: Navlink) => {
+  //     const isAtBottomAndIsContactLink =
+  //       navlink === Navlink.contact && isAtBottom;
+  //     const isLinkSameAsClicked = selectedNavLink === navlink;
+  //     if (!isLinkSameAsClicked) {
+  //       return baseNavStyle;
+  //     }
 
-      if (navlink === Navlink.contact && isAtBottom) {
-        return selectedBaseStyle;
-      }
+  //     return selectedBaseStyle;
+  //   },
+  //   [baseNavStyle, selectedBaseStyle, selectedNavLink, isAtBottom]
+  // );
 
-      return "";
-    },
-    [baseNavStyle, selectedBaseStyle, selectedNavLink, isAtBottom]
-  );
+  // useEffect(() => {
+  //   Events.scrollEvent.register("begin", (to: string, element: any) => {
+  //     const currentNavlinkPressed = NavlinkFromString(to);
+  //     setSelectedNavLink(currentNavlinkPressed);
+  //   });
+  //   Events.scrollEvent.register("end", (to: string, element: any) => {
+  //     console.log("end");
+  //     setSelectedNavLink(Navlink.unknown);
+  //   });
 
-  useEffect(() => {
-    Events.scrollEvent.register("begin", (to: string, element: any) => {
-      const currentNavlinkPressed = NavlinkFromString(to);
-      setSelectedNavLink(currentNavlinkPressed);
-    });
-    Events.scrollEvent.register("end", (to: string, element: any) => {
-      setSelectedNavLink(Navlink.unknown);
-    });
-
-    return () => {
-      console.log("removed scroll listener");
-      Events.scrollEvent.remove("begin");
-      Events.scrollEvent.remove("end");
-    };
-  }, []);
+  //   return () => {
+  //     console.log("removed scroll listener");
+  //     Events.scrollEvent.remove("begin");
+  //     Events.scrollEvent.remove("end");
+  //   };
+  // }, []);
 
   const toggleMobilenavVisible = () => {
     setMobilenavVisible(!mobilenavVisible);
@@ -83,8 +84,8 @@ const Navbar: FC = () => {
             smooth={true}
             duration={500}
             offset={adujustedOffset}
-            className={styles.navitem}
-            activeClass={styles["navitem-selected"]}
+            className={baseNavStyle}
+            activeClass={selectedBaseStyle}
           >
             ABOUT
           </Link>
@@ -96,8 +97,8 @@ const Navbar: FC = () => {
             smooth={true}
             duration={500}
             offset={adujustedOffset}
-            className={styles.navitem}
-            activeClass={styles["navitem-selected"]}
+            className={baseNavStyle}
+            activeClass={selectedBaseStyle}
           >
             EXPERIENCE
           </Link>
@@ -109,8 +110,8 @@ const Navbar: FC = () => {
             smooth={true}
             duration={500}
             offset={adujustedOffset}
-            className={styles.navitem}
-            activeClass={styles["navitem-selected"]}
+            className={baseNavStyle}
+            activeClass={selectedBaseStyle}
           >
             PROJECTS
           </Link>
@@ -123,10 +124,8 @@ const Navbar: FC = () => {
             smooth={true}
             duration={500}
             offset={adujustedOffset}
-            className={styles.navitem}
-            activeClass={
-              isAtBottom ? styles.navitem : styles["navitem-selected"]
-            }
+            className={baseNavStyle}
+            activeClass={isAtBottom ? baseNavStyle : selectedBaseStyle}
           >
             AWARDS
           </Link>
@@ -138,8 +137,8 @@ const Navbar: FC = () => {
             smooth={true}
             duration={500}
             offset={adujustedOffset}
-            className={isAtBottom ? styles["navitem-selected"] : styles.navitem}
-            activeClass={styles["navitem-selected"]}
+            className={isAtBottom ? selectedBaseStyle : baseNavStyle}
+            activeClass={selectedBaseStyle}
           >
             CONTACT
           </Link>

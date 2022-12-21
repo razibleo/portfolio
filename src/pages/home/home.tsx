@@ -8,6 +8,7 @@ import Intro from "./intro/intro";
 import PersonalProjects from "./personal_projects/projects";
 import WorkProjects from "./work_projects/workproject";
 import Navbar from "../navbar/navbar";
+import ReactProjectInfo from "./reactprojectinfo/react_project_info";
 
 function Home(): React.ReactElement {
   return (
@@ -23,6 +24,7 @@ function Home(): React.ReactElement {
 
       <Awards />
       <Contact />
+      <ReactProjectInfo />
       <CustomFooter />
     </>
   );

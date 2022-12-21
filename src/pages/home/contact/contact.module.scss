@@ -1,6 +1,6 @@
 .contact-form-wrapper {
   background-color: var(--secondary-background-color);
-  padding: 5% 0;
+  padding: 5% 0 3% 0;
 }
 
 .contact-form {
@@ -9,6 +9,31 @@
   display: flex;
   flex-direction: column;
   max-width: 500px;
+}
+.textfield {
+  width: 100%;
+  margin-bottom: 0;
+  .errormessage {
+    color: yellow;
+    font-size: 0.9em;
+    padding: 0;
+  }
+}
+
+.email,
+.message {
+  width: 100%;
+}
+
+.submit-wrapper {
+  .submit {
+    width: 100%;
+  }
+  .errormessage {
+    color: yellow;
+    text-align: center;
+    padding: 16px 0 0 0;
+  }
 }
 
 // .email {
