@@ -37,6 +37,7 @@ const Contact: FC = () => {
   const isSuccess = futureStatus === FutureStatus.success;
   const isLoading = futureStatus === FutureStatus.loading;
   const nodeRef = isSuccess ? goodbyeRef : helloRef;
+  const buttonHeight = 45;
 
   const emailStyle = {
     backgroundColor: "#3b4353",
@@ -183,7 +184,7 @@ const Contact: FC = () => {
                 {isSuccess ? (
                   <div
                     className={styles["request-success-message"]}
-                    style={{ height: 50 }}
+                    style={{ height: buttonHeight }}
                   >
                     <CheckCircleOutlineIcon style={{ color: primaryColor }} />
                     <div style={{ width: "8px" }} />
@@ -206,7 +207,7 @@ const Contact: FC = () => {
                         backgroundColor: alpha(primaryColor, 0.5),
                       },
                     }}
-                    style={{ height: 50 }}
+                    style={{ height: buttonHeight }}
                     type="submit"
                     variant="contained"
                   >
