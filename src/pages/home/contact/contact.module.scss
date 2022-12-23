@@ -5,9 +5,11 @@
 
 .contact-form {
   margin: 40px auto 0 auto;
-  width: 100%;
+  width: 50%;
+
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   max-width: 500px;
 }
 .textfield {
@@ -36,6 +38,15 @@
   }
 }
 
+.request-success-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+}
+
 // .email {
 //   & > * {
 //     // marginBottom: theme.spacing(2),
@@ -60,3 +71,25 @@
 // .css-o943dk-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
 //   color: #1976d2;
 // }
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 500ms, transform 500ms;
+}
