@@ -13,6 +13,8 @@ import { CSSTransition, SwitchTransition } from "react-transition-group";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import FutureStatus from "../../../utils/FutureStatus";
 import { sleep } from "../../../utils/common_functions";
+import FadeReveal from "react-reveal/Fade";
+import Bounce from "react-reveal/Bounce";
 
 const schema = yup.object().shape({
   email: yup
@@ -118,117 +120,127 @@ const Contact: FC = () => {
         }}
         method="POST"
       >
-        <div className={styles.textfield}>
-          <TextField
-            className={styles["email"]}
-            // type="email"
-            name="email"
-            label="Email"
-            sx={emailStyle}
-            error={formErrors.email != null}
-            // helperText={formErrors.email && formErrors.email[0]}
-            // value={emailText}
-            // onChange={handleEmailChange}
-            variant="filled"
-          />
-          {formErrors.email != null && (
-            <Fade in={formErrors.email != null} timeout={700}>
-              <p className={styles.errormessage}>{formErrors.email[0]}</p>
-            </Fade>
-          )}
-        </div>
+        <FadeReveal>
+          <>
+            <div className={styles.textfield}>
+              <TextField
+                className={styles["email"]}
+                // type="email"
+                name="email"
+                label="Email"
+                sx={emailStyle}
+                error={formErrors.email != null}
+                // helperText={formErrors.email && formErrors.email[0]}
+                // value={emailText}
+                // onChange={handleEmailChange}
+                variant="filled"
+              />
+              {formErrors.email != null && (
+                <Fade in={formErrors.email != null} timeout={700}>
+                  <p className={styles.errormessage}>{formErrors.email[0]}</p>
+                </Fade>
+              )}
+            </div>
+            <div className={styles.textfield}>
+              <TextField
+                className={styles.message}
+                type="text"
+                name="message"
+                label="Message"
+                // value={messageText}
+                // onChange={handleMessageChange}
+                sx={emailStyle}
+                multiline
+                rows="5"
+                variant="filled"
+                error={formErrors.message != null}
+                // helperText={formErrors.message && formErrors.message[0]}
+              />
 
-        <div className={styles.textfield}>
-          <TextField
-            className={styles.message}
-            type="text"
-            name="message"
-            label="Message"
-            // value={messageText}
-            // onChange={handleMessageChange}
-            sx={emailStyle}
-            multiline
-            rows="5"
-            variant="filled"
-            error={formErrors.message != null}
-            // helperText={formErrors.message && formErrors.message[0]}
-          />
+              {formErrors.message != null && (
+                <Fade in={formErrors.message != null} timeout={700}>
+                  <p className={styles.errormessage}>{formErrors.message[0]}</p>
+                </Fade>
+              )}
+            </div>
+          </>
+        </FadeReveal>
 
-          {formErrors.message != null && (
-            <Fade in={formErrors.message != null} timeout={700}>
-              <p className={styles.errormessage}>{formErrors.message[0]}</p>
-            </Fade>
-          )}
-        </div>
-        <div className={styles["submit-wrapper"]}>
-          <SwitchTransition>
-            <CSSTransition
-              key={isSuccess ? "contactsuccess" : "contactfailure"}
-              nodeRef={nodeRef}
-              addEndListener={(done) => {
-                nodeRef.current!.addEventListener("transitionend", done, false);
-              }}
-              classNames={{
-                // appear: 'my-appear',
-                // appearActive: 'my-active-appear',
-                // appearDone: 'my-done-appear',
-                enter: styles["fade-enter"],
-                enterActive: styles["fade-enter-active"],
-                // enterDone: "my-done-enter",
-                exit: styles["fade-exit"],
-                exitActive: styles["fade-exit-active"],
-                // exitDone: "my-done-exit",
-              }}
-            >
-              <div ref={nodeRef}>
-                {isSuccess ? (
-                  <div
-                    className={styles["request-success-message"]}
-                    style={{ height: buttonHeight }}
-                  >
-                    <CheckCircleOutlineIcon style={{ color: primaryColor }} />
-                    <div style={{ width: "8px" }} />
-                    <p>
-                      You request has been sent successfully.
-                      {/* I'll get to you as soon as
+        <Bounce>
+          <div className={styles["submit-wrapper"]}>
+            <SwitchTransition>
+              <CSSTransition
+                key={isSuccess ? "contactsuccess" : "contactfailure"}
+                nodeRef={nodeRef}
+                addEndListener={(done) => {
+                  nodeRef.current!.addEventListener(
+                    "transitionend",
+                    done,
+                    false
+                  );
+                }}
+                classNames={{
+                  // appear: 'my-appear',
+                  // appearActive: 'my-active-appear',
+                  // appearDone: 'my-done-appear',
+                  enter: styles["fade-enter"],
+                  enterActive: styles["fade-enter-active"],
+                  // enterDone: "my-done-enter",
+                  exit: styles["fade-exit"],
+                  exitActive: styles["fade-exit-active"],
+                  // exitDone: "my-done-exit",
+                }}
+              >
+                <div ref={nodeRef}>
+                  {isSuccess ? (
+                    <div
+                      className={styles["request-success-message"]}
+                      style={{ height: buttonHeight }}
+                    >
+                      <CheckCircleOutlineIcon style={{ color: primaryColor }} />
+                      <div style={{ width: "8px" }} />
+                      <p>
+                        You request has been sent successfully.
+                        {/* I'll get to you as soon as
                       possbile */}
-                    </p>
-                  </div>
-                ) : (
-                  <Button
-                    className={styles.submit}
-                    disabled={isLoading}
-                    sx={{
-                      backgroundColor: secondaryColor,
-                      "&:hover": {
-                        backgroundColor: primaryColor,
-                      },
-                      "&.Mui-disabled": {
-                        backgroundColor: alpha(primaryColor, 0.5),
-                      },
-                    }}
-                    style={{ height: buttonHeight }}
-                    type="submit"
-                    variant="contained"
-                  >
-                    {isLoading ? (
-                      <CircularProgress
-                        sx={{ color: "white" }}
-                        style={{ width: 30, height: 30 }}
-                      />
-                    ) : (
-                      "Submit"
-                    )}
-                  </Button>
-                )}
-              </div>
-            </CSSTransition>
-          </SwitchTransition>
+                      </p>
+                    </div>
+                  ) : (
+                    <Button
+                      className={styles.submit}
+                      disabled={isLoading}
+                      sx={{
+                        backgroundColor: secondaryColor,
+                        "&:hover": {
+                          backgroundColor: primaryColor,
+                        },
+                        "&.Mui-disabled": {
+                          backgroundColor: alpha(primaryColor, 0.5),
+                        },
+                      }}
+                      style={{ height: buttonHeight }}
+                      type="submit"
+                      variant="contained"
+                    >
+                      {isLoading ? (
+                        <CircularProgress
+                          sx={{ color: "white" }}
+                          style={{ width: 30, height: 30 }}
+                        />
+                      ) : (
+                        "Submit"
+                      )}
+                    </Button>
+                  )}
+                </div>
+              </CSSTransition>
+            </SwitchTransition>
 
-          {formErrors.unknown != null && (
-            <p className={styles.errormessage}>{formErrors.unknown[0]}</p>
-          )}
-        </div>
+            {formErrors.unknown != null && (
+              <p className={styles.errormessage}>{formErrors.unknown[0]}</p>
+            )}
+          </div>
+        </Bounce>
       </form>
     </Element>
   );

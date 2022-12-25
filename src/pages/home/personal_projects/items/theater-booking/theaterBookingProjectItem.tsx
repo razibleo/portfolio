@@ -6,6 +6,7 @@ import HoverButton from "../../../../../shared/components/buttons/hover_button/h
 import RaisedButton from "../../../../../shared/components/buttons/raised_button/raisedbutton";
 import Assets from "../../../../../utils/assets";
 import styles from "../../projectitem.module.css";
+import Fade from "react-reveal/Fade";
 
 const TheaterBookingProjectItem = () => {
   return (
@@ -16,15 +17,18 @@ const TheaterBookingProjectItem = () => {
           className={styles["project-image-section"]}
           style={{ paddingTop: "4em" }}
         >
-          <div
-            style={{ display: "flex", justifyContent: "end" }}
-            className="me-3"
-          >
-            <img
-              src={Assets.THEATER_GIF}
-              style={{ width: "100%", border: `3px solid green` }}
-            />
-          </div>
+          <Fade duration={1250}>
+            <div
+              style={{ display: "flex", justifyContent: "end" }}
+              className="me-3"
+            >
+              <img
+                src={Assets.THEATER_GIF}
+                alt={"Theater Booking System Screenshot"}
+                style={{ width: "100%", border: `3px solid green` }}
+              />
+            </div>
+          </Fade>
         </Col>
 
         <Col md={5}>
@@ -37,8 +41,11 @@ const TheaterBookingProjectItem = () => {
             <h5 className={styles["techstackusedtext"]}>
               What's under the hood?
             </h5>
-            <HoverListItem title={"Java"} iconPath={Assets.JAVA_LOGO} />
-            <HoverListItem title={"JavaFX"} iconPath={Assets.JAVAFX_LOGO} />
+
+            <Fade right duration={1000} distance={"75px"}>
+              <HoverListItem title={"Java"} iconPath={Assets.JAVA_LOGO} />
+              <HoverListItem title={"JavaFX"} iconPath={Assets.JAVAFX_LOGO} />
+            </Fade>
           </div>
 
           <div className={styles["project-resource-btn"]}>

@@ -1,4 +1,5 @@
 import "./sectionheader.css";
+import Fade from "react-reveal/Fade";
 
 interface Props {
   title: string;
@@ -7,8 +8,13 @@ interface Props {
 const SectionHeader = ({ title }: Props) => {
   return (
     <>
-      <h2 className="section-title">{title}</h2>
-      <div className="underline"></div>
+      <Fade left duration={1000} distance="70px">
+        <h2 className="section-title">{title}</h2>
+      </Fade>
+
+      <Fade right duration={1000}>
+        <div className="underline"></div>
+      </Fade>
     </>
   );
 };

@@ -15,7 +15,7 @@ import github from "../../../assets/social/github.png";
 import ArrowDropDown from "@mui/icons-material/ArrowDropDownCircleRounded";
 import { Link } from "react-scroll";
 import { adujustedOffset, navBarHeight } from "../../navbar/navbar";
-
+import Fade from "react-reveal/Fade";
 const Intro: React.ElementType = () => {
   const x: RecursivePartial<IOptions> = {
     particles: {
@@ -100,59 +100,69 @@ const Intro: React.ElementType = () => {
         // canvasClassName="particles"
         className="particles"
       />
-      <article className="intro-main">
-        <img className="profileimg" src={profileImg} />
 
-        <h1 className="greeting-text">
-          Hi, I'm <span className="name">Razib Sarker</span>.{" "}
-          <span className="wave-emoji" role="img" aria-label="waving hand">
-            👋
-          </span>
-        </h1>
+      <Fade bottom distance="40px">
+        <div className="intro-content">
+          <article className="intro-main">
+            <img className="profileimg" src={profileImg} />
 
-        <h1 className="greeting-text">
-          <Typewriter
-            options={{
-              strings: [
-                "It's nice to meet you.",
-                "I'm a Full-Stack Engineer.",
-                "I like to design web & mobile apps.",
-                "I love learning new tech.",
-                "I love meeting new people.",
-              ],
-              autoStart: true,
-              loop: true,
-              deleteSpeed: 10,
-              cursor: "<",
-              delay: 100,
-            }}
-          />
-        </h1>
-      </article>
+            <h1 className="greeting-text">
+              Hi, I'm <span className="name">Razib Sarker</span>.{" "}
+              <span className="wave-emoji" role="img" aria-label="waving hand">
+                👋
+              </span>
+            </h1>
 
-      <div className="links">
-        <a
-          href="https://www.linkedin.com/in/razibsarkerleo/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={linkedin} alt="Linkedin Logo" />
-        </a>
+            <h1 className="greeting-text">
+              <Typewriter
+                options={{
+                  strings: [
+                    "It's nice to meet you.",
+                    "I'm a Full-Stack Engineer.",
+                    "I like to design web & mobile apps.",
+                    "I love learning new tech.",
+                    "I love meeting new people.",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  deleteSpeed: 10,
+                  cursor: "<",
+                  delay: 100,
+                }}
+              />
+            </h1>
+          </article>
 
-        <a
-          href="https://github.com/razibleo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={github} alt="Github Logo" />
-        </a>
-      </div>
+          <div className="links">
+            <a
+              href="https://www.linkedin.com/in/razibsarkerleo/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedin} alt="Linkedin Logo" />
+            </a>
 
-      <Link to="about" smooth={true} duration={500} offset={adujustedOffset}>
-        <div className="scroll-down">
-          <ArrowDropDown style={{ fontSize: "30px", cursor: "pointer" }} />
+            <a
+              href="https://github.com/razibleo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={github} alt="Github Logo" />
+            </a>
+          </div>
+
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            offset={adujustedOffset}
+          >
+            <div className="scroll-down">
+              <ArrowDropDown style={{ fontSize: "30px", cursor: "pointer" }} />
+            </div>
+          </Link>
         </div>
-      </Link>
+      </Fade>
     </div>
   );
 };
