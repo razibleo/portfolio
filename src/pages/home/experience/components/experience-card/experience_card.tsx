@@ -68,6 +68,7 @@ const ExperienceCard = (experience: ExperienceCardProps) => {
                 <img
                   className={styles["company-logo"]}
                   src={companyImageUrl}
+                  alt={"Company Logo"}
                   style={
                     experience.logoheight
                       ? {
@@ -99,6 +100,7 @@ const ExperienceCard = (experience: ExperienceCardProps) => {
                     <img
                       className={`${styles.techstackIcon}`}
                       src={tech.logoPath}
+                      alt={"Tech Stack Logo"}
                       style={
                         {
                           filter: ` invert(${

@@ -16,6 +16,8 @@ function monthYearFormat(date: Date): string {
   return `${months.get(date.getMonth())} ${date.getFullYear()}`;
 }
 
-export default {
+const dataHelper = {
   monthYearFormat,
 };
+
+export default dataHelper;

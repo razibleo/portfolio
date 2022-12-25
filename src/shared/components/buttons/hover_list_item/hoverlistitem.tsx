@@ -54,6 +54,7 @@ const HoverListItem = (props: Props) => {
         {props.iconPath && (
           <img
             src={props.iconPath}
+            alt={"Stack Logo"}
             className={styles.logo}
             style={{
               padding: props.iconPadding,

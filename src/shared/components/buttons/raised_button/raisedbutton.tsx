@@ -1,8 +1,4 @@
-import {
-  primaryBackgroundColor,
-  primaryColor,
-  secondaryBackgroundColor,
-} from "../../../../theme/colors";
+import { primaryColor } from "../../../../theme/colors";
 import styles from "./raisedbutton.module.css";
 import LaunchIcon from "@mui/icons-material/Launch";
 interface Props {

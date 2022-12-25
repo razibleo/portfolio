@@ -2,7 +2,6 @@ import { FC } from "react";
 import SectionHeader from "../../../shared/components/sectionheader/sectionheader";
 import ExperienceCard from "./components/experience-card/experience_card";
 import styles from "./experience.module.scss";
-import Assets from "../../../utils/assets";
 import experiences from "../../../data/experience_data";
 import dateHelper from "../../../utils/datehelper";
 import { Element } from "react-scroll";

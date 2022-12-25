@@ -7,7 +7,7 @@ import LocationIcon from "@mui/icons-material/LocationOnOutlined";
 
 import Typewriter from "typewriter-effect";
 import TagCloud from "./components/tagcloud";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import Fade from "react-reveal/Fade";
 
 const About = () => {
@@ -56,11 +56,17 @@ const About = () => {
                   <p>
                     At the start of 2017, I only intended to learn coding just
                     to impress my friends. But, over time, this obsession turned
-                    into a hobby and is now the <a href="">career</a> path that
-                    I have chosen. During this period, I had constantly been
-                    exposed to new technologies, leading me to work on several{" "}
-                    <a href="">projects</a> and collaborate with some great
-                    people.
+                    into a hobby and is now the{" "}
+                    <Link to="experience" className="link">
+                      career
+                    </Link>{" "}
+                    path that I have chosen. During this period, I had
+                    constantly been exposed to new technologies, leading me to
+                    work on several{" "}
+                    <Link to="projects" className="link">
+                      projects
+                    </Link>{" "}
+                    and collaborate with some great people.
                     {/*                 
                 At durin Since 2 - I've spent my time seeking and learning
                 new technologies and forms of digital expression. This has led

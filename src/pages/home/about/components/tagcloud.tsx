@@ -10,9 +10,9 @@ import {
   OrbitControls,
   PerspectiveCamera,
   Text,
-  TrackballControls,
+  // TrackballControls,
 } from "@react-three/drei";
-import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
+// import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import skills from "../../../../data/skills_data";
 
 function Word({ children, ...props }: any) {
@@ -26,9 +26,10 @@ function Word({ children, ...props }: any) {
   };
   const ref: any = useRef();
   const [hovered, setHovered] = useState(false);
-  const over = (e: ThreeEvent<PointerEvent>) => (
-    e.stopPropagation(), setHovered(true)
-  );
+  const over = (e: ThreeEvent<PointerEvent>) => {
+    e.stopPropagation();
+    setHovered(true);
+  };
   const out = () => setHovered(false);
   // Change the mouse cursor on hover
   useEffect(() => {
@@ -104,7 +105,7 @@ function Cloud({ wordsList, radius }: CloudProps) {
       }
 
     return temp;
-  }, [count, radius]);
+  }, [count, radius, wordsList]);
 
   console.log("words", words.length);
   return (
@@ -115,27 +116,27 @@ function Cloud({ wordsList, radius }: CloudProps) {
     </>
   );
 }
-function Zoom() {
-  return useFrame((state) => {
-    const zoomLevel = THREE.MathUtils.lerp(state.camera.zoom, 1, 0.025);
-    console.log("zoom", zoomLevel);
+// function Zoom() {
+//   return useFrame((state) => {
+//     const zoomLevel = THREE.MathUtils.lerp(state.camera.zoom, 1, 0.025);
+//     console.log("zoom", zoomLevel);
 
-    state.camera.zoom = zoomLevel;
-    state.camera.updateProjectionMatrix();
-  });
-}
+//     state.camera.zoom = zoomLevel;
+//     state.camera.updateProjectionMatrix();
+//   });
+// }
 
 function TagCloud() {
   const cameraRef = useRef<PerspectiveCameraProps>();
 
-  useEffect(() => {
-    setTimeout(() => {
-      const zoomLevel = THREE.MathUtils.lerp(1, 20, 0.5);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     const zoomLevel = THREE.MathUtils.lerp(1, 20, 0.5);
 
-      //   cameraRef.current!.zoom = 2;
-      //   cameraRef.current!.updateProjectionMatrix!();
-    }, 2000);
-  }, []);
+  //     //   cameraRef.current!.zoom = 2;
+  //     //   cameraRef.current!.updateProjectionMatrix!();
+  //   }, 2000);
+  // }, []);
 
   return (
     <Canvas style={{ height: "400px" }} dpr={[1, 2]}>

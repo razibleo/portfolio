@@ -43,3 +43,8 @@ body {
 .project-image-section {
   margin: 23px 0 0 0;
 }
+
+.link {
+  color: var(--primary-color);
+  cursor: pointer;
+}

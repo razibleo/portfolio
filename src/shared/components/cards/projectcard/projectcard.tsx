@@ -8,7 +8,6 @@ import PersonalProject from "../../../../models/project/personalproject";
 import HoverButton, {
   HoverButtonIconType,
 } from "../../buttons/hover_button/hoverbutton";
-import RaisedButton from "../../buttons/raised_button/raisedbutton";
 import { primaryColor } from "../../../../theme/colors";
 
 interface Props {

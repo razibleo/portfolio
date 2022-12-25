@@ -1,5 +1,5 @@
 import "./intro.css";
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback } from "react";
 import profileImg from "../../../assets/profile.jpeg";
 import Typewriter from "typewriter-effect";
 import Particles from "react-particles";
@@ -14,7 +14,7 @@ import linkedin from "../../../assets/social/linkedin.png";
 import github from "../../../assets/social/github.png";
 import ArrowDropDown from "@mui/icons-material/ArrowDropDownCircleRounded";
 import { Link } from "react-scroll";
-import { adujustedOffset, navBarHeight } from "../../navbar/navbar";
+import { adujustedOffset } from "../../navbar/navbar";
 import Fade from "react-reveal/Fade";
 const Intro: React.ElementType = () => {
   const x: RecursivePartial<IOptions> = {
@@ -104,7 +104,7 @@ const Intro: React.ElementType = () => {
       <Fade bottom distance="40px">
         <div className="intro-content">
           <article className="intro-main">
-            <img className="profileimg" src={profileImg} />
+            <img className="profileimg" src={profileImg} alt={"Profile"} />
 
             <h1 className="greeting-text">
               Hi, I'm <span className="name">Razib Sarker</span>.{" "}

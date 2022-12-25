@@ -1,23 +1,23 @@
-import React, { FC, useCallback, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import styles from "./navbar.module.scss";
-import { Link, Events } from "react-scroll";
+import { Link } from "react-scroll";
 import useAtBottom from "../../shared/hooks/useAtbottom";
 // import MobileNav from '../mobileNav/MobileNav'
 export const navBarHeight = 60;
 export const adujustedOffset = -navBarHeight;
 
-enum Navlink {
-  about = "about",
-  experience = "experience",
-  projects = "projects",
-  awards = "awards",
-  contact = "contact",
-  unknown = "unknown,",
-}
-const NavlinkFromString = (value: String): Navlink =>
-  Object.values(Navlink).find(
-    (item) => item.toLocaleLowerCase() === value.toLowerCase()
-  ) ?? Navlink.unknown;
+// enum Navlink {
+//   about = "about",
+//   experience = "experience",
+//   projects = "projects",
+//   awards = "awards",
+//   contact = "contact",
+//   unknown = "unknown,",
+// }
+// const NavlinkFromString = (value: String): Navlink =>
+//   Object.values(Navlink).find(
+//     (item) => item.toLocaleLowerCase() === value.toLowerCase()
+//   ) ?? Navlink.unknown;
 
 const Navbar: FC = () => {
   const [mobilenavVisible, setMobilenavVisible] = useState<boolean>(false);
@@ -81,7 +81,7 @@ const Navbar: FC = () => {
           <Link
             to="about"
             spy={true}
-            smooth={true}
+            // smooth={true}
             duration={500}
             offset={adujustedOffset}
             className={baseNavStyle}
@@ -94,7 +94,7 @@ const Navbar: FC = () => {
           <Link
             to="experience"
             spy={true}
-            smooth={true}
+            // smooth={true}
             duration={500}
             offset={adujustedOffset}
             className={baseNavStyle}
@@ -107,7 +107,7 @@ const Navbar: FC = () => {
           <Link
             to="projects"
             spy={true}
-            smooth={true}
+            // smooth={true}
             duration={500}
             offset={adujustedOffset}
             className={baseNavStyle}
@@ -121,7 +121,7 @@ const Navbar: FC = () => {
           <Link
             to="awards"
             spy={true}
-            smooth={true}
+            // smooth={true}
             duration={500}
             offset={adujustedOffset}
             className={baseNavStyle}
@@ -134,7 +134,7 @@ const Navbar: FC = () => {
           <Link
             to="contact"
             spy={true}
-            smooth={true}
+            // smooth={true}
             duration={500}
             offset={adujustedOffset}
             className={isAtBottom ? selectedBaseStyle : baseNavStyle}
