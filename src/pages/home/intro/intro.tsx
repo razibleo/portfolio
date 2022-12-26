@@ -1,6 +1,5 @@
 import "./intro.css";
 import React, { useCallback } from "react";
-import profileImg from "../../../assets/profile.jpeg";
 import Typewriter from "typewriter-effect";
 import Particles from "react-particles";
 import type {
@@ -10,12 +9,12 @@ import type {
   IOptions,
 } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
-import linkedin from "../../../assets/social/linkedin.png";
-import github from "../../../assets/social/github.png";
+
 import ArrowDropDown from "@mui/icons-material/ArrowDropDownCircleRounded";
 import { Link } from "react-scroll";
 import { adujustedOffset } from "../../navbar/navbar";
 import Fade from "react-reveal/Fade";
+import Assets from "../../../utils/assets";
 const Intro: React.ElementType = () => {
   const x: RecursivePartial<IOptions> = {
     particles: {
@@ -104,7 +103,11 @@ const Intro: React.ElementType = () => {
       <Fade bottom distance="40px">
         <div className="intro-content">
           <article className="intro-main">
-            <img className="profileimg" src={profileImg} alt={"Profile"} />
+            <img
+              className="profileimg"
+              src={Assets.PROFILE_IMAGE}
+              alt={"Profile"}
+            />
 
             <h1 className="greeting-text">
               Hi, I'm <span className="name">Razib Sarker</span>.{" "}
@@ -139,7 +142,7 @@ const Intro: React.ElementType = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={linkedin} alt="Linkedin Logo" />
+              <img src={Assets.LINKEDIN_LOGO} alt="Linkedin Logo" />
             </a>
 
             <a
@@ -147,7 +150,7 @@ const Intro: React.ElementType = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={github} alt="Github Logo" />
+              <img src={Assets.GITHUB_LOGO} alt="Github Logo" />
             </a>
           </div>
 

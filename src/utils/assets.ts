@@ -107,6 +107,7 @@ import ReacherMappingInternal from "../assets/projectimages/reacher_mapping_inte
 import ReacherLocalizationInternal from "../assets/projectimages/reacher_localization_internal.gif";
 
 ///// miscellaneous
+
 import UCResearch from "../assets/miscellaneous/uc_undergraduate-min.png";
 import Ega from "../assets/miscellaneous/ega-min.jpeg";
 import MVPLogo from "../assets/miscellaneous/mvp_logo.jpeg";
@@ -123,6 +124,11 @@ import MAWJLogo from "../assets/miscellaneous/mawj_app_logo.png";
 import IOTBanner from "../assets/miscellaneous/iot_banner.jpg";
 import WebDesignBanner from "../assets/miscellaneous/web_design_banner.png";
 import CodeBanner from "../assets/miscellaneous/code_banner.png";
+
+/// intro assets
+import profileImg from "../assets/profile.jpeg";
+import linkedin from "../assets/social/linkedin.png";
+import github from "../assets/social/github.png";
 
 class Assets {
   /////Icons
@@ -250,7 +256,44 @@ class Assets {
   static readonly REACHER_NAVIGATION_INTERNAL_GIF: string =
     ReacherNavigationInternal;
 
+  public static getAllProjectImages = (): string[] => [
+    this.EIEV_SOCIAL,
+    this.EIEV_HOME,
+    this.ERC_HOME,
+    this.ERC_PROJECT_SHARE,
+    this.KHAYMATZAMAN_SCREENSHOT,
+    this.SITT_SCREENSHOT,
+    this.MAWJ_SCREENSHOT,
+    this.SMARTFIX_SCREENSHOT,
+    this.BSEEN_SCREENSHOT,
+    this.NOMADIC_TRIBE_SCREENSHOT,
+    this.TIC_TAC_TOE_HOME,
+    this.TIC_TAC_TOE_GAMEPLAY,
+    this.TIC_TAC_TOE_SCREENSHOT,
+    this.THEATER_GIF,
+    this.FROGGER_GIF,
+    this.FROGGER_SCREENSHOT,
+    this.SPACEINVADERS_GIF,
+    this.SPACEINVADERS_SCREENSHOT,
+    this.COUMMUNISERVE_HOME,
+    this.COUMMUNISERVE_MAPS,
+    this.COUMMUNISERVE_SCREENSHOT,
+    this.COINCOUNTER_GIF,
+    this.FACEDETECTION_GIF,
+    this.COLLISION_AVOIDANCE_GIF,
+    this.COLOR_DETECTION_GIF,
+    this.GRIPPER_GIF,
+    this.LINE_FOLLOWER_GIF,
+    this.REACHER_CHATBOT_GIF,
+    this.REACHER_COLLISION_AVOIDANCE_GIF,
+    this.REACHER_NAVIGATION_GIF,
+    this.REACHER_LOCALIZATION_INTERNAL_GIF,
+    this.REACHER_MAPPING_INTERNAL_GIF,
+    this.REACHER_NAVIGATION_INTERNAL_GIF,
+  ];
+
   /// miscellaneous
+
   static readonly UC_RESEARCH: string = UCResearch;
   static readonly EGA_COMPETITION: string = Ega;
   static readonly MVP_LOGO: string = MVPLogo;
@@ -267,6 +310,16 @@ class Assets {
   static readonly IOT_BANNER: string = IOTBanner;
   static readonly WEBDESIGN_BANNER: string = WebDesignBanner;
   static readonly CODE_BANNER: string = CodeBanner;
+
+  /// intro assets////
+  static readonly PROFILE_IMAGE: string = profileImg;
+  static readonly GITHUB_LOGO: string = github;
+  static readonly LINKEDIN_LOGO: string = linkedin;
+  public static getAllIntroAssets = (): string[] => [
+    this.PROFILE_IMAGE,
+    this.GITHUB_LOGO,
+    this.LINKEDIN_LOGO,
+  ];
 }
 
 export default Assets;
