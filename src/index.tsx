@@ -5,15 +5,17 @@ import reportWebVitals from "./reportWebVitals";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
-import { RouterProvider } from "react-router-dom";
-import mainRouter from "./routes";
+import { MemoryRouter } from "react-router-dom";
+import MainRoutes from "./pages/routes/routes";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={mainRouter} />
+    <MemoryRouter>
+      <MainRoutes />
+    </MemoryRouter>
   </React.StrictMode>
 );
 

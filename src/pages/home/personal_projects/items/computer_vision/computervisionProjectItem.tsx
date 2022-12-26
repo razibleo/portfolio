@@ -26,7 +26,7 @@ const ComputerVisionProjectItem = () => {
                 <h5 className={styles["techstackusedtext"]}>
                   What's under the hood?
                 </h5>
-                <Fade duration={1000} left distance={"250px"}>
+                <Fade duration={1000} left distance={"75px"}>
                   <HoverListItem
                     title={"Python"}
                     iconPath={Assets.PYTHON_LOGO}
