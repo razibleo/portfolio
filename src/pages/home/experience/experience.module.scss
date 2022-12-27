@@ -1,10 +1,37 @@
 .experience-wrapper {
   background-color: var(--primary-background-color);
-  padding: 5% 0 8% 0;
+  padding: 5% 0 5% 0;
 }
 .exp-card-section {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin-top: 32px;
+  .experience-item-wrapper {
+    margin: 0 0.5em 2em 0.5em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .exp-card-section {
+    .experience-item-wrapper {
+      width: 390px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .experience-wrapper {
+    padding: 3rem 0 3rem 0;
+  }
+
+  .exp-card-section {
+    .exp-card-section {
+      .experience-item-wrapper {
+        max-width: 450px;
+        width: 100%;
+      }
+    }
+  }
 }

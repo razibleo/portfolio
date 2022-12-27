@@ -37,6 +37,12 @@
 strong {
   font-weight: 700;
 }
+html {
+  font-size: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -46,7 +52,9 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   font-weight: bold;
-  overflow: scroll;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
 }
 
 p {

@@ -1,4 +1,4 @@
-import "./about.css";
+import styles from "./about.module.scss";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -13,14 +13,14 @@ import Fade from "react-reveal/Fade";
 const About = () => {
   return (
     <Element name="about">
-      <Fade duration={1000}>
-        <div className="about-wrapper">
-          <SectionHeader title={"About"} />
-          <Container fluid className="about-content">
+      <div className={styles["about-wrapper"]}>
+        <SectionHeader title={"About"} />
+        <Fade duration={1200}>
+          <Container fluid className={styles["about-content"]}>
             <Row>
-              <Col md={6}>
-                <div className="about-text">
-                  <h2>Who am I?</h2>
+              <Col md={6} className={styles["info-wrapper"]}>
+                <div className={styles["about-text"]}>
+                  <h2 className={styles["section-header"]}>Who am I?</h2>
                   <p>Hi, i'm Razib 😄</p>
                   <p>
                     ⚡️ A passionate 👨‍💻Full Stack Web & 📱Mobile developer
@@ -32,7 +32,7 @@ const About = () => {
                   </p>
                   <p>⚡️ Flight sim geek.✈️</p>
 
-                  <div className="i-love-section">
+                  <div className={styles["i-love-section"]}>
                     <p style={{ paddingRight: "4px" }}>⚡️ I love</p>
                     <p>
                       <Typewriter
@@ -52,18 +52,18 @@ const About = () => {
                   </div>
                 </div>
 
-                <div className="about-summary">
+                <div className={styles["about-summary"]}>
                   <p>
                     At the start of 2017, I only intended to learn coding just
                     to impress my friends. But, over time, this obsession turned
                     into a hobby and is now the{" "}
-                    <Link to="experience" className="link">
+                    <Link to="experience" className={styles["link"]}>
                       career
                     </Link>{" "}
                     path that I have chosen. During this period, I had
                     constantly been exposed to new technologies, leading me to
                     work on several{" "}
-                    <Link to="projects" className="link">
+                    <Link to="projects" className={styles["link"]}>
                       projects
                     </Link>{" "}
                     and collaborate with some great people.
@@ -72,7 +72,7 @@ const About = () => {
                 new technologies and forms of digital expression. This has led
                 to me working on some amazing world-class{" "} */}
                     {/* <Link
-                className="textLink"
+                className={styles["textLink]}"
                 to="projects"
                 spy={true}
                 smooth={true}
@@ -82,7 +82,7 @@ const About = () => {
               </Link>
               , worked at some{' '}
               <Link
-                className="textLink"
+                className={styles["textLink]}"
                 to="experience"
                 spy={true}
                 smooth={true}
@@ -94,21 +94,27 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="location-wrapper">
+                <div className={styles["location-wrapper"]}>
                   <LocationIcon />
                   <p>Abu Dhabi, UAE</p>
                 </div>
               </Col>
-              <Col md={6}>
-                <h2 className="skills-header">Skills</h2>
-                <div style={{ width: "110%" }}>
+              <Col md={6} className={styles["word-cloud-section"]}>
+                <h2
+                  className={
+                    styles["skills-header"] + " " + styles["section-header"]
+                  }
+                >
+                  Skills
+                </h2>
+                <div style={{ width: "100%" }}>
                   <TagCloud />
                 </div>
               </Col>
             </Row>
           </Container>
-        </div>
-      </Fade>
+        </Fade>
+      </div>
     </Element>
   );
 };

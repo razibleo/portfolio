@@ -12,11 +12,11 @@ const Experience: FC = () => {
     <Element name="experience" className={styles["experience-wrapper"]}>
       <SectionHeader title={"Experience"} />
 
-      <Fade bottom duration={1000} distance="100px">
-        <div className={styles["exp-card-section"]}>
-          {experiences.map((e, index) => {
-            return (
-              <div style={{ width: "390px" }}>
+      <div className={styles["exp-card-section"]}>
+        {experiences.map((e, index) => {
+          return (
+            <div className={styles["experience-item-wrapper"]}>
+              <Fade bottom duration={1000} distance="100px">
                 <ExperienceCard
                   link={e.companyUrl}
                   companyBackGroundUrl={e.companyBackgroundUrl}
@@ -36,11 +36,11 @@ const Experience: FC = () => {
                   colourPrimary={"green"}
                   colourSecondary={"transparent"}
                 />
-              </div>
-            );
-          })}
-        </div>
-      </Fade>
+              </Fade>
+            </div>
+          );
+        })}
+      </div>
     </Element>
   );
 };

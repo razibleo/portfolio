@@ -1,4 +1,4 @@
-import "./intro.css";
+import styles from "./intro.module.scss";
 import React, { useCallback } from "react";
 import Typewriter from "typewriter-effect";
 import Particles from "react-particles";
@@ -84,47 +84,52 @@ const Intro: React.ElementType = () => {
 
   const particlesLoaded = useCallback(
     async (container: Container | undefined) => {
+      console.log("Particles loaded");
       await console.log("container", container);
     },
     []
   );
 
   return (
-    <div className="intro">
+    <div className={styles.intro}>
       <Particles
         params={x}
         // style={{ position: "absolute" }}
         init={particlesInit}
         loaded={particlesLoaded}
         // canvasClassName="particles"
-        className="particles"
+        className={styles.particles}
       />
-
+      z
       <Fade bottom distance="40px">
-        <div className="intro-content">
-          <article className="intro-main">
+        <div className={styles["intro-content"]}>
+          <article className={styles["intro-main"]}>
             <img
-              className="profileimg"
+              className={styles["profileimg"]}
               src={Assets.PROFILE_IMAGE}
               alt={"Profile"}
             />
 
-            <h1 className="greeting-text">
-              Hi, I'm <span className="name">Razib Sarker</span>.{" "}
-              <span className="wave-emoji" role="img" aria-label="waving hand">
+            <h1 className={styles["name-text"]}>
+              Hi, I'm <span className={styles.name}>Razib Sarker</span>.{" "}
+              <span
+                className={styles["wave-emoji"]}
+                role="img"
+                aria-label="waving hand"
+              >
                 👋
               </span>
             </h1>
 
-            <h1 className="greeting-text">
+            <h1 className={styles["greeting-text"]}>
               <Typewriter
                 options={{
                   strings: [
-                    "It's nice to meet you.",
-                    "I'm a Full-Stack Engineer.",
+                    // "It's nice to meet you.",
+                    // "I'm a Full-Stack Engineer.",
                     "I like to design web & mobile apps.",
-                    "I love learning new tech.",
-                    "I love meeting new people.",
+                    // "I love learning new tech.",
+                    // "I love meeting new people.",
                   ],
                   autoStart: true,
                   loop: true,
@@ -136,7 +141,7 @@ const Intro: React.ElementType = () => {
             </h1>
           </article>
 
-          <div className="links">
+          <div className={styles.links}>
             <a
               href="https://www.linkedin.com/in/razibsarkerleo/"
               target="_blank"
@@ -160,8 +165,8 @@ const Intro: React.ElementType = () => {
             duration={500}
             offset={adujustedOffset}
           >
-            <div className="scroll-down">
-              <ArrowDropDown style={{ fontSize: "30px", cursor: "pointer" }} />
+            <div className={styles["scroll-down"]}>
+              <ArrowDropDown style={{ fontSize: "40px", cursor: "pointer" }} />
             </div>
           </Link>
         </div>

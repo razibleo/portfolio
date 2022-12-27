@@ -1,9 +1,15 @@
+$profile_image_size: 120px;
 .intro {
-  height: calc(100vh);
+  height: 100vh;
+  width: 100%;
+  position: relative;
 }
 .intro-content {
+  position: relative;
+
   height: 100%;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,21 +17,31 @@
   position: relative;
   text-align: center;
 }
+.particles {
+  background-color: #272b33;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .profileimg {
   border-radius: 50%;
   border: 0.2rem solid var(--primary-color);
-  width: 120px;
-  height: 120px;
+  width: $profile_image_size;
+  height: $profile_image_size;
   transition: all 0.5s ease-in-out 0s;
 }
 
 .profileimg:hover {
-  width: 200px;
-  height: 200px;
+  width: calc($profile_image_size * 1.5);
+  height: calc($profile_image_size * 1.5);
 }
 
+.name-text,
 .greeting-text {
-  margin: 15px;
+  margin: 15px 0;
   font-weight: 700;
   font-size: 2.2rem;
 }
@@ -47,15 +63,6 @@
   transform-origin: 70% 70%;
   /* an
     imation-fill-mode: forwards; */
-}
-
-.particles {
-  background-color: #272b33;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
 }
 
 .links {
@@ -80,10 +87,13 @@
 }
 
 .scroll-down {
+  margin: 0;
   position: absolute;
+  left: 0;
+  right: 0;
   /* left: 0; */
   /* right: 0; */
-  bottom: 75px;
+  bottom: 12%;
 }
 
 @keyframes wave {
@@ -113,5 +123,25 @@
 
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .name-text {
+    padding-top: 5%;
+    font-size: 1.5rem;
+  }
+
+  .greeting-text {
+    font-size: 1.4rem;
+  }
+
+  .links {
+    margin-top: 0;
+  }
+
+  .links a img {
+    width: 35px;
+    height: 35px;
   }
 }

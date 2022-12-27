@@ -11,3 +11,8 @@
   margin-bottom: 15px;
   width: 70px;
 }
+@media only screen and (max-width: 600px) {
+  .section-title {
+    font-size: calc(25pt * 0.75);
+  }
+}

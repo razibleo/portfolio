@@ -1,0 +1,96 @@
+$sectionTitleSize: 27px;
+.about-wrapper {
+  background-color: var(--secondary-background-color);
+  padding: 3% 0 6% 0;
+}
+body {
+  color: white;
+}
+.about-content {
+  width: 85%;
+  max-width: 1300px;
+}
+
+.section-header {
+  font-weight: bold;
+  font-size: $sectionTitleSize;
+  margin: 23px 0;
+}
+
+.skills-header {
+  text-align: center;
+}
+
+.i-love-section {
+  display: flex;
+}
+
+.location-wrapper {
+  border-top: 1px white solid;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+}
+.location-wrapper p {
+  margin: 0 8px;
+}
+
+.about-summary a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.project-image-section {
+  margin: 23px 0 0 0;
+}
+
+.link {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.word-cloud-section {
+  padding-left: 3em;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-wrapper {
+    padding: 3rem 0 3rem 0;
+  }
+
+  .section-header {
+    font-size: calc($sectionTitleSize * 0.75);
+    // text-align: center;
+  }
+
+  .info-wrapper {
+    padding-bottom: 2rem;
+  }
+
+  .about-content {
+    width: 95%;
+
+    .about-text {
+      p {
+        font-size: 16px;
+      }
+    }
+    .about-summary {
+      margin-top: 0.8rem;
+
+      p {
+        font-size: 17px;
+      }
+    }
+    .location-wrapper {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .word-cloud-section {
+    padding: 0;
+  }
+}

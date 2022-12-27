@@ -14,6 +14,9 @@ import {
 } from "@react-three/drei";
 // import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import skills from "../../../../data/skills_data";
+import useContainerDimensions from "../../../../shared/hooks/useContainerDimensions";
+import { lerp } from "three/src/math/MathUtils";
+import { clamp } from "../../../../utils/common_functions";
 
 function Word({ children, ...props }: any) {
   const color = new THREE.Color();
@@ -116,18 +119,43 @@ function Cloud({ wordsList, radius }: CloudProps) {
     </>
   );
 }
-// function Zoom() {
-//   return useFrame((state) => {
-//     const zoomLevel = THREE.MathUtils.lerp(state.camera.zoom, 1, 0.025);
-//     console.log("zoom", zoomLevel);
 
-//     state.camera.zoom = zoomLevel;
-//     state.camera.updateProjectionMatrix();
-//   });
-// }
+interface ZoomProps {
+  zoomLevel: number;
+}
+function Zoom(props: ZoomProps) {
+  return useFrame((state) => {
+    const zoomLevel = THREE.MathUtils.lerp(
+      state.camera.zoom,
+      props.zoomLevel,
+      0.025
+    );
+    console.log("zoom", zoomLevel);
+
+    state.camera.zoom = zoomLevel;
+    state.camera.updateProjectionMatrix();
+  });
+}
 
 function TagCloud() {
   const cameraRef = useRef<PerspectiveCameraProps>();
+
+  const ref = useRef<HTMLCanvasElement>(null);
+  const dimensions = useContainerDimensions(ref);
+
+  const minWidthThreshhold = 300;
+  const maxWidthThreshold = 550;
+  let zoomLevel = lerp(
+    0.7,
+    1,
+    clamp(
+      (dimensions.width - minWidthThreshhold) /
+        (maxWidthThreshold - minWidthThreshhold),
+      0,
+      1
+    )
+  );
+  // console.log("zoom level", zoomLevel);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -139,7 +167,7 @@ function TagCloud() {
   // }, []);
 
   return (
-    <Canvas style={{ height: "400px" }} dpr={[1, 2]}>
+    <Canvas style={{ height: "400px" }} dpr={[1, 2]} ref={ref}>
       <PerspectiveCamera
         ref={cameraRef}
         makeDefault={true}
@@ -157,7 +185,7 @@ function TagCloud() {
         maxDistance={32}
         enableZoom={false}
       />
-      {/* <Zoom />d */}
+      <Zoom zoomLevel={zoomLevel} />
     </Canvas>
   );
 }
