@@ -130,7 +130,6 @@ function Zoom(props: ZoomProps) {
       props.zoomLevel,
       0.025
     );
-    console.log("zoom", zoomLevel);
 
     state.camera.zoom = zoomLevel;
     state.camera.updateProjectionMatrix();
@@ -140,8 +139,11 @@ function Zoom(props: ZoomProps) {
 function TagCloud() {
   const cameraRef = useRef<PerspectiveCameraProps>();
 
-  const ref = useRef<HTMLCanvasElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const cavasRef = useRef<HTMLCanvasElement>(null);
+
   const dimensions = useContainerDimensions(ref);
+  console.log("dimensions", dimensions.width);
 
   const minWidthThreshhold = 300;
   const maxWidthThreshold = 550;
@@ -155,6 +157,25 @@ function TagCloud() {
       1
     )
   );
+
+  useEffect(() => {
+    const canvasEl = cavasRef.current!;
+    const onTouchStart = (e: TouchEvent) => {
+      e.preventDefault();
+      console.log("touch");
+    };
+    // canvasEl.addEventListener("touchstart", onTouchStart);
+    // canvasEl.addEventListener("touchmove", onTouchStart);
+    // canvasEl.addEventListener("touchend", onTouchStart);
+    // canvasEl.addEventListener("touchcancel", onTouchStart);
+
+    // return () => {
+    //   canvasEl.removeEventListener("touchstart", onTouchStart);
+    //   canvasEl.removeEventListener("touchmove", onTouchStart);
+    //   canvasEl.removeEventListener("touchend", onTouchStart);
+    //   canvasEl.removeEventListener("touchcancel", onTouchStart);
+    // };
+  }, []);
   // console.log("zoom level", zoomLevel);
 
   // useEffect(() => {
@@ -167,26 +188,37 @@ function TagCloud() {
   // }, []);
 
   return (
-    <Canvas style={{ height: "400px" }} dpr={[1, 2]} ref={ref}>
-      <PerspectiveCamera
-        ref={cameraRef}
-        makeDefault={true}
-        position={[0, 0, 20 * 1.46]}
-        fov={90}
-      />
-      <fog attach="fog" args={["#202025", 0, 100]} />
-      <Cloud wordsList={skills} radius={20} />
-      {/* <TrackballControls /> */}
-      <OrbitControls
-        makeDefault={true}
-        autoRotate={true}
-        autoRotateSpeed={5}
-        // minZoom={1.33}
-        maxDistance={32}
-        enableZoom={false}
-      />
-      <Zoom zoomLevel={zoomLevel} />
-    </Canvas>
+    <div ref={ref}>
+      <Canvas
+        style={{
+          height: "400px",
+          // pointerEvents: "none",
+        }}
+        dpr={[1, 2]}
+        ref={cavasRef}
+      >
+        <PerspectiveCamera
+          ref={cameraRef}
+          makeDefault={true}
+          position={[0, 0, 20 * 1.46]}
+          fov={90}
+        />
+        <fog attach="fog" args={["#202025", 0, 100]} />
+        <Cloud wordsList={skills} radius={20} />
+        {/* <TrackballControls /> */}
+        <OrbitControls
+          makeDefault={true}
+          autoRotate={true}
+          autoRotateSpeed={5}
+          // minZoom={1.33}
+          // minPolarAngle={Math.PI / 2}
+          // maxPolarAngle={Math.PI / 2}
+          maxDistance={32}
+          enableZoom={false}
+        />
+        <Zoom zoomLevel={zoomLevel} />
+      </Canvas>
+    </div>
   );
 }
 

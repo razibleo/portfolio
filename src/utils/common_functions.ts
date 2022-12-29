@@ -1,6 +1,6 @@
-export function sleep(duration: number) {
+export function sleep(durationInMs: number) {
   return new Promise((resolve) => {
-    setTimeout(resolve, duration);
+    setTimeout(resolve, durationInMs);
   });
 }
 

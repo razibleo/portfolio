@@ -107,7 +107,7 @@ const About = () => {
                 >
                   Skills
                 </h2>
-                <div style={{ width: "100%" }}>
+                <div className={styles["word-cloud-wrapper"]}>
                   <TagCloud />
                 </div>
               </Col>

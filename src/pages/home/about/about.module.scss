@@ -54,6 +54,10 @@ body {
   padding-left: 3em;
 }
 
+.word-cloud-wrapper {
+  width: 110%;
+}
+
 @media only screen and (max-width: 600px) {
   .about-wrapper {
     padding: 3rem 0 3rem 0;
@@ -92,5 +96,8 @@ body {
 
   .word-cloud-section {
     padding: 0;
+  }
+  .word-cloud-wrapper {
+    width: 100%;
   }
 }
