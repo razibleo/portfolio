@@ -1,14 +1,12 @@
 import React, { FC, useState } from "react";
 import styles from "./navbar.module.scss";
-import { Link, scrollSpy } from "react-scroll";
+import { Link } from "react-scroll";
 import useAtBottom from "../../shared/hooks/useAtbottom";
 import AnimatedMenuButton from "./components/animated-menu-button/animated-menu-button";
 // import MobileNav from '../mobileNav/MobileNav'
-import { useEffect } from "react";
 import MobileNavBar from "./components/mobilenavbar/mobilenavbar";
 export const navBarHeight = 60;
 export const adujustedOffset = -navBarHeight;
-
 // enum Navlink {
 //   about = "about",
 //   experience = "experience",
@@ -24,8 +22,17 @@ export const adujustedOffset = -navBarHeight;
 
 const Navbar: FC = () => {
   const [isMenuOpened, setMenuOpened] = useState<boolean>(false);
+  const [currentLinkName, setCurrentLink] = useState<string>("");
 
   const isAtBottom = useAtBottom({ offset: 10 });
+  const onChangeActiveLink = (linkName: string) => {
+    setCurrentLink(linkName);
+  };
+  const onChangeInActiveLink = (linkName: string) => {
+    if (linkName === "about") {
+      setCurrentLink("");
+    }
+  };
 
   const baseNavStyle = styles.navitem;
   const selectedBaseStyle = styles["navitem-selected"];
@@ -37,6 +44,14 @@ const Navbar: FC = () => {
   // }, []);
 
   // console.log("scrollspy", scrollSpy.scrollSpyContainers);
+
+  let adjustedCurrentLinkName = isAtBottom ? "Contact" : currentLinkName;
+
+  if (adjustedCurrentLinkName.length > 0) {
+    adjustedCurrentLinkName =
+      adjustedCurrentLinkName[0].toUpperCase() +
+      adjustedCurrentLinkName.substring(1);
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -56,6 +71,8 @@ const Navbar: FC = () => {
               offset={adujustedOffset}
               className={baseNavStyle}
               activeClass={selectedBaseStyle}
+              onSetActive={onChangeActiveLink}
+              onSetInactive={onChangeInActiveLink}
             >
               ABOUT
             </Link>
@@ -69,6 +86,7 @@ const Navbar: FC = () => {
               offset={adujustedOffset}
               className={baseNavStyle}
               activeClass={selectedBaseStyle}
+              onSetActive={onChangeActiveLink}
             >
               EXPERIENCE
             </Link>
@@ -82,6 +100,7 @@ const Navbar: FC = () => {
               offset={adujustedOffset}
               className={baseNavStyle}
               activeClass={selectedBaseStyle}
+              onSetActive={onChangeActiveLink}
             >
               PROJECTS
             </Link>
@@ -96,6 +115,7 @@ const Navbar: FC = () => {
               offset={adujustedOffset}
               className={baseNavStyle}
               activeClass={isAtBottom ? baseNavStyle : selectedBaseStyle}
+              onSetActive={onChangeActiveLink}
             >
               AWARDS
             </Link>
@@ -109,11 +129,14 @@ const Navbar: FC = () => {
               offset={adujustedOffset}
               className={isAtBottom ? selectedBaseStyle : baseNavStyle}
               activeClass={selectedBaseStyle}
+              onSetActive={onChangeActiveLink}
             >
               CONTACT
             </Link>
           </div>
         </div>
+        <p className={styles.title}>{adjustedCurrentLinkName}</p>
+
         <span className={styles["menu-icon-wrapper"]}>
           <AnimatedMenuButton
             isOpened={isMenuOpened}

@@ -12,6 +12,7 @@ const MobileNavBar: FC<Props> = (props) => {
   const isAtBottom = useAtBottom({ offset: 10 });
   const baseNavStyle = styles.navitem;
   const selectedBaseStyle = styles["navitem-selected"];
+
   return (
     <section
       className={styles.wrapper + " " + (props.isOpened ? styles.open : "")}
