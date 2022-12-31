@@ -17,6 +17,7 @@ import skills from "../../../../data/skills_data";
 import useContainerDimensions from "../../../../shared/hooks/useContainerDimensions";
 import { lerp } from "three/src/math/MathUtils";
 import { clamp } from "../../../../utils/common_functions";
+import useScreenDimensions from "../../../../shared/hooks/useScreenDimensions";
 
 function Word({ children, ...props }: any) {
   const color = new THREE.Color();
@@ -54,7 +55,7 @@ function Word({ children, ...props }: any) {
       ref={ref}
       onPointerOver={over}
       onPointerOut={out}
-      onClick={() => console.log("clicked")}
+      // onClick={() => console.log("clicked")}
       {...props}
       {...fontProps}
       children={children}
@@ -91,14 +92,14 @@ function Cloud({ wordsList, radius }: CloudProps) {
       remainingStartIndex,
       wordsList.length
     );
-    console.log("remainingWordList", remainingWordList);
+    // console.log("remainingWordList", remainingWordList);
 
     const phiSpanR = Math.PI / (remainingWordList.length + 1);
     const thetaSpanR = (Math.PI * 2) / remainingWordList.length;
     for (let i = 1; i < remainingWordList.length + 1; i++)
       for (let j = 0; j < remainingWordList.length; j++) {
         const index = j + (i - 1) * remainingWordList.length;
-        console.log("index", index);
+        // console.log("index", index);
         temp.push({
           vector: new THREE.Vector3().setFromSpherical(
             spherical.set(radius * 0.6, phiSpanR * 1 * 2.25, thetaSpanR * j)
@@ -110,7 +111,7 @@ function Cloud({ wordsList, radius }: CloudProps) {
     return temp;
   }, [count, radius, wordsList]);
 
-  console.log("words", words.length);
+  // console.log("words", words.length);
   return (
     <>
       {words.map((item, index) => (
@@ -143,7 +144,10 @@ function TagCloud() {
   const cavasRef = useRef<HTMLCanvasElement>(null);
 
   const dimensions = useContainerDimensions(ref);
-  console.log("dimensions", dimensions.width);
+  // console.log("dimensions", dimensions.width);
+
+  const screenDimensions = useScreenDimensions();
+  // console.log("screenDimensions", screenDimensions.width);
 
   const minWidthThreshhold = 300;
   const maxWidthThreshold = 550;
@@ -158,41 +162,12 @@ function TagCloud() {
     )
   );
 
-  useEffect(() => {
-    const canvasEl = cavasRef.current!;
-    const onTouchStart = (e: TouchEvent) => {
-      e.preventDefault();
-      console.log("touch");
-    };
-    // canvasEl.addEventListener("touchstart", onTouchStart);
-    // canvasEl.addEventListener("touchmove", onTouchStart);
-    // canvasEl.addEventListener("touchend", onTouchStart);
-    // canvasEl.addEventListener("touchcancel", onTouchStart);
-
-    // return () => {
-    //   canvasEl.removeEventListener("touchstart", onTouchStart);
-    //   canvasEl.removeEventListener("touchmove", onTouchStart);
-    //   canvasEl.removeEventListener("touchend", onTouchStart);
-    //   canvasEl.removeEventListener("touchcancel", onTouchStart);
-    // };
-  }, []);
-  // console.log("zoom level", zoomLevel);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     const zoomLevel = THREE.MathUtils.lerp(1, 20, 0.5);
-
-  //     //   cameraRef.current!.zoom = 2;
-  //     //   cameraRef.current!.updateProjectionMatrix!();
-  //   }, 2000);
-  // }, []);
-
   return (
     <div ref={ref}>
       <Canvas
         style={{
           height: "400px",
-          // pointerEvents: "none",
+          pointerEvents: screenDimensions.width < 600 ? "none" : undefined,
         }}
         dpr={[1, 2]}
         ref={cavasRef}

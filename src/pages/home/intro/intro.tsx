@@ -74,7 +74,7 @@ const Intro: React.ElementType = () => {
     fullScreen: false,
   };
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
+    // console.log(engine);
 
     // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -85,7 +85,7 @@ const Intro: React.ElementType = () => {
   const particlesLoaded = useCallback(
     async (container: Container | undefined) => {
       console.log("Particles loaded");
-      await console.log("container", container);
+      // await console.log("container", container);
     },
     []
   );

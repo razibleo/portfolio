@@ -15,7 +15,7 @@ const HorizontalProgressBar: FC<Props> = (props: Props) => {
   return (
     <TrackVisibility once>
       {({ isVisible }) => {
-        console.log("isvisible: ", isVisible);
+        // console.log("isvisible: ", isVisible);
         return (
           <div className={styles["progress-background"]} ref={ref}>
             <div

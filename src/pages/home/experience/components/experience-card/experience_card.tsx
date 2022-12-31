@@ -95,8 +95,8 @@ const ExperienceCard = (experience: ExperienceCardProps) => {
             </div>
             <div className={styles["experience-card-tech"]}>
               <ul>
-                {stack.map((tech) => (
-                  <li key={`${company}-${tech}`}>
+                {stack.map((tech, index) => (
+                  <li key={`${company}-${tech}-${index}`}>
                     <img
                       className={`${styles.techstackIcon}`}
                       src={tech.logoPath}

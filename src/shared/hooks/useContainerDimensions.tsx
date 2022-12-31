@@ -1,8 +1,5 @@
 import { useState, useEffect, MutableRefObject } from "react";
-
-interface Dimensions {
-  width: number;
-}
+import Dimensions from "../../models/dimensions";
 
 const useContainerDimensions = (myRef: MutableRefObject<any>) => {
   const [dimensions, setDimensions] = useState<Dimensions>({ width: 0 });

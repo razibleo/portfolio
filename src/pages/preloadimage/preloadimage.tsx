@@ -17,14 +17,14 @@ const PreloadImagePage: FC = () => {
   };
 
   useEffect(() => {
-    console.log("again");
+    // console.log("again");
     const startTime = new Date();
 
     const projectImageUrls = Assets.getAllProjectImages();
     cacheImages(
       [
         ...Assets.getAllIntroAssets(),
-        ...projectImageUrls.slice(0, Math.ceil(projectImageUrls.length / 3)),
+        ...projectImageUrls.slice(0, Math.ceil(projectImageUrls.length / 1.5)),
       ],
       onChangedProgress
     ).then(async (_) => {

@@ -15,7 +15,10 @@ const Experience: FC = () => {
       <div className={styles["exp-card-section"]}>
         {experiences.map((e, index) => {
           return (
-            <div className={styles["experience-item-wrapper"]}>
+            <div
+              className={styles["experience-item-wrapper"]}
+              key={`expierience-card-${index}`}
+            >
               <Fade bottom duration={1000} distance="100px">
                 <ExperienceCard
                   link={e.companyUrl}

@@ -6,6 +6,7 @@ import Home from "../home/home";
 import styles from "./routes.module.scss";
 const MainRoutes: FC = () => {
   const location = useLocation();
+  // console.log("location", location.pathname);
   return (
     <div className={styles["wrapper"]}>
       <TransitionGroup>

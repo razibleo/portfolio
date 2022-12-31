@@ -10,11 +10,15 @@ const OtherWorkProjects: FC = () => {
       <h3 className={styles["title"]}>Other Projects I've contributed</h3>
 
       <div className={styles["grid-view"]}>
-        {workprojects.map((workprojectitem) => {
+        {workprojects.map((workprojectitem, index) => {
           return (
-            <Zoom>
-              <WorkProjectCard projectitem={workprojectitem} />
-            </Zoom>
+            <span
+              key={`otherworkprojects-card-${workprojectitem.title}-${index}`}
+            >
+              <Zoom>
+                <WorkProjectCard projectitem={workprojectitem} />
+              </Zoom>
+            </span>
           );
         })}
       </div>

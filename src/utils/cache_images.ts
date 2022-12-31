@@ -18,10 +18,10 @@ const cacheImages = async (
       try {
         /// this could throw and error when you orgin is not https
         navigator.locks.request("myLock", async (lock) => {
-          console.log("got lock", itemsCompleted);
+          // console.log("got lock", itemsCompleted);
           itemsCompleted++;
           progressCallBack(itemsCompleted / srcArray.length);
-          console.log("released lock", itemsCompleted);
+          // console.log("released lock", itemsCompleted);
         });
       } catch (e) {}
     });

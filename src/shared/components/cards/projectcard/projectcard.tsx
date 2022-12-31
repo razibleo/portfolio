@@ -92,7 +92,10 @@ const WorkProjectCard: FC<Props> = (props: Props) => {
               <div className={styles["wrapper"]}>
                 {projectitem.stacks.map((e, index) => {
                   return (
-                    <div className={styles["tech-stack-item"]}>
+                    <div
+                      className={styles["tech-stack-item"]}
+                      key={`project-item-${index}`}
+                    >
                       <img src={e.logoPath} alt={`${e.name} logo`} />
                       <p className={styles["name"]}>{e.name}</p>
                     </div>

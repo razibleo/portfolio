@@ -8,7 +8,9 @@
   height: 100%;
   transition: all var(--transition-duration);
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 1000%, 0% 1000%);
+
   min-height: 150px;
 
   .summary {
@@ -48,7 +50,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    // bottom: 0;
     transform: translateY(-100%);
     padding: 5% 5% 8% 5%;
 
