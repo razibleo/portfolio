@@ -3,7 +3,7 @@
   padding: 5% 0 8% 0;
 }
 .awards-content {
-  width: 85%;
+  width: 95%;
   max-width: 1300px;
   margin: 0% auto;
 }
@@ -13,4 +13,8 @@
   border-radius: 0 12px 12px 0;
   margin: 4% 0;
   border-bottom: 3px solid var(--primary-color);
+}
+
+.header-awarditem-padding {
+  height: clamp(0.5em, 2vw, 4em);
 }

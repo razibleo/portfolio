@@ -6,4 +6,6 @@
   font-weight: normal;
   background-color: var(--secondary-background-color);
   color: grey;
+
+  font-size: clamp(10px, 1.8vw, 16px);
 }

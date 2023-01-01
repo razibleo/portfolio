@@ -2,13 +2,14 @@
   text-align: center;
   font-weight: 700;
   font-family: "Courier";
-  margin: 0;
   margin: 0 auto;
   width: 90%;
   max-width: 1300;
+  font-size: clamp(11px, 2vw, 18px);
 }
+
 .website-created-with img {
-  width: 20px;
+  width: clamp(11px, 2vw, 20px);
   display: inline-block;
 }
 .typewriter {

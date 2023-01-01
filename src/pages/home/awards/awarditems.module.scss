@@ -1,0 +1,68 @@
+@import "../../../bootstrapimports.scss";
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.award-title {
+  font-weight: bold;
+  font-size: clamp(22px, 1.8vw, 25px);
+  margin: 23px 0 27px 0;
+}
+
+.image {
+  cursor: pointer;
+  width: 100%;
+}
+
+.mobile-image-wrapper {
+  display: none;
+  width: 100%;
+  max-width: 750px;
+}
+
+.award-description {
+  font-size: clamp(16px, 1.25vw, 18px);
+}
+
+.date {
+  color: var(--primary-color);
+  font-size: clamp(8px, 1.25vw, 12px);
+
+  display: none;
+  /* font-style: italic; */
+}
+@include media-breakpoint-down(lg) {
+  .award-title {
+    text-align: center;
+  }
+
+  .image-wrapper {
+    display: none;
+  }
+
+  .mobile-image-wrapper {
+    display: initial;
+    margin: 0 auto;
+  }
+  .content {
+    align-items: center;
+  }
+
+  .button-wrapper {
+    margin: 0;
+    margin-top: 1.5rem;
+    width: 70%;
+  }
+}

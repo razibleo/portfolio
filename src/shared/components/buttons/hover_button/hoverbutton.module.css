@@ -3,7 +3,6 @@
   display: inline-block;
   background: transparent;
   color: var(--text-color);
-  width: var(--width);
 
   border: 2px solid var(--border-color);
   font: inherit;
@@ -16,6 +15,7 @@
   transition: all var(--animation-duration);
 
   z-index: 1;
+  width: 100%;
 }
 
 .text {

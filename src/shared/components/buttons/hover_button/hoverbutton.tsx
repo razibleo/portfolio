@@ -23,6 +23,7 @@ interface Props {
   width?: string;
   iconWidth?: number;
   iconMargin?: string;
+  className?: string;
 }
 
 const HoverButton = (props: Props) => {
@@ -41,7 +42,6 @@ const HoverButton = (props: Props) => {
           "--animation-duration": props.animationDuration ?? "0.4s",
           "--padding": props.padding ?? "0.65em 2em",
           "--icon-margin": props.iconMargin ?? "4px",
-          "--width": props.width,
           "--icon-width":
             props.iconWidth != null ? `${props.iconWidth}px` : null,
         } as React.CSSProperties

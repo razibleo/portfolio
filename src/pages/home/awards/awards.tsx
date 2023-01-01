@@ -13,7 +13,7 @@ const Awards: FC = () => {
       className={`${styles["awards-wrapper"]} ${styles["awards-content"]}`}
     >
       <SectionHeader title={"Awards"} />
-      <div style={{ height: "4em" }} />
+      <div className={styles["header-awarditem-padding"]} />
       <UCResearchAwardItem />
       <Fade duration={1000}>
         <div className={styles["separator"]} />
