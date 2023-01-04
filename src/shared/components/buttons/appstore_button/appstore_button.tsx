@@ -19,13 +19,14 @@ interface Props {
   hoverTextColor?: string;
   fontSize?: number;
   animationDuration?: number;
+  className?: string;
 }
 
 const AppStoreButton = (props: Props) => {
   const isApple = props.buttonType === AppStoreButtonType.apple;
   return (
     <div
-      className={styles["button-wrapper"]}
+      className={styles["button-wrapper"] + " " + props.className}
       style={
         {
           "--color": props.color ?? "transparent",
@@ -45,23 +46,24 @@ const AppStoreButton = (props: Props) => {
           window.open(props.urlToOpen, "_blank");
         }}
       >
-        {isApple ? (
-          <AppleIcon className={styles.logo} />
-        ) : (
-          <GooglePlayIcon className={styles.logo} />
-        )}
-        <span style={{ display: "inline-block", width: "14px" }} />
-
-        <span
-          className={styles.text}
-          style={{
-            fontSize: props.fontSize,
-            whiteSpace: "nowrap",
-          }}
-        >
-          <h5>{isApple ? "Download on the" : "GET IT ON"}</h5>
-          <h4>{isApple ? "App Store" : "Google Play"}</h4>
-        </span>
+        <div className={styles["button-content"]}>
+          {isApple ? (
+            <AppleIcon className={styles.logo} />
+          ) : (
+            <GooglePlayIcon className={styles.logo} />
+          )}
+          <span style={{ display: "inline-block", width: "14px" }} />
+          <span
+            className={styles.text}
+            style={{
+              fontSize: props.fontSize,
+              whiteSpace: "nowrap",
+            }}
+          >
+            <h5>{isApple ? "Download on the" : "GET IT ON"}</h5>
+            <h4>{isApple ? "App Store" : "Google Play"}</h4>
+          </span>
+        </div>
       </button>
     </div>
   );

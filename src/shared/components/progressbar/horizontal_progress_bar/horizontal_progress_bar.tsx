@@ -13,7 +13,7 @@ const HorizontalProgressBar: FC<Props> = (props: Props) => {
   const dimensions = useContainerDimensions(ref);
 
   return (
-    <TrackVisibility once>
+    <TrackVisibility once className={styles.wrapper}>
       {({ isVisible }) => {
         // console.log("isvisible: ", isVisible);
         return (

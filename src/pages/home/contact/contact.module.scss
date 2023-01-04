@@ -47,6 +47,12 @@
   }
 }
 
+.request-success-message {
+  p {
+    font-size: clamp(12px, 3.5vw, 18px);
+  }
+}
+
 // .email {
 //   & > * {
 //     // marginBottom: theme.spacing(2),

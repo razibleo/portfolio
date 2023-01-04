@@ -1,6 +1,15 @@
+@import "../../../bootstrapimports.scss";
+
+$secondImageOffset: 40%;
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
 .project-title {
   font-weight: bold;
-  font-size: 27px;
+  font-size: clamp(22px, 4vw, 27px);
   margin: 23px 0;
   color: var(--primary-color);
 }
@@ -9,20 +18,16 @@
   padding: 0 0 7em 0;
 }
 
-.project-image {
-  display: inline-block;
-  width: 35%;
-}
-
 .project-resource-btn {
   padding-top: 2%;
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   /* justify-content: center; */
 }
 
 .project-description {
   margin-bottom: 2.5em;
+  font-size: clamp(14px, 2.5vw, 18px);
 }
 
 .techstackusedtext {
@@ -43,21 +48,44 @@
   margin-bottom: 3%;
 
   .value {
-    font-size: 2.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.25em, 4vw, 2.2em);
     font-weight: 100;
     color: rgba($color: #ffffff, $alpha: 0.96);
   }
+  .downloads-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .title {
-    font-size: 1.5em;
+    font-size: clamp(1em, 3.5vw, 1.5em);
     font-weight: 100;
     color: rgba($color: #ffffff, $alpha: 0.96);
   }
 }
 
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pr-5 {
+  padding-right: 5%;
+}
+
 .divider {
-  width: 2px;
-  height: 70px;
+  width: 0;
+  height: 0;
+  padding: 35px 2px;
   margin: 0% 5%;
   background-color: rgba($color: #ffffff, $alpha: 0.8);
 }
@@ -66,4 +94,105 @@
   height: 65px;
   margin: 0 5% 0 2%;
   border-radius: 20%;
+}
+
+.project-image {
+  display: inline-block;
+  width: 70%;
+}
+
+.right-offset {
+  position: absolute;
+  left: $secondImageOffset;
+}
+
+.images-wrapper {
+  position: relative;
+  width: 65%;
+}
+.lg-stats-wrapper {
+  display: none;
+  position: relative;
+  .mobile-image {
+    display: none;
+  }
+  .tablet-image {
+    display: none;
+  }
+}
+
+.appstorebutton {
+  max-width: 48%;
+}
+
+.appstore-buttons-spacing {
+  width: clamp(8px, 2vw, 20px);
+}
+
+@include media-breakpoint-down(xxl) {
+  .images-wrapper {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .images-wrapper {
+    width: 90%;
+  }
+  .xl-images {
+    display: none;
+  }
+  .lg-stats-wrapper {
+    display: initial;
+    .stats-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .tablet-image {
+      display: initial;
+    }
+  }
+
+  .xl-stats-wrapper {
+    display: none;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .project-title {
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .project-description {
+    text-align: center;
+  }
+
+  .images-wrapper {
+    min-width: 150px;
+    max-width: 300px;
+    width: 70%;
+    margin: 0 auto;
+    // margin-left: calc($secondImageOffset / 2);
+  }
+
+  .lg-stats-wrapper {
+    .stats-section {
+      align-items: center;
+    }
+    .mobile-image {
+      display: initial;
+    }
+    .tablet-image {
+      display: none;
+    }
+  }
+
+  .statistics {
+    justify-content: center;
+  }
 }
