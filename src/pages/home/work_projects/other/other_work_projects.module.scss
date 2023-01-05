@@ -1,3 +1,4 @@
+@import "../../../../bootstrapimports.scss";
 .title {
   font-weight: bold;
   font-size: 27px;
@@ -8,7 +9,7 @@
 
 .grid-view {
   display: grid;
-  max-width: 800px;
+  max-width: 1000px;
   width: 75%;
   margin: 0 auto;
   grid-template-columns: repeat(3, 30%);
@@ -20,4 +21,22 @@
   align-items: center;
   justify-items: center;
   justify-content: center;
+}
+
+@include media-breakpoint-down(xl) {
+  .grid-view {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .grid-view {
+    grid-template-columns: repeat(2, 40%);
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .grid-view {
+    grid-template-columns: repeat(1, 75%);
+  }
 }

@@ -4,14 +4,14 @@ import Row from "react-bootstrap/Row";
 import HoverListItem from "../../../../../shared/components/buttons/hover_list_item/hoverlistitem";
 import HoverButton from "../../../../../shared/components/buttons/hover_button/hoverbutton";
 import Assets from "../../../../../utils/assets";
-import styles from "../../projectitem.module.css";
+import styles from "../../projectitem.module.scss";
 import Fade from "react-reveal/Fade";
 
 const ComputerVisionProjectItem = () => {
   return (
     <Container fluid className={styles["projectitem-wrapper"]}>
       <Row>
-        <Col md={5}>
+        <Col lg={5}>
           <Fade duration={1000}>
             <>
               <h2 className={styles["project-title"]}>
@@ -22,6 +22,7 @@ const ComputerVisionProjectItem = () => {
                 value the quanity & value of coins as we all detect the facial
                 expressions of a human face running on a Rasperry Pi 4.
               </p>
+              <div className={styles["lg-stats-wrapper"]}>{_renderImage()}</div>
               <div className={styles["techstackssectiom"]}>
                 <h5 className={styles["techstackusedtext"]}>
                   What's under the hood?
@@ -75,46 +76,56 @@ const ComputerVisionProjectItem = () => {
             </>
           </Fade>
         </Col>
-        <Col md={7} style={{ paddingTop: "4em" }}>
-          <div className={"ms-3"} style={{ position: "relative" }}>
-            <Fade duration={1250}>
-              <img
-                src={Assets.COINCOUNTER_GIF}
-                alt={"Coin Counter Screenshot"}
-                width="50%"
-                className="me-3"
-                style={{
-                  display: "inline-block",
-                  zIndex: "0",
-                  position: "relative",
-                  /* offset-x | offset-y | blur-radius | spread-radius | color */
-                  boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2)",
-                  border: `2px solid red`,
-                }}
-              />
-            </Fade>
-
-            <Fade duration={1000} delay={150}>
-              <img
-                src={Assets.FACEDETECTION_GIF}
-                className="me-3"
-                alt={"Face Detection Screenshot"}
-                style={{
-                  position: "absolute",
-                  top: "80%",
-                  left: "15%",
-                  width: "75%",
-                  zIndex: "10",
-                  border: `3px solid blue`,
-
-                  boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2)",
-                }}
-              />
-            </Fade>
-          </div>
+        <Col
+          lg={7}
+          style={{ paddingTop: "4em" }}
+          className={styles["xl-images"]}
+        >
+          {_renderImage()}
         </Col>
       </Row>
     </Container>
+  );
+};
+
+const _renderImage = () => {
+  return (
+    <div className={"ms-3"} style={{ position: "relative" }}>
+      <Fade duration={1250}>
+        <img
+          src={Assets.COINCOUNTER_GIF}
+          alt={"Coin Counter Screenshot"}
+          width="50%"
+          className="me-3"
+          style={{
+            display: "inline-block",
+            zIndex: "0",
+            position: "relative",
+            /* offset-x | offset-y | blur-radius | spread-radius | color */
+            boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2)",
+            border: `2px solid red`,
+          }}
+        />
+      </Fade>
+
+      <Fade duration={1000} delay={150}>
+        <img
+          src={Assets.FACEDETECTION_GIF}
+          className="me-3"
+          alt={"Face Detection Screenshot"}
+          style={{
+            position: "absolute",
+            top: "80%",
+            left: "15%",
+            width: "75%",
+            zIndex: "10",
+            border: `3px solid blue`,
+
+            boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.2)",
+          }}
+        />
+      </Fade>
+    </div>
   );
 };
 

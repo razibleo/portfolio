@@ -5,7 +5,7 @@ import HoverListItem from "../../../../../shared/components/buttons/hover_list_i
 import HoverButton from "../../../../../shared/components/buttons/hover_button/hoverbutton";
 import RaisedButton from "../../../../../shared/components/buttons/raised_button/raisedbutton";
 import Assets from "../../../../../utils/assets";
-import styles from "../../projectitem.module.css";
+import styles from "../../projectitem.module.scss";
 import Fade from "react-reveal/Fade";
 
 const StackerProjectItem = () => {
@@ -13,96 +13,16 @@ const StackerProjectItem = () => {
     <Container fluid className={styles["projectitem-wrapper"]}>
       <Row>
         <Col
-          md={7}
-          className={styles["project-image-section"]}
+          lg={7}
+          className={
+            styles["project-image-section"] + " " + styles["xl-images"]
+          }
           style={{ paddingTop: "8em" }}
         >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "end",
-              position: "relative",
-            }}
-            className="me-3"
-          >
-            <Fade duration={1000} delay={200}>
-              <img
-                src={Assets.LINE_FOLLOWER_GIF}
-                alt={"Line Follower"}
-                style={{
-                  width: "35%",
-                  marginRight: "40%",
-                  border: `3px solid green`,
-                }}
-              />
-            </Fade>
-            <Fade duration={1000}>
-              <img
-                src={Assets.COLOR_DETECTION_GIF}
-                alt={"Color Detection"}
-                style={{
-                  width: "45%",
-                  top: "5%",
-                  border: `3px solid green`,
-                  position: "absolute",
-                }}
-              />
-            </Fade>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "end",
-
-              position: "relative",
-            }}
-            className="me-3"
-          >
-            <Fade duration={1000} delay={200}>
-              <img
-                src={Assets.COLLISION_AVOIDANCE_GIF}
-                alt={"Collision Avoidanc"}
-                style={{
-                  width: "50%",
-                  border: `3px solid green`,
-                  position: "absolute",
-                  right: "33%",
-                  marginTop: "-2%",
-                  zIndex: "30",
-                }}
-              />
-            </Fade>
-
-            <Fade duration={1000} delay={200}>
-              <div
-                style={{
-                  border: `3px solid green`,
-                  marginTop: "-15%",
-                  marginRight: "1%",
-                  width: "38%",
-                  position: "relative",
-                  zIndex: "10",
-                  display: "inline-block",
-                }}
-              >
-                <img
-                  src={Assets.GRIPPER_GIF}
-                  alt={"Gripper"}
-                  style={{
-                    display: "inline-block",
-                    width: "101%",
-
-                    clipPath:
-                      "polygon(0% 0%, calc(100% - 3px)  0%, calc(100% - 3px) 100%, 0% 100%)",
-                  }}
-                />
-              </div>
-            </Fade>
-          </div>
+          {_renderImage()}
         </Col>
 
-        <Col md={5}>
+        <Col lg={5}>
           <Fade duration={1000}>
             <h2 className={styles["project-title"]}>Stacking Robot</h2>
             <p className={styles["project-description"]}>
@@ -111,6 +31,7 @@ const StackerProjectItem = () => {
               after which it picks it up and goes back to be stacked via a line
               follower.
             </p>
+            <div className={styles["lg-stats-wrapper"]}>{_renderImage()}</div>
             <div className={styles["techstackssectiom"]}>
               <h5 className={styles["techstackusedtext"]}>
                 What's under the hood?
@@ -169,6 +90,96 @@ const StackerProjectItem = () => {
         </Col>
       </Row>
     </Container>
+  );
+};
+
+const _renderImage = () => {
+  return (
+    <>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "end",
+          position: "relative",
+        }}
+        className="me-3"
+      >
+        <Fade duration={1000} delay={200}>
+          <img
+            src={Assets.LINE_FOLLOWER_GIF}
+            alt={"Line Follower"}
+            style={{
+              width: "35%",
+              marginRight: "40%",
+              border: `3px solid green`,
+            }}
+          />
+        </Fade>
+        <Fade duration={1000}>
+          <img
+            src={Assets.COLOR_DETECTION_GIF}
+            alt={"Color Detection"}
+            style={{
+              width: "45%",
+              top: "5%",
+              border: `3px solid green`,
+              position: "absolute",
+            }}
+          />
+        </Fade>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "end",
+
+          position: "relative",
+        }}
+        className="me-3"
+      >
+        <Fade duration={1000} delay={200}>
+          <img
+            src={Assets.COLLISION_AVOIDANCE_GIF}
+            alt={"Collision Avoidanc"}
+            style={{
+              width: "50%",
+              border: `3px solid green`,
+              position: "absolute",
+              right: "33%",
+              marginTop: "-2%",
+              zIndex: "30",
+            }}
+          />
+        </Fade>
+
+        <Fade duration={1000} delay={200}>
+          <div
+            style={{
+              border: `3px solid green`,
+              marginTop: "-15%",
+              marginRight: "1%",
+              width: "38%",
+              position: "relative",
+              zIndex: "10",
+              display: "inline-block",
+            }}
+          >
+            <img
+              src={Assets.GRIPPER_GIF}
+              alt={"Gripper"}
+              style={{
+                display: "inline-block",
+                width: "101%",
+
+                clipPath:
+                  "polygon(0% 0%, calc(100% - 3px)  0%, calc(100% - 3px) 100%, 0% 100%)",
+              }}
+            />
+          </div>
+        </Fade>
+      </div>
+    </>
   );
 };
 

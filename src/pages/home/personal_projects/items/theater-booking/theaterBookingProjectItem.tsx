@@ -5,7 +5,7 @@ import HoverListItem from "../../../../../shared/components/buttons/hover_list_i
 import HoverButton from "../../../../../shared/components/buttons/hover_button/hoverbutton";
 import RaisedButton from "../../../../../shared/components/buttons/raised_button/raisedbutton";
 import Assets from "../../../../../utils/assets";
-import styles from "../../projectitem.module.css";
+import styles from "../../projectitem.module.scss";
 import Fade from "react-reveal/Fade";
 
 const TheaterBookingProjectItem = () => {
@@ -13,29 +13,22 @@ const TheaterBookingProjectItem = () => {
     <Container fluid className={styles["projectitem-wrapper"]}>
       <Row>
         <Col
-          md={7}
-          className={styles["project-image-section"]}
+          lg={7}
+          className={
+            styles["project-image-section"] + " " + styles["xl-images"]
+          }
           style={{ paddingTop: "4em" }}
         >
-          <Fade duration={1250}>
-            <div
-              style={{ display: "flex", justifyContent: "end" }}
-              className="me-3"
-            >
-              <img
-                src={Assets.THEATER_GIF}
-                alt={"Theater Booking System Screenshot"}
-                style={{ width: "100%", border: `3px solid green` }}
-              />
-            </div>
-          </Fade>
+          {_renderImage()}
         </Col>
 
-        <Col md={5}>
+        <Col lg={5}>
           <h2 className={styles["project-title"]}>Theatre Booking System</h2>
+
           <p className={styles["project-description"]}>
             A minimalist seat booking system for a movie theatre created using
             javaFX.
+            <div className={styles["lg-stats-wrapper"]}>{_renderImage()}</div>
           </p>
           <div className={styles["techstackssectiom"]}>
             <h5 className={styles["techstackusedtext"]}>
@@ -66,6 +59,20 @@ const TheaterBookingProjectItem = () => {
         </Col>
       </Row>
     </Container>
+  );
+};
+
+const _renderImage = () => {
+  return (
+    <Fade duration={1250}>
+      <div style={{ display: "flex", justifyContent: "end" }} className="me-3">
+        <img
+          src={Assets.THEATER_GIF}
+          alt={"Theater Booking System Screenshot"}
+          style={{ width: "100%", border: `3px solid green` }}
+        />
+      </div>
+    </Fade>
   );
 };
 

@@ -6,7 +6,7 @@ import HoverListItem from "../../../../../shared/components/buttons/hover_list_i
 import HoverButton from "../../../../../shared/components/buttons/hover_button/hoverbutton";
 import RaisedButton from "../../../../../shared/components/buttons/raised_button/raisedbutton";
 import Assets from "../../../../../utils/assets";
-import styles from "../../projectitem.module.css";
+import styles from "../../projectitem.module.scss";
 import { primaryColor } from "../../../../../theme/colors";
 
 const JavaFXGamesProjectItem = () => {

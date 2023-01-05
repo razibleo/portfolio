@@ -7,7 +7,7 @@ import ComputerVisionProjectItem from "./items/computer_vision/computervisionPro
 import ReacherProjectItem from "./items/reacher/reacherProjectItem";
 import StackerProjectItem from "./items/stacker/stackerProjectItem";
 import TheaterBookingProjectItem from "./items/theater-booking/theaterBookingProjectItem";
-import styles from "./projects.module.css";
+import styles from "./projects.module.scss";
 import OtherPersonalProjects from "./items/other_personal_projects/other_personal_projects";
 
 const PersonalProjects: FC = () => {

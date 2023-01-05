@@ -5,7 +5,7 @@ import HoverListItem from "../../../../../shared/components/buttons/hover_list_i
 import HoverButton from "../../../../../shared/components/buttons/hover_button/hoverbutton";
 import RaisedButton from "../../../../../shared/components/buttons/raised_button/raisedbutton";
 import Assets from "../../../../../utils/assets";
-import styles from "../../projectitem.module.css";
+import styles from "../../projectitem.module.scss";
 import { HoverButtonIconType } from "../../../../../shared/components/buttons/hover_button/hoverbutton";
 import Fade from "react-reveal/Fade";
 
@@ -17,7 +17,7 @@ const ReacherProjectItem = () => {
       style={{ paddingBottom: 0 }}
     >
       <Row>
-        <Col md={5}>
+        <Col lg={5}>
           <Fade duration={1000}>
             <>
               <h2 className={styles["project-title"]}>
@@ -33,6 +33,8 @@ const ReacherProjectItem = () => {
                 human-robot voice interaction subsystem, <strong>(e)</strong>{" "}
                 and an academic content personalization subsystem.
               </p>
+              <div className={styles["lg-stats-wrapper"]}>{_renderImage()}</div>
+
               <div className={styles["techstackssectiom"]}>
                 <h5 className={styles["techstackusedtext"]}>
                   What's under the hood?
@@ -151,69 +153,77 @@ const ReacherProjectItem = () => {
             </>
           </Fade>
         </Col>
-        <Col md={7} style={{ paddingTop: "6em" }}>
-          <div className={"me-3"} style={{ width: "80%" }}>
-            <div>
-              <Fade duration={1000}>
-                <img
-                  src={Assets.REACHER_CHATBOT_GIF}
-                  alt={"Chatbot Demo"}
-                  // className={styles["project-image"]}
-                  style={{ width: "49%" }}
-                />
-              </Fade>
-              <div style={{ width: "2%", display: "inline-block" }} />
-              <Fade duration={1000}>
-                <img
-                  src={Assets.REACHER_COLLISION_AVOIDANCE_GIF}
-                  alt={"Collision Avoidance Demo"}
-                  // className={styles["project-image"]}
-                  style={{ width: "49%" }}
-                />
-              </Fade>
-
-              <Fade duration={1000}>
-                <img
-                  src={Assets.REACHER_NAVIGATION_GIF}
-                  alt={"Navigation Demo Map"}
-                  // className={styles["project-image"]}
-                  style={{ width: "100%", paddingTop: "1em" }}
-                />
-              </Fade>
-            </div>
-
-            <div>
-              <Fade duration={1000}>
-                <img
-                  src={Assets.REACHER_NAVIGATION_INTERNAL_GIF}
-                  alt={"Chatbot Demo"}
-                  // className={styles["project-image"]}
-                  style={{ width: "100%", padding: "1em 0" }}
-                />
-              </Fade>
-              <Fade duration={1000}>
-                <img
-                  src={Assets.REACHER_MAPPING_INTERNAL_GIF}
-                  alt={"Mapping Demo"}
-                  // className={styles["project-image"]}
-                  style={{ width: "49%" }}
-                />
-              </Fade>
-              <div style={{ width: "2%", display: "inline-block" }} />
-              <Fade duration={1000}>
-                <img
-                  src={Assets.REACHER_LOCALIZATION_INTERNAL_GIF}
-                  alt={"Localization Demo"}
-                  // className={styles["project-image"]}
-                  style={{ width: "49%", paddingRight: "2%" }}
-                />
-              </Fade>
-            </div>
-          </div>
+        <Col
+          lg={7}
+          style={{ paddingTop: "6em" }}
+          className={styles["xl-images"]}
+        >
+          {_renderImage()}
         </Col>
       </Row>
     </Container>
   );
 };
+const _renderImage = () => {
+  return (
+    <div className={"me-3"} style={{ width: "80%" }}>
+      <div>
+        <Fade duration={1000}>
+          <img
+            src={Assets.REACHER_CHATBOT_GIF}
+            alt={"Chatbot Demo"}
+            // className={styles["project-image"]}
+            style={{ width: "49%" }}
+          />
+        </Fade>
+        <div style={{ width: "2%", display: "inline-block" }} />
+        <Fade duration={1000}>
+          <img
+            src={Assets.REACHER_COLLISION_AVOIDANCE_GIF}
+            alt={"Collision Avoidance Demo"}
+            // className={styles["project-image"]}
+            style={{ width: "49%" }}
+          />
+        </Fade>
 
+        <Fade duration={1000}>
+          <img
+            src={Assets.REACHER_NAVIGATION_GIF}
+            alt={"Navigation Demo Map"}
+            // className={styles["project-image"]}
+            style={{ width: "100%", paddingTop: "1em" }}
+          />
+        </Fade>
+      </div>
+
+      <div>
+        <Fade duration={1000}>
+          <img
+            src={Assets.REACHER_NAVIGATION_INTERNAL_GIF}
+            alt={"Chatbot Demo"}
+            // className={styles["project-image"]}
+            style={{ width: "100%", padding: "1em 0" }}
+          />
+        </Fade>
+        <Fade duration={1000}>
+          <img
+            src={Assets.REACHER_MAPPING_INTERNAL_GIF}
+            alt={"Mapping Demo"}
+            // className={styles["project-image"]}
+            style={{ width: "49%" }}
+          />
+        </Fade>
+        <div style={{ width: "2%", display: "inline-block" }} />
+        <Fade duration={1000}>
+          <img
+            src={Assets.REACHER_LOCALIZATION_INTERNAL_GIF}
+            alt={"Localization Demo"}
+            // className={styles["project-image"]}
+            style={{ width: "49%", paddingRight: "2%" }}
+          />
+        </Fade>
+      </div>
+    </div>
+  );
+};
 export default ReacherProjectItem;
