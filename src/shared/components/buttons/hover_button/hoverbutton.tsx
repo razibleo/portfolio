@@ -29,7 +29,7 @@ interface Props {
 const HoverButton = (props: Props) => {
   return (
     <div
-      className={styles["button-wrapper"]}
+      className={styles["button-wrapper"] + " " + (props.className ?? "")}
       style={
         {
           "--color": props.color ?? "transparent",
@@ -40,7 +40,7 @@ const HoverButton = (props: Props) => {
           "--hover-text-color": props.hoverTextColor ?? "black",
           "--hover-border-color": props.hoverBorderColor ?? "white",
           "--animation-duration": props.animationDuration ?? "0.4s",
-          "--padding": props.padding ?? "0.65em 2em",
+          "--padding": props.padding ?? "0.65em",
           "--icon-margin": props.iconMargin ?? "4px",
           "--icon-width":
             props.iconWidth != null ? `${props.iconWidth}px` : null,
@@ -57,7 +57,7 @@ const HoverButton = (props: Props) => {
           <LaunchIcon className={`${styles.text} ${styles.icon}`} />
         )}
         {props.icon === HoverButtonIconType.article && (
-          <ArticleIcon className={`${styles.text} ${styles.icon}`} />
+          <ArticleIcon className={`${styles.icon}`} />
         )}
 
         <span

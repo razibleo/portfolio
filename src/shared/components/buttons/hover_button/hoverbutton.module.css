@@ -20,6 +20,7 @@
 
 .text {
   position: relative;
+  font-size: clamp(15px, 2vw, 18px);
 }
 .button:hover
 /* ,

@@ -28,8 +28,9 @@ const TheaterBookingProjectItem = () => {
           <p className={styles["project-description"]}>
             A minimalist seat booking system for a movie theatre created using
             javaFX.
-            <div className={styles["lg-stats-wrapper"]}>{_renderImage()}</div>
           </p>
+          <div className={styles["lg-stats-wrapper"]}>{_renderImage()}</div>
+
           <div className={styles["techstackssectiom"]}>
             <h5 className={styles["techstackusedtext"]}>
               What's under the hood?
@@ -46,15 +47,17 @@ const TheaterBookingProjectItem = () => {
               title={"</> Source Code"}
               urlToOpen={"https://github.com/razibleo/TheatreBooking"}
             />
-            <RaisedButton
-              title={"Demo"}
-              hoverBorderColor={"transparent"}
-              borderColor={"transparent"}
-              hoverShadowColor={"transparent"}
-              urlToOpen={
-                "https://drive.google.com/file/d/1cLd-cyyoYXOILgoO35-yGJ-K5XOyt4_4/view?usp=sharing"
-              }
-            />
+            <div className={styles["raised-button-wrapper"]}>
+              <RaisedButton
+                title={"Demo"}
+                hoverBorderColor={"transparent"}
+                borderColor={"transparent"}
+                hoverShadowColor={"transparent"}
+                urlToOpen={
+                  "https://drive.google.com/file/d/1cLd-cyyoYXOILgoO35-yGJ-K5XOyt4_4/view?usp=sharing"
+                }
+              />
+            </div>
           </div>
         </Col>
       </Row>

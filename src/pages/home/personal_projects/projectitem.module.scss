@@ -1,13 +1,13 @@
 @import "../../../bootstrapimports.scss";
 .project-title {
   font-weight: bold;
-  font-size: clamp(22px, 2.5vw, 27px);
+  font-size: clamp(21px, 2.5vw, 27px);
   margin: 23px 0;
   color: var(--primary-color);
 }
 
 .projectitem-wrapper {
-  padding: 0 0 7em 0;
+  padding: 2em 0 5em 0;
 }
 
 .project-image {
@@ -47,6 +47,31 @@
   width: 90%;
   margin: 0 auto;
   margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.stacker-image-wrapper {
+  width: 80%;
+}
+
+.reacher-image-wrapper {
+  width: 90%;
+}
+
+.button-spacing {
+  width: clamp(12px, 2vw, 24px);
+}
+.hover-button-section {
+  display: flex;
+  flex-direction: column;
+}
+@include media-breakpoint-down(xl) {
+  .stacker-image-wrapper {
+    width: 95%;
+  }
+  .reacher-image-wrapper {
+    width: 100%;
+  }
 }
 
 @include media-breakpoint-down(lg) {
@@ -54,7 +79,7 @@
     display: block;
   }
   .xl-images {
-    display: none;
+    display: none !important;
   }
   .project-title {
     text-align: center;
@@ -64,5 +89,45 @@
 @include media-breakpoint-down(sm) {
   .techstackusedtext {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .project-resource-btn {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .project-resource-btn {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .project-resource-btn-top {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .project-resource-btn {
+    flex-direction: column;
+    row-gap: 0.5em;
+    & > * {
+      width: 100%;
+    }
+  }
+
+  .hover-button-section {
+    width: 100%;
+    p {
+      text-align: center;
+    }
+  }
+  .raised-button-wrapper {
+    display: flex;
+    justify-content: center;
   }
 }

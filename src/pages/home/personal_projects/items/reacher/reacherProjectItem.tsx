@@ -33,7 +33,12 @@ const ReacherProjectItem = () => {
                 human-robot voice interaction subsystem, <strong>(e)</strong>{" "}
                 and an academic content personalization subsystem.
               </p>
-              <div className={styles["lg-stats-wrapper"]}>{_renderImage()}</div>
+              <div
+                className={styles["lg-stats-wrapper"]}
+                style={{ width: "80%" }}
+              >
+                {_renderImage()}
+              </div>
 
               <div className={styles["techstackssectiom"]}>
                 <h5 className={styles["techstackusedtext"]}>
@@ -158,7 +163,9 @@ const ReacherProjectItem = () => {
           style={{ paddingTop: "6em" }}
           className={styles["xl-images"]}
         >
-          {_renderImage()}
+          <div className={styles["reacher-image-wrapper"]}>
+            {_renderImage()}
+          </div>
         </Col>
       </Row>
     </Container>
@@ -166,7 +173,7 @@ const ReacherProjectItem = () => {
 };
 const _renderImage = () => {
   return (
-    <div className={"me-3"} style={{ width: "80%" }}>
+    <div className={"me-3"}>
       <div>
         <Fade duration={1000}>
           <img

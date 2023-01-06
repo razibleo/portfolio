@@ -51,26 +51,25 @@ const ComputerVisionProjectItem = () => {
               </div>
 
               <div className={styles["project-resource-btn"]}>
-                <div>
+                <div className={styles["hover-button-section"]}>
                   <p style={{ fontSize: "13px", padding: "0 5%", margin: 0 }}>
                     Coin Counter:
                   </p>
                   <HoverButton
+                    className={styles["hover-button"]}
                     title={"</> Source Code"}
                     urlToOpen={"https://github.com/razibleo/coin_counter"}
                   />
                 </div>
-                <div style={{ width: "24px" }} />
-                <div>
-                  <div>
-                    <p style={{ fontSize: "13px", padding: "0 5%", margin: 0 }}>
-                      Face Detector:
-                    </p>
-                    <HoverButton
-                      title={"</> Source Code"}
-                      urlToOpen={"https://github.com/razibleo/face_detection"}
-                    />
-                  </div>
+                <div className={styles["button-spacing"]} />
+                <div className={styles["hover-button-section"]}>
+                  <p style={{ fontSize: "13px", padding: "0 5%", margin: 0 }}>
+                    Face Detector:
+                  </p>
+                  <HoverButton
+                    title={"</> Source Code"}
+                    urlToOpen={"https://github.com/razibleo/face_detection"}
+                  />
                 </div>
               </div>
             </>
@@ -114,9 +113,8 @@ const _renderImage = () => {
           className="me-3"
           alt={"Face Detection Screenshot"}
           style={{
-            position: "absolute",
-            top: "80%",
-            left: "15%",
+            marginTop: "-10%",
+            marginLeft: "15%",
             width: "75%",
             zIndex: "10",
             border: `3px solid blue`,
