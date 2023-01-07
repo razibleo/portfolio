@@ -40,7 +40,7 @@ const HoverButton = (props: Props) => {
           "--hover-text-color": props.hoverTextColor ?? "black",
           "--hover-border-color": props.hoverBorderColor ?? "white",
           "--animation-duration": props.animationDuration ?? "0.4s",
-          "--padding": props.padding ?? "0.65em",
+          "--padding": props.padding ?? "0.65em 2em",
           "--icon-margin": props.iconMargin ?? "4px",
           "--icon-width":
             props.iconWidth != null ? `${props.iconWidth}px` : null,

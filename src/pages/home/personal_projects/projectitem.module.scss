@@ -111,13 +111,18 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .project-resource-btn {
     flex-direction: column;
     row-gap: 0.5em;
     & > * {
       width: 100%;
     }
+  }
+
+  .project-resource-btn-top {
+    flex-direction: column;
+    align-items: center;
   }
 
   .hover-button-section {
@@ -129,5 +134,6 @@
   .raised-button-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 0.5em;
   }
 }

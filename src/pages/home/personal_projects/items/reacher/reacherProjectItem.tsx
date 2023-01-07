@@ -118,7 +118,7 @@ const ReacherProjectItem = () => {
               </div>
 
               <div className={styles["project-resource-btn-top"]}>
-                <div>
+                <div className={styles["hover-button-section"]}>
                   <HoverButton
                     icon={HoverButtonIconType.launch}
                     title={"Presentation"}
@@ -145,15 +145,17 @@ const ReacherProjectItem = () => {
                 "https://docs.google.com/presentation/d/1SfcnnYBrp54WCK-vey3FcF5-NrohfWx8/edit?usp=sharing&ouid=114847083521454778339&rtpof=true&sd=true "
               }
             /> */}
-                <RaisedButton
-                  title={"Demo"}
-                  hoverBorderColor={"transparent"}
-                  borderColor={"transparent"}
-                  hoverShadowColor={"transparent"}
-                  urlToOpen={
-                    "https://www.youtube.com/watch?v=vZH21VyiZFY&list=PLGoghKuPV1BFEnL86wTrb4rdy7vxj0sud"
-                  }
-                />
+                <div className={styles["raised-button-wrapper"]}>
+                  <RaisedButton
+                    title={"Demo"}
+                    hoverBorderColor={"transparent"}
+                    borderColor={"transparent"}
+                    hoverShadowColor={"transparent"}
+                    urlToOpen={
+                      "https://www.youtube.com/watch?v=vZH21VyiZFY&list=PLGoghKuPV1BFEnL86wTrb4rdy7vxj0sud"
+                    }
+                  />
+                </div>
               </div>
             </>
           </Fade>

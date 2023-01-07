@@ -47,7 +47,7 @@ const Intro: React.ElementType = () => {
         direction: "none",
         random: true,
         straight: false,
-        bounce: true,
+        bounce: false,
       },
     },
     interactivity: {
