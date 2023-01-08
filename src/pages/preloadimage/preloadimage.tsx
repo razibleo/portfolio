@@ -7,18 +7,40 @@ import cacheImages from "../../utils/cache_images";
 import Assets from "../../utils/assets";
 import { sleep } from "../../utils/common_functions";
 import Typewriter from "typewriter-effect";
+import MainApi from "../../apis/mainapi";
+import FutureStatus from "../../utils/FutureStatus";
 
 const PreloadImagePage: FC = () => {
   const navigate = useNavigate();
   const [preoloadProgress, setPreloadProgress] = useState<number>(0);
+  const [visitorDetailsStatus, setVisitorDetailsStatus] =
+    useState<FutureStatus>(FutureStatus.initialized);
   const onChangedProgress = (progress: number) => {
     // console.log("progress", progress);
     setPreloadProgress(progress);
   };
 
+  async function sendDetails() {
+    const isDevMode = process.env.NODE_ENV === "development";
+    if (isDevMode || visitorDetailsStatus !== FutureStatus.initialized) {
+      return;
+    }
+
+    try {
+      setVisitorDetailsStatus(FutureStatus.loading);
+      const ipaddress = await MainApi.getIpaddress();
+      console.log("ipaddress", ipaddress);
+      await MainApi.sendVisitorIP(ipaddress);
+      setVisitorDetailsStatus(FutureStatus.success);
+    } catch (e) {
+      setVisitorDetailsStatus(FutureStatus.failure);
+    }
+  }
+
   useEffect(() => {
     // console.log("again");
     const startTime = new Date();
+    sendDetails();
 
     const projectImageUrls = Assets.getAllProjectImages();
     cacheImages(

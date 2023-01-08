@@ -15,6 +15,7 @@ import FutureStatus from "../../../utils/FutureStatus";
 import { sleep } from "../../../utils/common_functions";
 import FadeReveal from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
+import MainApi from "../../../apis/mainapi";
 
 const schema = yup.object().shape({
   email: yup
@@ -102,9 +103,16 @@ const Contact: FC = () => {
             );
             setFormErrors({});
             setFutureStatus((val) => FutureStatus.loading);
-            await sleep(2000);
+
+            await MainApi.sendContactDetails(
+              target.email.value,
+              target.message.value
+            );
+            await sleep(400);
             setFutureStatus((val) => FutureStatus.success);
           } catch (e: any) {
+            setFutureStatus((val) => FutureStatus.failure);
+
             if (e instanceof ValidationError) {
               console.log(parseYupError(e));
               setFormErrors(parseYupError(e));
