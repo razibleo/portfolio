@@ -16,19 +16,29 @@ class MainApi {
 
   static async getIpaddress(): Promise<string> {
     const ipaddress = (
-      await fetch("http://ip-api.com/json").then((res) => res.json())
-    ).query;
+      await fetch("https://api.ipify.org/?format=json").then((res) =>
+        res.json()
+      )
+    ).ip;
 
     return ipaddress;
   }
 
-  static async sendVisitorIP(ipaddress: string) {
+  static async sendVisitorInfo(
+    clientFingerprint: number,
+    ipaddress: string,
+    metaData: string
+  ) {
     await fetch(`${this.BASEURL}/storevistor`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ ipaddress: ipaddress }),
+      body: JSON.stringify({
+        clientFingerprint: clientFingerprint,
+        ipaddress: ipaddress,
+        metaData: metaData,
+      }),
     });
   }
 }

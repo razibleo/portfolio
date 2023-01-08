@@ -9,7 +9,7 @@ import { sleep } from "../../utils/common_functions";
 import Typewriter from "typewriter-effect";
 import MainApi from "../../apis/mainapi";
 import FutureStatus from "../../utils/FutureStatus";
-
+import { ClientJS } from "clientjs";
 const PreloadImagePage: FC = () => {
   const navigate = useNavigate();
   const [preoloadProgress, setPreloadProgress] = useState<number>(0);
@@ -21,6 +21,8 @@ const PreloadImagePage: FC = () => {
   };
 
   async function sendDetails() {
+    const client = new ClientJS();
+
     const isDevMode = process.env.NODE_ENV === "development";
     if (isDevMode || visitorDetailsStatus !== FutureStatus.initialized) {
       return;
@@ -29,8 +31,13 @@ const PreloadImagePage: FC = () => {
     try {
       setVisitorDetailsStatus(FutureStatus.loading);
       const ipaddress = await MainApi.getIpaddress();
-      console.log("ipaddress", ipaddress);
-      await MainApi.sendVisitorIP(ipaddress);
+
+      const metaData = `${client.getBrowser()} ${client.getCPU()} ${client.getOS()}:${client.getOSVersion()} ${client.getDevice()} ${client.getDeviceType()}`;
+      await MainApi.sendVisitorInfo(
+        client.getFingerprint(),
+        ipaddress,
+        metaData
+      );
       setVisitorDetailsStatus(FutureStatus.success);
     } catch (e) {
       setVisitorDetailsStatus(FutureStatus.failure);
