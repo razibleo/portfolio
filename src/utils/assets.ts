@@ -80,24 +80,24 @@ import NomadicTribe from "../assets/projectimages/nomadic_tribe.png";
 import MAWJ from "../assets/projectimages/mawj.png";
 import BSeen from "../assets/projectimages/bseen.png";
 
-import AndroidTicTacToeHome from "../assets/projectimages/tictactoe_home-min.png";
-import AndroidTicTacToeGameplay from "../assets/projectimages/tictactoe_gameplay-min.png";
+// import AndroidTicTacToeHome from "../assets/projectimages/tictactoe_home-min.png";
+// import AndroidTicTacToeGameplay from "../assets/projectimages/tictactoe_gameplay-min.png";
 import AndroidTicTacToeSceenshot from "../assets/projectimages/android_tic_tac_toe_screenshot.png";
 import TheaterBooking from "../assets/projectimages/theater-min.gif";
-import Frogger from "../assets/projectimages/frogger-min.gif";
+// import Frogger from "../assets/projectimages/frogger-min.gif";
 import FroggerScreenshot from "../assets/projectimages/frogger_screenshot.gif";
 
-import SpaceInvaders from "../assets/projectimages/space_invaders-min.gif";
+// import SpaceInvaders from "../assets/projectimages/space_invaders-min.gif";
 import SpaceInvadersScreenshot from "../assets/projectimages/space_invaders_screenshot.gif";
 
-import CommuniserveHome from "../assets/projectimages/communiserve_home-min.png";
-import CommuniserveMaps from "../assets/projectimages/communiserve_maps-min.png";
+// import CommuniserveHome from "../assets/projectimages/communiserve_home-min.png";
+// import CommuniserveMaps from "../assets/projectimages/communiserve_maps-min.png";
 import CommuniserveScreenshots from "../assets/projectimages/coummuniserve_screenshot.png";
 import CoinCounter from "../assets/projectimages/coin-counter-min.gif";
 import FaceDetection from "../assets/projectimages/face-detection-min.gif";
 import CollisionAvoidance from "../assets/projectimages/collison-avoidance-min.gif";
 import ColorDetection from "../assets/projectimages/color-detection-min.gif";
-import Gripper from "../assets/projectimages/grabber-min.gif";
+import Gripper from "../assets/projectimages/grabber.gif";
 import LineFollower from "../assets/projectimages/line-follower-min.gif";
 import ReacherChatbot from "../assets/projectimages/reacher_chatbot.gif";
 import ReacherCollisionAvoidance from "../assets/projectimages/reacher_collision_avoidance.gif";
@@ -126,7 +126,7 @@ import WebDesignBanner from "../assets/miscellaneous/web_design_banner.png";
 import CodeBanner from "../assets/miscellaneous/code_banner.png";
 
 /// intro assets
-import profileImg from "../assets/profile.jpeg";
+import profileImg from "../assets/miscellaneous/profile.jpeg";
 import linkedin from "../assets/social/linkedin.png";
 import github from "../assets/social/github.png";
 
@@ -225,19 +225,19 @@ class Assets {
   static readonly BSEEN_SCREENSHOT: string = BSeen;
   static readonly NOMADIC_TRIBE_SCREENSHOT: string = NomadicTribe;
 
-  static readonly TIC_TAC_TOE_HOME: string = AndroidTicTacToeHome;
-  static readonly TIC_TAC_TOE_GAMEPLAY: string = AndroidTicTacToeGameplay;
+  // static readonly TIC_TAC_TOE_HOME: string = AndroidTicTacToeHome;
+  // static readonly TIC_TAC_TOE_GAMEPLAY: string = AndroidTicTacToeGameplay;
   static readonly TIC_TAC_TOE_SCREENSHOT: string = AndroidTicTacToeSceenshot;
 
   static readonly THEATER_GIF: string = TheaterBooking;
-  static readonly FROGGER_GIF: string = Frogger;
+  // static readonly FROGGER_GIF: string = Frogger;
   static readonly FROGGER_SCREENSHOT: string = FroggerScreenshot;
 
-  static readonly SPACEINVADERS_GIF: string = SpaceInvaders;
+  // static readonly SPACEINVADERS_GIF: string = SpaceInvaders;
   static readonly SPACEINVADERS_SCREENSHOT: string = SpaceInvadersScreenshot;
 
-  static readonly COUMMUNISERVE_HOME: string = CommuniserveHome;
-  static readonly COUMMUNISERVE_MAPS: string = CommuniserveMaps;
+  // static readonly COUMMUNISERVE_HOME: string = CommuniserveHome;
+  // static readonly COUMMUNISERVE_MAPS: string = CommuniserveMaps;
   static readonly COUMMUNISERVE_SCREENSHOT: string = CommuniserveScreenshots;
 
   static readonly COINCOUNTER_GIF: string = CoinCounter;
@@ -267,16 +267,16 @@ class Assets {
     this.SMARTFIX_SCREENSHOT,
     this.BSEEN_SCREENSHOT,
     this.NOMADIC_TRIBE_SCREENSHOT,
-    this.TIC_TAC_TOE_HOME,
-    this.TIC_TAC_TOE_GAMEPLAY,
+    // this.TIC_TAC_TOE_HOME,
+    // this.TIC_TAC_TOE_GAMEPLAY,
     this.TIC_TAC_TOE_SCREENSHOT,
     this.THEATER_GIF,
-    this.FROGGER_GIF,
+    // this.FROGGER_GIF,
     this.FROGGER_SCREENSHOT,
-    this.SPACEINVADERS_GIF,
+    // this.SPACEINVADERS_GIF,
     this.SPACEINVADERS_SCREENSHOT,
-    this.COUMMUNISERVE_HOME,
-    this.COUMMUNISERVE_MAPS,
+    // this.COUMMUNISERVE_HOME,
+    // this.COUMMUNISERVE_MAPS,
     this.COUMMUNISERVE_SCREENSHOT,
     this.COINCOUNTER_GIF,
     this.FACEDETECTION_GIF,
