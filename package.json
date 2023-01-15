@@ -1,6 +1,6 @@
 {
   "name": "my-portfolio",
-  "version": "0.8.6",
+  "version": "0.9.5",
   "private": true,
   "description": "Work in progress",
   "dependencies": {

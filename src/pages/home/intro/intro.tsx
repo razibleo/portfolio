@@ -143,7 +143,7 @@ const Intro: React.ElementType = () => {
 
           <div className={styles.links}>
             <a
-              href="https://www.linkedin.com/in/razibsarkerleo/"
+              href="https://www.linkedin.com/in/razibleo/"
               target="_blank"
               rel="noopener noreferrer"
             >
