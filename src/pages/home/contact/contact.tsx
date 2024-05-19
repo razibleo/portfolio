@@ -77,6 +77,7 @@ const Contact: FC = () => {
       },
     },
   };
+
   return (
     <Element name="contact" className={styles["contact-form-wrapper"]}>
       <SectionHeader title={"Let's Chat"} />

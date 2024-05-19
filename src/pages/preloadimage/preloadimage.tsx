@@ -53,7 +53,7 @@ const PreloadImagePage: FC = () => {
     cacheImages(
       [
         ...Assets.getAllIntroAssets(),
-        ...projectImageUrls.slice(0, Math.ceil(projectImageUrls.length / 1.5)),
+        ...projectImageUrls.slice(0, Math.ceil(projectImageUrls.length / 1.8)),
       ],
       onChangedProgress
     ).then(async (_) => {

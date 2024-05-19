@@ -26,7 +26,7 @@ const _renderImage = (urlToOpen: string) => {
 
 const EgaAwardItem = () => {
   const urlToOpen =
-    "https://www.ega.ae/en/media-releases/2020/march/al-robot-competition";
+    "https://media.ega.ae/team-from-abu-dhabi-university-wins-first-place-in-ega-student-industrial-robotics-competition";
   return (
     <Container fluid style={styles}>
       <Row>
@@ -41,7 +41,7 @@ const EgaAwardItem = () => {
               </h3>
               <p className={styles["award-description"]}>
                 Won first place at Emirates Global Aluminium(EGA) 2nd
-                <a href="https://www.ega.ae/en/media-releases/2021/september/al-robot">
+                <a href="https://media.ega.ae/ega-launches-industrial-robotics-competition-for-university-students/">
                   {" "}
                   Industrial Robotics Competition
                 </a>{" "}
